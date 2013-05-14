@@ -1,0 +1,3 @@
+[submodule "iosClientCode/submodules/core"]
+	path = iosClientCode/submodules/core
+	url = https://github.com/TheCanon/core.git
