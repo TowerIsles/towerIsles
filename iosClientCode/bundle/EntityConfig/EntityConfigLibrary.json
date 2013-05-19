@@ -1,0 +1,26 @@
+{
+  "entityConfig_1": {
+    "orderedBaseEntityConfigIdentifiers": [
+      "entityConfig_2"
+    ],
+    "componentData": {
+      "TestComponentOne": {
+        "testParamOne": 999
+      },
+      "TestComponentTwo": {
+        "testParamOne": 333,
+        "testParamTwo": 444
+      }
+    }
+  },
+  "entityConfig_2": {
+    "orderedBaseEntityConfigIdentifiers": [
+    ],
+    "componentData": {
+      "TestComponentOne": {
+        "testParamOne": 111,
+        "testParamTwo": 222
+      }
+    }
+  }
+}

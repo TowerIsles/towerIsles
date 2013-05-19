@@ -14,44 +14,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6717A2B11742250600BF60C0"
-               BuildableName = "game.app"
-               BlueprintName = "game"
-               ReferencedContainer = "container:game.xcodeproj">
+               BlueprintIdentifier = "67CCECE11743EAC400AE8940"
+               BuildableName = "TowerIsles.app"
+               BlueprintName = "TowerIsles"
+               ReferencedContainer = "container:TowerIsles.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6717A2D11742250600BF60C0"
-               BuildableName = "gameTests.octest"
-               BlueprintName = "gameTests"
-               ReferencedContainer = "container:game.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6717A2B11742250600BF60C0"
-            BuildableName = "game.app"
-            BlueprintName = "game"
-            ReferencedContainer = "container:game.xcodeproj">
+            BlueprintIdentifier = "67CCECE11743EAC400AE8940"
+            BuildableName = "TowerIsles.app"
+            BlueprintName = "TowerIsles"
+            ReferencedContainer = "container:TowerIsles.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
@@ -61,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6717A2B11742250600BF60C0"
-            BuildableName = "game.app"
-            BlueprintName = "game"
-            ReferencedContainer = "container:game.xcodeproj">
+            BlueprintIdentifier = "67CCECE11743EAC400AE8940"
+            BuildableName = "TowerIsles.app"
+            BlueprintName = "TowerIsles"
+            ReferencedContainer = "container:TowerIsles.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6717A2B11742250600BF60C0"
-            BuildableName = "game.app"
-            BlueprintName = "game"
-            ReferencedContainer = "container:game.xcodeproj">
+            BlueprintIdentifier = "67CCECE11743EAC400AE8940"
+            BuildableName = "TowerIsles.app"
+            BlueprintName = "TowerIsles"
+            ReferencedContainer = "container:TowerIsles.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

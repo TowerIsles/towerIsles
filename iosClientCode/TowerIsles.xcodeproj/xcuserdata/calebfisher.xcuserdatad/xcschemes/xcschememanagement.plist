@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>game.xcscheme</key>
+		<key>TowerIsles.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6717A2B11742250600BF60C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6717A2D11742250600BF60C0</key>
+		<key>67CCECE11743EAC400AE8940</key>
 		<dict>
 			<key>primary</key>
 			<true/>
