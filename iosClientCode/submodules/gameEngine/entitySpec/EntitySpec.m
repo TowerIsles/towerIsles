@@ -1,11 +1,13 @@
 #import "EntitySpec.h"
 #import "Component.h"
 #import "Entity.h"
+#import "EntityManager.h"
 
 #define keyFromIvar(ivar) Integer((int)ivar)
 
 @interface EntitySpec ()
 {
+    EntityManager* entityManager;
 }
 
 @property (nonatomic, retain) Entity* entity;
@@ -72,7 +74,10 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
         if (componentClass != nil)
         {
             if ([entity componentForClass:componentClass] == nil)
+            {
+                free(ivars);
                 return NO;
+            }
             
             continue;
         }
@@ -82,10 +87,14 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
         if (specClass != nil)
         {
             if ([entity entitySpecForClass:specClass] == nil)
+            {
+                free(ivars);
                 return NO;
+            }
         }
     }
     
+    free(ivars);
     return [EntitySpec internal_verifyIvarsMatchRecursive:entity
                                              currentClass:class_getSuperclass(currentClass)];
 }
@@ -145,6 +154,31 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
     [self internal_injectIvarsRecursive:self.class];
 }
 
+- (BOOL)isSpecOfSpec:(EntitySpec*)entitySpec
+{
+    return _entity == entitySpec.entity;
+}
+
+- (BOOL)isValid
+{
+    return _entity != nil &&
+           !self.isQueuedForDestruction;
+}
+
+- (BOOL)isQueuedForDestruction
+{
+    return _entity.queuedForDestruction;
+}
+
+- (void)queueDestruction
+{
+    if (!self.isQueuedForDestruction)
+    {
+        _entity.queuedForDestruction = YES;
+        [entityManager queueEntityForRemoval:_entity];
+    }
+}
+
 - (id)transformedSpec:(Class)entitySpecClass
 {
     CheckTrue([_entity entitySpecForClass:entitySpecClass] != nil);
@@ -154,6 +188,11 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 - (id)possiblyTransformedSpec:(Class)entitySpecClass
 {
     return [_entity entitySpecForClass:entitySpecClass];    
+}
+
+- (void)teardown
+{
+    self.entity = nil;
 }
 
 @end

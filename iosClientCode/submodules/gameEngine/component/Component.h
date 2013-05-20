@@ -2,4 +2,6 @@
 
 @interface Component : ManagedPropertiesObject<SerializeByDefault>
 
+- (void)teardown;
+
 @end

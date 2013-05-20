@@ -11,4 +11,6 @@
 
 @implementation Component
 
+- (void)teardown {}
+
 @end

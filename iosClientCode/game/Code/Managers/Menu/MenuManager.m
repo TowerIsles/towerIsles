@@ -11,12 +11,6 @@
 
 @implementation MenuManager
 
-- (void)dealloc
-{
-	[MenuManager releaseRetainedPropertiesOfObject:self];
-	[super dealloc];
-}
-
 - (void)showDebugMenu
 {
     

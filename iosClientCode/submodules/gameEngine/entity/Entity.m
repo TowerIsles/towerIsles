@@ -21,10 +21,17 @@
 }
 
 @property (nonatomic, retain) NSMutableDictionary* componentsByClass;
-@property (nonatomic, retain) NSMutableDictionary* specInstancesBySpecClass;
+@property (nonatomic, retain) NSMutableDictionary* entitySpecsByEntitySpecClass;
 @end
 
 @implementation Entity
+
+- (void)dealloc
+{
+    [_entityIdentifier release];
+    [_entityConfig release];
+    [super dealloc];
+}
 
 - (NSString*)description
 {
@@ -32,7 +39,7 @@
     [description appendFormat:@"Entity with identifier = %@\n", _entityIdentifier.stringValue];
     [description appendFormat:@"          entityConfig = %@\n", _entityConfig.identifier.stringValue];
     [description appendFormat:@"===Components===\n\n"];
-                                                   
+    
     for (Component* component in _componentsByClass.allValues)
     {
         [description appendFormat:@"%@", component.class];
@@ -47,7 +54,7 @@
     if (self = [super init])
     {
         _componentsByClass = [NSMutableDictionary new];
-        _specInstancesBySpecClass = [NSMutableDictionary new];
+        _entitySpecsByEntitySpecClass = [NSMutableDictionary new];
     }
     return self;
 }
@@ -72,23 +79,45 @@
                            forKey:(id<NSCopying>)component.class];
 }
 
+- (NSArray*)entitySpecClasses
+{
+    return _entitySpecsByEntitySpecClass.allKeys;
+}
+
 - (EntitySpec*)entitySpecForClass:(Class)entitySpec
 {
-    return [_specInstancesBySpecClass objectForKey:entitySpec];
+    return [_entitySpecsByEntitySpecClass objectForKey:entitySpec];
 }
 
 - (void)addEntitySpec:(EntitySpec*)entitySpec
 {
-    [_specInstancesBySpecClass setObject:entitySpec
-                                  forKey:(id<NSCopying>)entitySpec.class];
+    [_entitySpecsByEntitySpecClass setObject:entitySpec
+                                      forKey:(id<NSCopying>)entitySpec.class];
 }
 
 - (void)injectIvarsIntoAllSpecs
 {
-    for (EntitySpec* spec in _specInstancesBySpecClass.allValues)
+    for (EntitySpec* spec in _entitySpecsByEntitySpecClass.allValues)
     {
         [spec injectFromEntity:self];
     }
+}
+
+- (void)teardown
+{
+    for (EntitySpec* entitySpec in _entitySpecsByEntitySpecClass.allValues)
+    {
+        [entitySpec teardown];
+    }
+    [_entitySpecsByEntitySpecClass removeAllObjects];
+    self.entitySpecsByEntitySpecClass = nil;
+    
+    for (Component* component in _componentsByClass.allValues)
+    {
+        [component teardown];
+    }
+    [_componentsByClass removeAllObjects];
+    self.componentsByClass = nil;
 }
 
 @end

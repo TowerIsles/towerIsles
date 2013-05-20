@@ -52,6 +52,7 @@
 		67E04D7A17460C4500B3FCFC /* TestComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7917460C4500B3FCFC /* TestComponents.m */; };
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
 		67E04D8A174746FF00B3FCFC /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E04D89174746FE00B3FCFC /* bundle */; };
+		67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D8D1749E82A00B3FCFC /* TestingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,8 @@
 		67E04D7B17460C9E00B3FCFC /* EntitySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySpec.h; sourceTree = "<group>"; };
 		67E04D7C17460C9E00B3FCFC /* EntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySpec.m; sourceTree = "<group>"; };
 		67E04D89174746FE00B3FCFC /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
+		67E04D8C1749E82A00B3FCFC /* TestingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingManager.h; path = game/code/managers/testing/TestingManager.h; sourceTree = SOURCE_ROOT; };
+		67E04D8D1749E82A00B3FCFC /* TestingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestingManager.m; path = game/code/managers/testing/TestingManager.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,7 @@
 		67CCED201743EBA700AE8940 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				67E04D8B1749E7F100B3FCFC /* Testing */,
 				67CCED211743EBA700AE8940 /* Loading */,
 				67CCED241743EBA700AE8940 /* Menu */,
 				67CCED271743EBA700AE8940 /* Offline */,
@@ -529,6 +533,15 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		67E04D8B1749E7F100B3FCFC /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				67E04D8C1749E82A00B3FCFC /* TestingManager.h */,
+				67E04D8D1749E82A00B3FCFC /* TestingManager.m */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -632,6 +645,7 @@
 				67E04D7717460C2700B3FCFC /* TestSpec.m in Sources */,
 				67E04D7A17460C4500B3FCFC /* TestComponents.m in Sources */,
 				67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */,
+				67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

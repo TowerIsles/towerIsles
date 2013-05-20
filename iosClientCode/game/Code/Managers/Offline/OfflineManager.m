@@ -12,12 +12,6 @@
 
 @implementation OfflineManager
 
-- (void)dealloc
-{
-	[OfflineManager releaseRetainedPropertiesOfObject:self];
-	[super dealloc];
-}
-
 + (OfflineManager*)sharedInstance
 {
     return (OfflineManager*)[[GameAppDelegate sharedApplicationDelegate].director managerForClass:OfflineManager.class];

@@ -3,6 +3,7 @@
 #import "EntityConfig.h"
 #import "EntitySpec.h"
 #import "ResourceManager.h"
+#import "AppDirector.h"
 
 @interface EntityManager ()
 {
@@ -23,18 +24,14 @@
 
 @implementation EntityManager
 
-- (void)dealloc
-{
-	[EntityManager releaseRetainedPropertiesOfObject:self];
-	[super dealloc];
-}
-
 - (id)init
 {
     if (self = [super init])
     {
+        _entitiesToRemove = [NSMutableArray new];
         _entitiesByIdentifier = [NSMutableDictionary new];
         _entityConfigsByIdentifier = [NSMutableDictionary new];
+        _entitySpecsByEntitySpecClass = [NSMutableDictionary new];
     }
     return self;
 }
@@ -43,10 +40,27 @@
 {
     [self internal_setupSpecCaches];
     
-    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
+   // [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
+}
 
-//    EntitySpec* entity = [self createEntityFromEntityConfigId:@"entityConfig_1"];
-//    entity = entity;
+- (void)endOfFrame
+{
+    for (Entity* entity in _entitiesToRemove)
+    {
+        for (Class specClass in entity.entitySpecClasses)
+        {
+            NSMutableArray* entitySpecs = [_entitySpecsByEntitySpecClass objectForKey:specClass];
+
+            CheckTrue([entitySpecs containsObject:[entity entitySpecForClass:specClass]]);
+            
+            [entitySpecs removeObject:[entity entitySpecForClass:specClass]];
+        }
+        
+        [entity teardown];
+        [_entitiesByIdentifier removeObjectForKey:entity.entityIdentifier];
+    }    
+    
+    [_entitiesToRemove removeAllObjects];
 }
 
 // Entity Config
@@ -70,7 +84,7 @@
 }
 
 // Entity
-- (EntitySpec*)createEntityFromEntityConfigId:(NSString*)entityConfigId
+- (EntitySpec*)createEntitySpecFromEntityConfigId:(NSString*)entityConfigId
 {
     EntityConfigIdentifier* entityConfigIdentifier = [EntityConfigIdentifier objectWithStringIdentifier:entityConfigId];
     
@@ -97,7 +111,22 @@
     for (Class specClass in conformingEntitySpecClasses)
     {
         EntitySpec* conformingEntitySpec = [specClass object];
+        
+        [self.director injectManagersIntoIVars:conformingEntitySpec];
+        
         [entity addEntitySpec:conformingEntitySpec];
+        
+        NSMutableArray* entitySpecs = [_entitySpecsByEntitySpecClass objectForKey:specClass];
+        
+        if (entitySpecs == nil)
+        {
+            entitySpecs = [NSMutableArray object];
+            
+            [_entitySpecsByEntitySpecClass setObject:entitySpecs
+                                              forKey:(id<NSCopying>)specClass];
+        }
+        
+        [entitySpecs addObject:conformingEntitySpec];
     }
     
     [entity injectIvarsIntoAllSpecs];
@@ -105,9 +134,17 @@
     return [entity entitySpecForClass:EntitySpec.class];
 }
 
-- (void)queueEntityForRemoval:(EntitySpec*)entityToRemove
+- (void)queueEntityForRemoval:(Entity*)entityToRemove
 {
-    //[_entitiesToRemove addObject:entityToRemove.entity];
+    [_entitiesToRemove addObject:entityToRemove];
+}
+
+- (void)queueAllEntitiesForRemoval
+{
+    for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:EntitySpec.class])
+    {
+        [entitySpec queueDestruction];
+    }
 }
 
 - (EntityIdentifier*)internal_nextEntityIdentifier
@@ -162,8 +199,6 @@
         id component = [componentClass objectFromSerializedRepresentation:componentData];
         
         [entity addComponent:component];
-        
-        
     }
     
     return entity;
@@ -180,7 +215,7 @@
     self.conformingEntitySpecClassesByEntityConfigIdentifier = [NSMutableDictionary object];
 }
 
-- (NSArray*)specInstancesConformingToSpec:(Class)entitySpecClass
+- (NSArray*)entitySpecInstancesConformingToSpec:(Class)entitySpecClass
 {
     return [_entitySpecsByEntitySpecClass objectForKey:entitySpecClass];
 }

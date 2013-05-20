@@ -1,13 +1,16 @@
 #import "Manager.h"
 
 @class EntitySpec;
+@class Entity;
 
 @interface EntityManager : Manager
 
-- (EntitySpec*)createEntityFromEntityConfigId:(NSString*)entityConfigId;
+- (EntitySpec*)createEntitySpecFromEntityConfigId:(NSString*)entityConfigId;
 
-- (void)queueEntityForRemoval:(EntitySpec*)entityToRemove;
+- (void)queueEntityForRemoval:(Entity*)entityToRemove;
 
-- (NSArray*)specInstancesConformingToSpec:(Class)entitySpecClass;
+- (void)queueAllEntitiesForRemoval;
+
+- (NSArray*)entitySpecInstancesConformingToSpec:(Class)entitySpecClass;
 
 @end

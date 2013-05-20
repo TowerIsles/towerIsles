@@ -8,13 +8,21 @@
 
 - (void)injectFromEntity:(Entity*)entity;
 
+- (BOOL)isSpecOfSpec:(EntitySpec*)entitySpec;
+
+- (BOOL)isValid;
+
+- (BOOL)isQueuedForDestruction;
+
+- (void)queueDestruction;
+
 - (id)transformedSpec:(Class)entitySpecClass;
 
 - (id)possiblyTransformedSpec:(Class)entitySpecClass;
 
+- (void)teardown;
+
 @end
-
-
 
 #define EntitySpecGettersImplementation(SpecClass)                      \
 @implementation EntitySpec (SpecClass)                                  \

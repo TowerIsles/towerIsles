@@ -15,12 +15,6 @@
 
 @implementation LoadingManager
 
-- (void)dealloc
-{
-	[LoadingManager releaseRetainedPropertiesOfObject:self];
-	[super dealloc];
-}
-
 - (void)load
 {
 #if DEBUG
@@ -35,15 +29,6 @@
     {
         [menuManager showLoginMenu];
     }
-}
-
-- (void)update
-{
-    EntitySpec* entity = [entityManager createEntityFromEntityConfigId:@"entityConfig_1"];
-    TestSpec* testSpec = entity.transformedToTestSpec;
-    TestSpecTwo* testSpecTwo = testSpec.transformedToTestSpecTwo;
-    testSpecTwo = testSpecTwo;
-    //CheckTrue(testSpecTwo != nil);
 }
 
 @end

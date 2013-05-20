@@ -16,12 +16,6 @@
 
 @implementation PlayerManager
 
-- (void)dealloc
-{
-	[PlayerManager releaseRetainedPropertiesOfObject:self];
-	[super dealloc];
-}
-
 - (void)clearUserDefaults
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserDefaults_lastLoginId];
