@@ -9,8 +9,6 @@
 
 - (void)queueEntityForRemoval:(Entity*)entityToRemove;
 
-- (void)queueAllEntitiesForRemoval;
-
 - (NSArray*)entitySpecInstancesConformingToSpec:(Class)entitySpecClass;
 
 @end

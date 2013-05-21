@@ -1,0 +1,175 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf370
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red194\green97\blue86;\red196\green26\blue22;\red214\green167\blue123;
+\red55\green60\blue251;\red158\green139\blue207;\red66\green115\blue122;\red109\green45\blue182;\red93\green173\blue184;
+\red166\green132\blue240;\red68\green74\blue72;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs22 \cf2 \CocoaLigature0 #import \cf3 "AppDirector.h"\cf2 \
+#import \cf3 "Manager.h"\cf2 \
+#import \cf3 "Base.h"\cf2 \
+#import \cf3 "ViewManager.h"\cf2 \
+#import \cf3 "GameAppDelegate.h"\cf2 \
+\cf4 \
+\cf5 int\cf4  reloadCcount = \cf6 0\cf4 ;\
+\
+\cf5 @interface\cf4  \cf7 AppDirector\cf4  ()\
+\{\
+    \cf8 CADisplayLink\cf4 * displayLink;\
+\}\
+\
+\cf5 @property\cf4  (\cf5 nonatomic\cf4 , \cf5 retain\cf4 ) \cf8 NSDictionary\cf4 * managersByClass;\
+\cf5 @property\cf4  (\cf5 nonatomic\cf4 , \cf5 retain\cf4 ) \cf7 ViewManager\cf4 * viewManager;\
+\cf5 @property\cf4  (\cf5 nonatomic\cf4 , \cf5 assign\cf4 ) \cf5 BOOL\cf4  firstFrame;\
+\cf5 @property\cf4  (\cf5 nonatomic\cf4 , \cf5 assign\cf4 ) \cf5 BOOL\cf4  shouldReload;\
+\
+\cf5 @end\cf4 \
+\
+\
+\cf5 @implementation\cf4  AppDirector\
+\
+- (\cf5 void\cf4 )dealloc\
+\{\
+    [\cf7 AppDirector\cf4  \cf9 releaseRetainedPropertiesOfObject\cf4 :\cf5 self\cf4 ];\
+    [\cf5 super\cf4  \cf10 dealloc\cf4 ];\
+\}\
+\
+- (\cf5 void\cf4 )configure\
+\{\
+    [\cf5 self\cf4  \cf9 internal_setupManagers\cf4 ];\
+    \
+    [\cf5 self\cf4  \cf9 injectManagersIntoIVars\cf4 :\cf5 self\cf4 ];\
+\}\
+\
+- (\cf5 void\cf4 )stopRunning\
+\{\
+    \cf5 if\cf4  (\cf7 displayLink\cf4 )\
+    \{\
+        [\cf7 displayLink\cf4  \cf10 invalidate\cf4 ];\
+        \cf7 displayLink\cf4  = \cf5 nil\cf4 ;\
+    \}\
+\}\
+\
+- (\cf5 void\cf4 )beginRunning\
+\{\
+    \cf5 self\cf4 .\cf7 firstFrame\cf4  = \cf5 YES\cf4 ;\
+    \
+    \
+    [\cf5 self\cf4  \cf9 internal_performNextFrame\cf4 ];\
+\
+    \cf5 if\cf4  (\cf7 displayLink\cf4  == \cf5 nil\cf4 )\
+    \{\
+        \cf7 displayLink\cf4  = [[\cf8 UIScreen\cf4  \cf10 mainScreen\cf4 ] \cf10 displayLinkWithTarget\cf4 :\cf5 self\cf4  \cf10 selector\cf4 :\cf5 @selector\cf4 (internal_performNextFrame)];\
+        [\cf7 displayLink\cf4  \cf10 setFrameInterval\cf4 :\cf6 2\cf4 ]; \cf11 // 1 - 60fps, 2 - 30fps, etc.\cf4 \
+        [\cf7 displayLink\cf4  \cf10 addToRunLoop\cf4 :[\cf8 NSRunLoop\cf4  \cf10 currentRunLoop\cf4 ] \cf10 forMode\cf4 :\cf8 NSDefaultRunLoopMode\cf4 ];\
+    \}\
+\}\
+\
+- (\cf5 void\cf4 )internal_performNextFrame\
+\{\
+    \cf5 if\cf4  (\cf7 _shouldReload\cf4 )\
+    \{\
+        \cf5 for\cf4  (\cf7 Manager\cf4 * manager \cf5 in\cf4  \cf7 _managersByClass\cf4 .\cf10 allValues\cf4 )\
+        \{\
+            [manager \cf9 unload\cf4 ];\
+        \}\
+        \cf7 reloadCcount\cf4 ++;\
+        \cf10 NSLog\cf4 (\cf3 @"reloadCcount = %d"\cf4 , \cf7 reloadCcount\cf4 );\
+        [\cf5 self\cf4  \cf9 internal_removeManagers\cf4 ];\
+        [\cf5 self\cf4  \cf9 internal_setupManagers\cf4 ];\
+        [[\cf7 GameAppDelegate\cf4  \cf9 sharedApplicationDelegate\cf4 ] \cf9 reload\cf4 ];\
+    \}\
+    \
+    \cf5 if\cf4  (\cf7 _shouldReload\cf4  || \cf7 _firstFrame\cf4 )\
+    \{\
+        \cf5 for\cf4  (\cf7 Manager\cf4 * manager \cf5 in\cf4  \cf7 _managersByClass\cf4 .\cf10 allValues\cf4 )\
+        \{\
+            [manager \cf9 load\cf4 ];\
+        \}\
+        \
+        \cf5 self\cf4 .\cf7 shouldReload\cf4  = \cf5 NO\cf4 ;\
+        \cf5 self\cf4 .\cf7 firstFrame\cf4  = \cf5 NO\cf4 ;\
+    \}\
+    \
+    \cf5 for\cf4  (\cf7 Manager\cf4 * manager \cf5 in\cf4  \cf7 _managersByClass\cf4 .\cf10 allValues\cf4 )\
+    \{\
+        [manager \cf9 update\cf4 ];\
+    \}\
+    \cf5 for\cf4  (\cf7 Manager\cf4 * manager \cf5 in\cf4  \cf7 _managersByClass\cf4 .\cf10 allValues\cf4 )\
+    \{\
+        [manager \cf9 endOfFrame\cf4 ];\
+    \}\
+\}\
+\
+- (\cf5 void\cf4 )reload\
+\{\
+    \cf7 _shouldReload\cf4  = \cf5 YES\cf4 ;\
+\}\
+\
+- (\cf5 void\cf4 )internal_setupManagers\
+\{\
+    \cf8 NSArray\cf4 * managerClasses = [\cf7 Util\cf4  \cf9 allClassesWithSuperClass\cf4 :\cf10 Manager\cf4 .\cf10 class\cf4 ];\
+    \
+    \cf8 NSMutableDictionary\cf4 * managersByClass = [\cf8 NSMutableDictionary\cf4  \cf9 object\cf4 ];\
+    \
+    \cf5 for\cf4  (\cf8 Class\cf4  managerClass \cf5 in\cf4  managerClasses)\
+    \{\
+        \cf7 Manager\cf4 * manager = [managerClass \cf9 object\cf4 ];\
+        \
+        manager.\cf7 director\cf4  = \cf5 self\cf4 ;\
+        \
+        [managersByClass \cf10 setObject\cf4 :manager\
+                            \cf10 forKey\cf4 :(\cf5 id\cf4 <\cf8 NSCopying\cf4 >)[manager \cf10 class\cf4 ]];\
+    \}\
+    \
+    \cf5 self\cf4 .\cf7 managersByClass\cf4  = managersByClass;\
+    \
+	\cf5 for\cf4  (\cf7 Manager\cf4 * manager \cf5 in\cf4  \cf7 _managersByClass\cf4 .\cf10 allValues\cf4 )\
+    \{\
+		[\cf5 self\cf4  \cf9 injectManagersIntoIVars\cf4 :manager];\
+    \}\
+\}\
+\
+- (\cf5 void\cf4 )internal_removeManagers\
+\{\
+    \cf5 self\cf4 .\cf7 managersByClass\cf4  = \cf5 nil\cf4 ;\
+\}\
+\
+- (\cf5 void\cf4 )injectManagersIntoIVars:(\cf5 id\cf4 )injectee\
+\{\
+    \cf8 Class\cf4  injecteeClass = [injectee \cf10 class\cf4 ];\
+    \cf5 while\cf4  (injecteeClass &&\
+           injecteeClass != [\cf8 NSObject\cf4  \cf10 class\cf4 ])\
+    \{\
+        \cf5 unsigned\cf4  \cf5 int\cf4  ivarListCount = \cf6 0\cf4 ;\
+        \cf8 Ivar\cf4 * ivarList = \cf10 class_copyIvarList\cf4 (injecteeClass, &ivarListCount);\
+		\
+        \cf5 for\cf4  (\cf5 int\cf4  i = \cf6 0\cf4 ; i < ivarListCount; i++)\
+        \{\
+			\cf8 Class\cf4  ivarClass = [\cf8 NSObject\cf4  \cf9 classForIvar\cf4 :ivarList[i]];\
+            \
+			\cf5 if\cf4  (ivarClass != \cf5 nil\cf4 )\
+			\{\
+				\cf5 id\cf4  registeredManager = [\cf7 _managersByClass\cf4  \cf10 objectForKey\cf4 :ivarClass];\
+				\
+				\cf5 if\cf4  (registeredManager != \cf5 nil\cf4 )\
+				\{\
+					\cf10 object_setIvar\cf4 (injectee, ivarList[i], registeredManager);\
+				\}\
+			\}\
+        \}\
+        \
+        \cf10 free\cf4 (ivarList);\
+        injecteeClass = [injecteeClass \cf10 superclass\cf4 ];\
+    \}\
+\}\
+\
+- (\cf5 id\cf4 )managerForClass:(\cf8 Class\cf4 )managerClass\
+\{\
+    \cf5 return\cf4  \cf7 _managersByClass\cf4 [managerClass];\
+\}\
+\
+\cf5 @end\cf4 \
+}

@@ -28,39 +28,51 @@
 {
     if (self = [super init])
     {
-        _entitiesToRemove = [NSMutableArray new];
-        _entitiesByIdentifier = [NSMutableDictionary new];
-        _entityConfigsByIdentifier = [NSMutableDictionary new];
-        _entitySpecsByEntitySpecClass = [NSMutableDictionary new];
+        [self internal_initContainers];
     }
     return self;
 }
 
+- (void)dealloc
+{
+    [super dealloc];
+}
+
 - (void)load
 {
+    [self internal_initContainers];
+    
     [self internal_setupSpecCaches];
     
-   // [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
+    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
+}
+
+- (void)unload
+{
+    for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:EntitySpec.class])
+    {
+        [entitySpec queueDestruction];
+    }
+    [self internal_removeQueuedEntities];
+    
+    self.entitiesByIdentifier = nil;
+    self.entityConfigsByIdentifier = nil;
+    self.allSpecClasses = nil;
+    self.conformingEntitySpecClassesByEntityConfigIdentifier = nil;
+    self.entitySpecsByEntitySpecClass = nil;
+}
+
+- (void)internal_initContainers
+{
+    if (_entitiesToRemove == nil) self.entitiesToRemove = [NSMutableArray object];
+    if (_entitiesByIdentifier == nil) self.entitiesByIdentifier = [NSMutableDictionary object];
+    if (_entityConfigsByIdentifier == nil) self.entityConfigsByIdentifier = [NSMutableDictionary object];
+    if (_entitySpecsByEntitySpecClass == nil) self.entitySpecsByEntitySpecClass = [NSMutableDictionary object];
 }
 
 - (void)endOfFrame
 {
-    for (Entity* entity in _entitiesToRemove)
-    {
-        for (Class specClass in entity.entitySpecClasses)
-        {
-            NSMutableArray* entitySpecs = [_entitySpecsByEntitySpecClass objectForKey:specClass];
-
-            CheckTrue([entitySpecs containsObject:[entity entitySpecForClass:specClass]]);
-            
-            [entitySpecs removeObject:[entity entitySpecForClass:specClass]];
-        }
-        
-        [entity teardown];
-        [_entitiesByIdentifier removeObjectForKey:entity.entityIdentifier];
-    }    
-    
-    [_entitiesToRemove removeAllObjects];
+    [self internal_removeQueuedEntities];
 }
 
 // Entity Config
@@ -84,6 +96,26 @@
 }
 
 // Entity
+- (void)internal_removeQueuedEntities
+{
+    for (Entity* entity in _entitiesToRemove)
+    {
+        for (Class specClass in entity.entitySpecClasses)
+        {
+            NSMutableArray* entitySpecs = [_entitySpecsByEntitySpecClass objectForKey:specClass];
+            
+            CheckTrue([entitySpecs containsObject:[entity entitySpecForClass:specClass]]);
+            
+            [entitySpecs removeObject:[entity entitySpecForClass:specClass]];
+        }
+        
+        [entity teardown];
+        [_entitiesByIdentifier removeObjectForKey:entity.entityIdentifier];
+    }
+    
+    [_entitiesToRemove removeAllObjects];
+}
+
 - (EntitySpec*)createEntitySpecFromEntityConfigId:(NSString*)entityConfigId
 {
     EntityConfigIdentifier* entityConfigIdentifier = [EntityConfigIdentifier objectWithStringIdentifier:entityConfigId];
@@ -137,14 +169,6 @@
 - (void)queueEntityForRemoval:(Entity*)entityToRemove
 {
     [_entitiesToRemove addObject:entityToRemove];
-}
-
-- (void)queueAllEntitiesForRemoval
-{
-    for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:EntitySpec.class])
-    {
-        [entitySpec queueDestruction];
-    }
 }
 
 - (EntityIdentifier*)internal_nextEntityIdentifier
@@ -210,8 +234,7 @@
     CheckTrue(_allSpecClasses == nil);
     CheckTrue(_conformingEntitySpecClassesByEntityConfigIdentifier == nil);
     
-    self.allSpecClasses = [Util allClassesWithSuperClass:EntitySpec.class];
-    self.allSpecClasses = [self.allSpecClasses arrayByAddingObject:EntitySpec.class];
+    self.allSpecClasses = [[Util allClassesWithSuperClass:EntitySpec.class] arrayByAddingObject:EntitySpec.class];
     self.conformingEntitySpecClassesByEntityConfigIdentifier = [NSMutableDictionary object];
 }
 

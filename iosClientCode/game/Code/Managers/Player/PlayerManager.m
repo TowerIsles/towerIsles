@@ -16,6 +16,16 @@
 
 @implementation PlayerManager
 
+- (void)load
+{
+    
+}
+
+- (void)unload
+{
+    self.activePlayerData = nil;
+}
+
 - (void)clearUserDefaults
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserDefaults_lastLoginId];

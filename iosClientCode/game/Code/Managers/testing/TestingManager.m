@@ -29,12 +29,9 @@
 //        TestSpec* testSpec = entity.transformedToTestSpec;
 //        TestSpecTwo* testSpecTwo = testSpec.transformedToTestSpecTwo;
 //        testSpecTwo = testSpecTwo;
-//        //[entity queueDestruction];
+//        [entity queueDestruction];
 //    }
-//    
-//    [entityManager queueAllEntitiesForRemoval];
-
-    [self.director reload];
+ //   [self.director reload];
 }
 
 @end

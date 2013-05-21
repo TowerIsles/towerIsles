@@ -2,6 +2,7 @@
 #import "GameAppDelegate.h"
 #import "LoginResponse.h"
 #import "PlayerService.h"
+
 @interface OfflineManager ()
 {
 	
@@ -11,6 +12,16 @@
 
 
 @implementation OfflineManager
+
+- (void)load
+{
+    
+}
+
+- (void)unload
+{
+    
+}
 
 + (OfflineManager*)sharedInstance
 {
