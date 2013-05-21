@@ -5,8 +5,6 @@
 
 @interface GameAppDelegate : UIResponder <UIApplicationDelegate>
 
-- (void)reload;
-
 + (GameAppDelegate*)sharedApplicationDelegate;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

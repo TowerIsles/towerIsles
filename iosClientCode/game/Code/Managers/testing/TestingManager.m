@@ -13,12 +13,20 @@
 
 - (void)load
 {
-    
+//    performBlockAfterDelay(2, ^{
+//        [self.director reload];
+//    });
 }
 
-- (void)unload
+- (void)reload
 {
-    
+//    performBlockAfterDelay(5, ^{
+//        NSLog(@"function by...");
+//    });
+//    
+//    performBlockAfterDelay(2, ^{
+//        [self.director reload];
+//    });
 }
 
 - (void)update
@@ -32,6 +40,7 @@
 //        [entity queueDestruction];
 //    }
  //   [self.director reload];
+
 }
 
 @end

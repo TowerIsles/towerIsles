@@ -28,7 +28,12 @@
 {
     if (self = [super init])
     {
-        [self internal_initContainers];
+        _entitiesToRemove = [NSMutableArray new];
+        _entitiesByIdentifier = [NSMutableDictionary new];
+        _entityConfigsByIdentifier = [NSMutableDictionary new];
+        _entitySpecsByEntitySpecClass = [NSMutableDictionary new];
+        _allSpecClasses = [[[Util allClassesWithSuperClass:EntitySpec.class] arrayByAddingObject:EntitySpec.class] retain];
+        _conformingEntitySpecClassesByEntityConfigIdentifier = [NSMutableDictionary new];
     }
     return self;
 }
@@ -40,34 +45,26 @@
 
 - (void)load
 {
-    [self internal_initContainers];
-    
-    [self internal_setupSpecCaches];
-    
     [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
 }
 
-- (void)unload
+- (void)reload
 {
     for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:EntitySpec.class])
     {
         [entitySpec queueDestruction];
     }
     [self internal_removeQueuedEntities];
-    
-    self.entitiesByIdentifier = nil;
-    self.entityConfigsByIdentifier = nil;
-    self.allSpecClasses = nil;
-    self.conformingEntitySpecClassesByEntityConfigIdentifier = nil;
-    self.entitySpecsByEntitySpecClass = nil;
-}
-
-- (void)internal_initContainers
-{
-    if (_entitiesToRemove == nil) self.entitiesToRemove = [NSMutableArray object];
-    if (_entitiesByIdentifier == nil) self.entitiesByIdentifier = [NSMutableDictionary object];
-    if (_entityConfigsByIdentifier == nil) self.entityConfigsByIdentifier = [NSMutableDictionary object];
-    if (_entitySpecsByEntitySpecClass == nil) self.entitySpecsByEntitySpecClass = [NSMutableDictionary object];
+  
+#if DEBUG
+    CheckTrue(_entitiesToRemove.count == 0);
+    CheckTrue(_entitiesByIdentifier.count == 0);
+    for (NSMutableArray* entitySpecs in _entitySpecsByEntitySpecClass.allValues)
+    {
+        CheckTrue(entitySpecs.count == 0);
+    }
+    CheckTrue(_allSpecClasses.count > 0);
+#endif
 }
 
 - (void)endOfFrame
@@ -229,15 +226,6 @@
 }
 
 // Entity Spec
-- (void)internal_setupSpecCaches
-{
-    CheckTrue(_allSpecClasses == nil);
-    CheckTrue(_conformingEntitySpecClassesByEntityConfigIdentifier == nil);
-    
-    self.allSpecClasses = [[Util allClassesWithSuperClass:EntitySpec.class] arrayByAddingObject:EntitySpec.class];
-    self.conformingEntitySpecClassesByEntityConfigIdentifier = [NSMutableDictionary object];
-}
-
 - (NSArray*)entitySpecInstancesConformingToSpec:(Class)entitySpecClass
 {
     return [_entitySpecsByEntitySpecClass objectForKey:entitySpecClass];

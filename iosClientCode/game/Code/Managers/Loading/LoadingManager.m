@@ -31,4 +31,11 @@
     }
 }
 
+- (void)reload
+{
+    performBlockAfterDelay(.5f, ^{
+    [menuManager showLoginMenu];
+    });
+}
+
 @end

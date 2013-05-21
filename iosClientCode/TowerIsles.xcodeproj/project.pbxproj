@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6715454D1744ABC4000E767B /* TestMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6715454B1744ABC4000E767B /* TestMainMenu.m */; };
 		6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6715454C1744ABC4000E767B /* TestMainMenu.xib */; };
+		67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */; };
 		67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE51743EAC400AE8940 /* UIKit.framework */; };
 		67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE71743EAC400AE8940 /* Foundation.framework */; };
 		67CCECEA1743EAC400AE8940 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE91743EAC400AE8940 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		6715454A1744ABC4000E767B /* TestMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMainMenu.h; path = TestMainMenu/TestMainMenu.h; sourceTree = "<group>"; };
 		6715454B1744ABC4000E767B /* TestMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMainMenu.m; path = TestMainMenu/TestMainMenu.m; sourceTree = "<group>"; };
 		6715454C1744ABC4000E767B /* TestMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestMainMenu.xib; path = TestMainMenu/TestMainMenu.xib; sourceTree = "<group>"; };
+		67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformBlockAfterDelay.h; sourceTree = "<group>"; };
+		67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformBlockAfterDelay.m; sourceTree = "<group>"; };
 		67CCECE21743EAC400AE8940 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CCECE51743EAC400AE8940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67CCECE71743EAC400AE8940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -396,6 +399,8 @@
 				67CCED511743EBB400AE8940 /* NSObject+Serialization.m */,
 				67CCED521743EBB400AE8940 /* Utilities.h */,
 				67CCED531743EBB400AE8940 /* Utilities.m */,
+				67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */,
+				67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				67E04D7A17460C4500B3FCFC /* TestComponents.m in Sources */,
 				67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */,
 				67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */,
+				67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

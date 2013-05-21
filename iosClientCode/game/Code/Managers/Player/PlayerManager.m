@@ -21,7 +21,7 @@
     
 }
 
-- (void)unload
+- (void)reload
 {
     self.activePlayerData = nil;
 }

@@ -20,19 +20,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "game/Code/Managers/Menu/MenuManager.m"
-         timestampString = "390728565.939719"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
-         landmarkName = "-showLoginMenu"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "submodules/core/base/NSObject+Serialization.m"
          timestampString = "390495812.510494"
          startingColumnNumber = "9223372036854775807"
@@ -47,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "game/code/managers/testing/TestingManager.m"
-         timestampString = "390729648.748433"
+         timestampString = "390815402.552085"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "46"
+         endingLineNumber = "46"
          landmarkName = "@implementation TestingManager"
          landmarkType = "3">
       </FileBreakpoint>

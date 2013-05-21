@@ -16,15 +16,6 @@
     [super dealloc];
 }
 
-- (void)reload
-{
-    viewManager = nil;
-    
-    [_director injectManagersIntoIVars:self];
-    
-    [self internal_setupViewLayers];
-}
-
 + (GameAppDelegate*)sharedApplicationDelegate
 {
     return (GameAppDelegate*)[[UIApplication sharedApplication] delegate];
