@@ -5,6 +5,8 @@
 #import "EntityConfig.h"
 #import "EntitySpec.h"
 #import "EntityManager.h"
+#import "FrameTimeManager.h"
+#import "ServerTimeManager.h"
 
 
 

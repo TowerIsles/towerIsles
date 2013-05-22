@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "game/code/managers/testing/TestingManager.m"
-         timestampString = "390815402.552085"
+         timestampString = "390933290.241578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "46"
-         endingLineNumber = "46"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
          landmarkName = "@implementation TestingManager"
          landmarkType = "3">
       </FileBreakpoint>

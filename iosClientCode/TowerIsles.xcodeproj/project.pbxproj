@@ -59,6 +59,7 @@
 		67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */; };
 		67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24F0174CB5F0008EE9A2 /* FPSCounter.m */; };
 		67FF24F3174CB5F0008EE9A2 /* FPSCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FF24F1174CB5F0008EE9A2 /* FPSCounter.xib */; };
+		67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24F5174CBD92008EE9A2 /* UpdateBlockAtInterval.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,6 +160,8 @@
 		67FF24EF174CB5F0008EE9A2 /* FPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPSCounter.h; path = UI/FPSCounter/FPSCounter.h; sourceTree = "<group>"; };
 		67FF24F0174CB5F0008EE9A2 /* FPSCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPSCounter.m; path = UI/FPSCounter/FPSCounter.m; sourceTree = "<group>"; };
 		67FF24F1174CB5F0008EE9A2 /* FPSCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FPSCounter.xib; path = UI/FPSCounter/FPSCounter.xib; sourceTree = "<group>"; };
+		67FF24F4174CBD92008EE9A2 /* UpdateBlockAtInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateBlockAtInterval.h; path = objects/UpdateBlockAtInterval.h; sourceTree = "<group>"; };
+		67FF24F5174CBD92008EE9A2 /* UpdateBlockAtInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateBlockAtInterval.m; path = objects/UpdateBlockAtInterval.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +539,8 @@
 				67E04D711745429100B3FCFC /* Identifier.m */,
 				67E04D6D1745427800B3FCFC /* DisplayInformation.h */,
 				67E04D6E1745427800B3FCFC /* DisplayInformation.m */,
+				67FF24F4174CBD92008EE9A2 /* UpdateBlockAtInterval.h */,
+				67FF24F5174CBD92008EE9A2 /* UpdateBlockAtInterval.m */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -694,6 +699,7 @@
 				67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */,
 				67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */,
 				67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */,
+				67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

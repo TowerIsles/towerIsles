@@ -34,7 +34,7 @@
     }];
 
     [viewManager showManagedViewOfClassOnLayer:FPSCounter.class
-                                     layerName:kDebugViewLayer
+                                     layerName:@"debug"
                                     setupBlock:^(FPSCounter* fpsCounter) {
                                         
                                     }];

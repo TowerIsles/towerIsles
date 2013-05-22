@@ -1,4 +1,4 @@
-#import "Game.h"
+#import "Core.h"
 
 @interface FPSCounter : ManagedView
 

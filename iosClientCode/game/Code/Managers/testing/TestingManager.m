@@ -4,6 +4,8 @@
 @interface TestingManager ()
 {
     EntityManager* entityManager;
+    FrameTimeManager* frameTimeManager;
+    ServerTimeManager* serverTimeManager;
 }
 
 @end
@@ -16,6 +18,20 @@
 //    performBlockAfterDelay(2, ^{
 //        [self.director reload];
 //    });
+    [self.director registerUpdateBlockAtFPS:30
+                                updateBlock:^{
+                                    [self update];//NSLog(@"30 HZ");
+                                }];
+//    
+//    [self.director registerUpdateBlockAtFPS:5
+//                                updateBlock:^{
+//        NSLog(@"5 HZ");
+//    }];
+//    
+//    [self.director registerUpdateBlockAtFPS:1
+//                                updateBlock:^{
+//                                    NSLog(@"1 HZ");
+//                                }];
 }
 
 - (void)reload
@@ -31,6 +47,7 @@
 
 - (void)update
 {
+    NSLog(@"%lld", serverTimeManager.getCurrentTimeInMs);
 //    for (int i = 0; i < 1000; ++i)
 //    {
 //        EntitySpec* entity = [entityManager createEntitySpecFromEntityConfigId:@"entityConfig_1"];
