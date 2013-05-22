@@ -45,6 +45,10 @@
 
 - (void)load
 {
+    [self.director registerInterUpdateBlock:^{
+        [self internal_removeQueuedEntities]; 
+    }];
+    
     [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
 }
 
@@ -66,12 +70,6 @@
     CheckTrue(_allSpecClasses.count > 0);
 #endif
 }
-
-- (void)endOfFrame
-{
-    [self internal_removeQueuedEntities];
-}
-
 // Entity Config
 - (void)loadEntityConfigsFromFile:(NSString*)filename
 {

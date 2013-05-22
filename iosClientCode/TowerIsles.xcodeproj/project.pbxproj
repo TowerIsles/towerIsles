@@ -54,6 +54,11 @@
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
 		67E04D8A174746FF00B3FCFC /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E04D89174746FE00B3FCFC /* bundle */; };
 		67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D8D1749E82A00B3FCFC /* TestingManager.m */; };
+		67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */; };
+		67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */; };
+		67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */; };
+		67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24F0174CB5F0008EE9A2 /* FPSCounter.m */; };
+		67FF24F3174CB5F0008EE9A2 /* FPSCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FF24F1174CB5F0008EE9A2 /* FPSCounter.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +151,14 @@
 		67E04D89174746FE00B3FCFC /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
 		67E04D8C1749E82A00B3FCFC /* TestingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingManager.h; path = game/code/managers/testing/TestingManager.h; sourceTree = SOURCE_ROOT; };
 		67E04D8D1749E82A00B3FCFC /* TestingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestingManager.m; path = game/code/managers/testing/TestingManager.m; sourceTree = SOURCE_ROOT; };
+		67FF24E0174C60CB008EE9A2 /* ServerTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerTimeManager.h; sourceTree = "<group>"; };
+		67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerTimeManager.m; sourceTree = "<group>"; };
+		67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		67FF24EC174CB373008EE9A2 /* FrameTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameTimeManager.h; sourceTree = "<group>"; };
+		67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameTimeManager.m; sourceTree = "<group>"; };
+		67FF24EF174CB5F0008EE9A2 /* FPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FPSCounter.h; path = UI/FPSCounter/FPSCounter.h; sourceTree = "<group>"; };
+		67FF24F0174CB5F0008EE9A2 /* FPSCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FPSCounter.m; path = UI/FPSCounter/FPSCounter.m; sourceTree = "<group>"; };
+		67FF24F1174CB5F0008EE9A2 /* FPSCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FPSCounter.xib; path = UI/FPSCounter/FPSCounter.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */,
 				67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */,
 				67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */,
 				67CCECEA1743EAC400AE8940 /* CoreGraphics.framework in Frameworks */,
@@ -193,6 +207,7 @@
 		67CCECE41743EAC400AE8940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */,
 				67CCECE51743EAC400AE8940 /* UIKit.framework */,
 				67CCECE71743EAC400AE8940 /* Foundation.framework */,
 				67CCECE91743EAC400AE8940 /* CoreGraphics.framework */,
@@ -462,6 +477,7 @@
 		67E04D52174539C000B3FCFC /* gameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				67FF24E5174C81FF008EE9A2 /* UI */,
 				67E04D53174539C000B3FCFC /* component */,
 				67E04D54174539C000B3FCFC /* entity */,
 				67E04D5717453A2B00B3FCFC /* entitySpec */,
@@ -496,6 +512,10 @@
 			children = (
 				67E04D5B17453B0400B3FCFC /* EntityManager.h */,
 				67E04D5C17453B0400B3FCFC /* EntityManager.m */,
+				67FF24E0174C60CB008EE9A2 /* ServerTimeManager.h */,
+				67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */,
+				67FF24EC174CB373008EE9A2 /* FrameTimeManager.h */,
+				67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */,
 			);
 			path = gameEngineManagers;
 			sourceTree = "<group>";
@@ -545,6 +565,24 @@
 				67E04D8D1749E82A00B3FCFC /* TestingManager.m */,
 			);
 			name = Testing;
+			sourceTree = "<group>";
+		};
+		67FF24E5174C81FF008EE9A2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				67FF24E6174C8207008EE9A2 /* FPSCounter */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		67FF24E6174C8207008EE9A2 /* FPSCounter */ = {
+			isa = PBXGroup;
+			children = (
+				67FF24EF174CB5F0008EE9A2 /* FPSCounter.h */,
+				67FF24F0174CB5F0008EE9A2 /* FPSCounter.m */,
+				67FF24F1174CB5F0008EE9A2 /* FPSCounter.xib */,
+			);
+			name = FPSCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,6 +645,7 @@
 				67CCED3D1743EBA700AE8940 /* MainWindow.xib in Resources */,
 				6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */,
 				67E04D8A174746FF00B3FCFC /* bundle in Resources */,
+				67FF24F3174CB5F0008EE9A2 /* FPSCounter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +691,9 @@
 				67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */,
 				67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */,
 				67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */,
+				67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */,
+				67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */,
+				67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
