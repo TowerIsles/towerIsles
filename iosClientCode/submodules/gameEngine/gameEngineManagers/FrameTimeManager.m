@@ -17,6 +17,7 @@
 {
     if (self = [super init])
     {
+        _frameCount = -1;
         _frameTimeInSec = .016f;
         _frameStartTimeInSec = CACurrentMediaTime();
     }
@@ -31,7 +32,7 @@
         self.frameTimeInSec = currentMediaTime - _frameStartTimeInSec;
         self.frameStartTimeInSec = currentMediaTime;
     }];
-    
+
     [viewManager showManagedViewOfClassOnLayer:FPSCounter.class
                                      layerName:kDebugViewLayer
                                     setupBlock:^(FPSCounter* fpsCounter) {

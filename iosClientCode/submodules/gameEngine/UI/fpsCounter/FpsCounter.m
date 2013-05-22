@@ -7,6 +7,7 @@
 }
 
 @property (nonatomic, assign) IBOutlet UILabel* fpsLabel;
+@property (nonatomic, assign) IBOutlet UILabel* frameCountLabel;
 
 @end
 
@@ -24,6 +25,7 @@
     [self performUpdateBlockAtInterval:1.0f
                            updateBlock:^{
                                _fpsLabel.text = Format(@"%.1f", frameTimeManager.currentFPS);
+                               _frameCountLabel.text = Format(@"%d", frameTimeManager.currentFrameNumber);
                            }];
 }
 
