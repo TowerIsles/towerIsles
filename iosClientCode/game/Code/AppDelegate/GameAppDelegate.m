@@ -81,6 +81,8 @@
 
 - (void)internal_setupViewLayers
 {
+    [viewManager setEAGLView:_viewDirector.eaglView];
+    
     [viewManager setDefaultViewLayer:_viewDirector.defaultViewLayer];
     
     [viewManager setViewLayer:_viewDirector.statusViewLayer

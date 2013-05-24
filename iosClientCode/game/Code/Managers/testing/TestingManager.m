@@ -18,11 +18,11 @@
 //    performBlockAfterDelay(2, ^{
 //        [self.director reload];
 //    });
-    [self.director registerUpdateBlockAtFPS:30
-                                updateBlock:^{
-                                    [self update];//NSLog(@"30 HZ");
-                                }];
-//    
+//    [self.director registerUpdateBlockAtFPS:30
+//                                updateBlock:^{
+//                                    [self update];//NSLog(@"30 HZ");
+//                                }];
+//
 //    [self.director registerUpdateBlockAtFPS:5
 //                                updateBlock:^{
 //        NSLog(@"5 HZ");
@@ -47,7 +47,7 @@
 
 - (void)update
 {
-    NSLog(@"%lld", serverTimeManager.getCurrentTimeInMs);
+//    NSLog(@"%lld", serverTimeManager.getCurrentTimeInMs);
 //    for (int i = 0; i < 1000; ++i)
 //    {
 //        EntitySpec* entity = [entityManager createEntitySpecFromEntityConfigId:@"entityConfig_1"];

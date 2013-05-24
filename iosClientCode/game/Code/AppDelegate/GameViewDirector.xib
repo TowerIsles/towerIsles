@@ -39,17 +39,18 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIView" id="706871618">
+					<object class="IBUIView" id="811162062">
 						<reference key="NSNextResponder" ref="7972772"/>
-						<int key="NSvFlags">274</int>
+						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
 						<reference key="NSNextKeyView" ref="136782031"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="364567772">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC45OTY1OTE3NTggMC45NjQ1MjMzOTM1IDAAA</bytes>
 						</object>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<object class="IBUIView" id="136782031">
@@ -57,12 +58,25 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSNextKeyView" ref="706871618"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor" id="364567772">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MCAwAA</bytes>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="706871618">
+						<reference key="NSNextResponder" ref="7972772"/>
+						<int key="NSvFlags">274</int>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
+						<string key="NSFrameSize">{320, 480}</string>
+						<reference key="NSSuperview" ref="7972772"/>
 						<reference key="NSNextKeyView" ref="445404772"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
-						</object>
+						<reference key="IBUIBackgroundColor" ref="364567772"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 					<object class="IBUIView" id="445404772">
@@ -98,7 +112,7 @@
 				</object>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="706871618"/>
+				<reference key="NSNextKeyView" ref="811162062"/>
 				<reference key="IBUIBackgroundColor" ref="364567772"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">3</int>
@@ -175,6 +189,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">eaglView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="811162062"/>
+					</object>
+					<int key="connectionID">295</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="558788345"/>
 						<reference key="destination" ref="136782031"/>
@@ -243,9 +265,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="445404772"/>
 							<reference ref="176735142"/>
-							<reference ref="136782031"/>
 							<reference ref="706871618"/>
 							<reference ref="845382829"/>
+							<reference ref="811162062"/>
+							<reference ref="136782031"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Base</string>
@@ -269,15 +292,6 @@
 						<string key="objectName">PopupView</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">276</int>
-						<reference key="object" ref="136782031"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="parent" ref="7972772"/>
-						<string key="objectName">DefaultView</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">277</int>
 						<reference key="object" ref="587101754"/>
 						<reference key="parent" ref="0"/>
@@ -292,6 +306,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">273</int>
 						<reference key="object" ref="706871618"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+						</object>
 						<reference key="parent" ref="7972772"/>
 						<string key="objectName">StatusBarView</string>
 					</object>
@@ -312,6 +329,18 @@
 						<reference key="object" ref="845382829"/>
 						<reference key="parent" ref="7972772"/>
 						<string key="objectName">DebugView</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">294</int>
+						<reference key="object" ref="811162062"/>
+						<reference key="parent" ref="7972772"/>
+						<string key="objectName">EAGLView</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">276</int>
+						<reference key="object" ref="136782031"/>
+						<reference key="parent" ref="7972772"/>
+						<string key="objectName">DefaultView</string>
 					</object>
 				</object>
 			</object>
@@ -344,6 +373,8 @@
 					<string>289.IBPluginDependency</string>
 					<string>291.CustomClassName</string>
 					<string>291.IBPluginDependency</string>
+					<string>294.CustomClassName</string>
+					<string>294.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -372,6 +403,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>PassthroughView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>EAGLView</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -386,7 +419,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">293</int>
+			<int key="maxID">295</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

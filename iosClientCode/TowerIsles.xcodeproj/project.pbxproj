@@ -10,6 +10,10 @@
 		6715454D1744ABC4000E767B /* TestMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6715454B1744ABC4000E767B /* TestMainMenu.m */; };
 		6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6715454C1744ABC4000E767B /* TestMainMenu.xib */; };
 		67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */; };
+		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
+		6736AEE5174E7257006FA778 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE3174E7257006FA778 /* EAGLView.m */; };
+		6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6736AEE4174E7257006FA778 /* EAGLView.xib */; };
+		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
 		67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE51743EAC400AE8940 /* UIKit.framework */; };
 		67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE71743EAC400AE8940 /* Foundation.framework */; };
 		67CCECEA1743EAC400AE8940 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE91743EAC400AE8940 /* CoreGraphics.framework */; };
@@ -66,8 +70,15 @@
 		6715454A1744ABC4000E767B /* TestMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMainMenu.h; path = TestMainMenu/TestMainMenu.h; sourceTree = "<group>"; };
 		6715454B1744ABC4000E767B /* TestMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMainMenu.m; path = TestMainMenu/TestMainMenu.m; sourceTree = "<group>"; };
 		6715454C1744ABC4000E767B /* TestMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestMainMenu.xib; path = TestMainMenu/TestMainMenu.xib; sourceTree = "<group>"; };
+		6715CE5F174F509200D29F4E /* graphicsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = graphicsBase.h; path = graphics/base/graphicsBase.h; sourceTree = "<group>"; };
 		67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformBlockAfterDelay.h; sourceTree = "<group>"; };
 		67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformBlockAfterDelay.m; sourceTree = "<group>"; };
+		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
+		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
+		6736AEE2174E7257006FA778 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = graphics/views/EAGLView.h; sourceTree = "<group>"; };
+		6736AEE3174E7257006FA778 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EAGLView.m; path = graphics/views/EAGLView.m; sourceTree = "<group>"; };
+		6736AEE4174E7257006FA778 /* EAGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EAGLView.xib; path = graphics/views/EAGLView.xib; sourceTree = "<group>"; };
+		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		67CCECE21743EAC400AE8940 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CCECE51743EAC400AE8940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67CCECE71743EAC400AE8940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */,
 				67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */,
 				67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */,
 				67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */,
@@ -187,6 +199,51 @@
 				6715454C1744ABC4000E767B /* TestMainMenu.xib */,
 			);
 			name = TestMainMenu;
+			sourceTree = "<group>";
+		};
+		6736AEDA174E71A0006FA778 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				6736AEDE174E71F6006FA778 /* base */,
+				6736AEDD174E71ED006FA778 /* objects */,
+				6736AEDC174E71E8006FA778 /* views */,
+				6736AEDB174E71BE006FA778 /* managers */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
+		6736AEDB174E71BE006FA778 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				6736AEDF174E723D006FA778 /* RenderManager.h */,
+				6736AEE0174E723D006FA778 /* RenderManager.m */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		6736AEDC174E71E8006FA778 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6736AEE2174E7257006FA778 /* EAGLView.h */,
+				6736AEE3174E7257006FA778 /* EAGLView.m */,
+				6736AEE4174E7257006FA778 /* EAGLView.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		6736AEDD174E71ED006FA778 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
+		6736AEDE174E71F6006FA778 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				6715CE5F174F509200D29F4E /* graphicsBase.h */,
+			);
+			name = base;
 			sourceTree = "<group>";
 		};
 		67CCECD91743EAC400AE8940 = {
@@ -210,6 +267,7 @@
 		67CCECE41743EAC400AE8940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6736AEEA174E7536006FA778 /* OpenGLES.framework */,
 				67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */,
 				67CCECE51743EAC400AE8940 /* UIKit.framework */,
 				67CCECE71743EAC400AE8940 /* Foundation.framework */,
@@ -375,6 +433,7 @@
 		67CCED451743EBB400AE8940 /* submodules */ = {
 			isa = PBXGroup;
 			children = (
+				6736AEDA174E71A0006FA778 /* graphics */,
 				67CCED461743EBB400AE8940 /* core */,
 				67E04D52174539C000B3FCFC /* gameEngine */,
 			);
@@ -651,6 +710,7 @@
 				6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */,
 				67E04D8A174746FF00B3FCFC /* bundle in Resources */,
 				67FF24F3174CB5F0008EE9A2 /* FPSCounter.xib in Resources */,
+				6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +760,8 @@
 				67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */,
 				67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */,
 				67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */,
+				6736AEE1174E723D006FA778 /* RenderManager.m in Sources */,
+				6736AEE5174E7257006FA778 /* EAGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,2 @@
+@interface EAGLView : UIView
+@end
