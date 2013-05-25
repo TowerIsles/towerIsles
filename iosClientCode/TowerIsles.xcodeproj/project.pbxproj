@@ -10,10 +10,19 @@
 		6715454D1744ABC4000E767B /* TestMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6715454B1744ABC4000E767B /* TestMainMenu.m */; };
 		6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6715454C1744ABC4000E767B /* TestMainMenu.xib */; };
 		67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */; };
+		6728650C174FC6FA003B1A65 /* TransformComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650B174FC6FA003B1A65 /* TransformComponent.m */; };
+		67286510174FC91F003B1A65 /* Vec3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650F174FC91F003B1A65 /* Vec3D.m */; };
+		67286513174FC92B003B1A65 /* Quat.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286512174FC92B003B1A65 /* Quat.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
 		6736AEE5174E7257006FA778 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE3174E7257006FA778 /* EAGLView.m */; };
 		6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6736AEE4174E7257006FA778 /* EAGLView.xib */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		67C731F61750714500F1BA07 /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F51750714500F1BA07 /* TestingManager.m */; };
+		67C731F91750715400F1BA07 /* TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F81750715400F1BA07 /* TestCase.m */; };
+		67C731FC1750715D00F1BA07 /* TestComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FB1750715D00F1BA07 /* TestComponents.m */; };
+		67C731FF1750716800F1BA07 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FE1750716800F1BA07 /* TestSpec.m */; };
+		67C732021750755F00F1BA07 /* MathTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732011750755F00F1BA07 /* MathTesting.m */; };
+		67C732041750939400F1BA07 /* MathValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732031750939400F1BA07 /* MathValidation.m */; };
 		67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE51743EAC400AE8940 /* UIKit.framework */; };
 		67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE71743EAC400AE8940 /* Foundation.framework */; };
 		67CCECEA1743EAC400AE8940 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE91743EAC400AE8940 /* CoreGraphics.framework */; };
@@ -53,11 +62,8 @@
 		67E04D6317453C4D00B3FCFC /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6217453C4D00B3FCFC /* Component.m */; };
 		67E04D6F1745427800B3FCFC /* DisplayInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6E1745427800B3FCFC /* DisplayInformation.m */; };
 		67E04D721745429100B3FCFC /* Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D711745429100B3FCFC /* Identifier.m */; };
-		67E04D7717460C2700B3FCFC /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7617460C2700B3FCFC /* TestSpec.m */; };
-		67E04D7A17460C4500B3FCFC /* TestComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7917460C4500B3FCFC /* TestComponents.m */; };
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
 		67E04D8A174746FF00B3FCFC /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E04D89174746FE00B3FCFC /* bundle */; };
-		67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D8D1749E82A00B3FCFC /* TestingManager.m */; };
 		67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */; };
 		67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */; };
 		67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */; };
@@ -73,12 +79,30 @@
 		6715CE5F174F509200D29F4E /* graphicsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = graphicsBase.h; path = graphics/base/graphicsBase.h; sourceTree = "<group>"; };
 		67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformBlockAfterDelay.h; sourceTree = "<group>"; };
 		67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformBlockAfterDelay.m; sourceTree = "<group>"; };
+		6728650A174FC6FA003B1A65 /* TransformComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransformComponent.h; path = game/code/components/TransformComponent.h; sourceTree = SOURCE_ROOT; };
+		6728650B174FC6FA003B1A65 /* TransformComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransformComponent.m; path = game/code/components/TransformComponent.m; sourceTree = SOURCE_ROOT; };
+		6728650E174FC91F003B1A65 /* Vec3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3D.h; path = math/Vec3D.h; sourceTree = "<group>"; };
+		6728650F174FC91F003B1A65 /* Vec3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vec3D.m; path = math/Vec3D.m; sourceTree = "<group>"; };
+		67286511174FC92B003B1A65 /* Quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quat.h; path = math/Quat.h; sourceTree = "<group>"; };
+		67286512174FC92B003B1A65 /* Quat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quat.m; path = math/Quat.m; sourceTree = "<group>"; };
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
 		6736AEE2174E7257006FA778 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = graphics/views/EAGLView.h; sourceTree = "<group>"; };
 		6736AEE3174E7257006FA778 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EAGLView.m; path = graphics/views/EAGLView.m; sourceTree = "<group>"; };
 		6736AEE4174E7257006FA778 /* EAGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EAGLView.xib; path = graphics/views/EAGLView.xib; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		67C731EA1750407000F1BA07 /* MathValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathValidation.h; path = math/MathValidation.h; sourceTree = "<group>"; };
+		67C731F41750714500F1BA07 /* TestingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingManager.h; path = game/code/testing/manager/TestingManager.h; sourceTree = SOURCE_ROOT; };
+		67C731F51750714500F1BA07 /* TestingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestingManager.m; path = game/code/testing/manager/TestingManager.m; sourceTree = SOURCE_ROOT; };
+		67C731F71750715400F1BA07 /* TestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestCase.h; path = game/code/testing/testCases/TestCase.h; sourceTree = SOURCE_ROOT; };
+		67C731F81750715400F1BA07 /* TestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestCase.m; path = game/code/testing/testCases/TestCase.m; sourceTree = SOURCE_ROOT; };
+		67C731FA1750715D00F1BA07 /* TestComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestComponents.h; path = game/code/testing/components/TestComponents.h; sourceTree = SOURCE_ROOT; };
+		67C731FB1750715D00F1BA07 /* TestComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestComponents.m; path = game/code/testing/components/TestComponents.m; sourceTree = SOURCE_ROOT; };
+		67C731FD1750716800F1BA07 /* TestSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestSpec.h; path = game/code/testing/entitySpecs/TestSpec.h; sourceTree = SOURCE_ROOT; };
+		67C731FE1750716800F1BA07 /* TestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSpec.m; path = game/code/testing/entitySpecs/TestSpec.m; sourceTree = SOURCE_ROOT; };
+		67C732001750755F00F1BA07 /* MathTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathTesting.h; path = game/code/testing/testCases/MathTesting.h; sourceTree = SOURCE_ROOT; };
+		67C732011750755F00F1BA07 /* MathTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathTesting.m; path = game/code/testing/testCases/MathTesting.m; sourceTree = SOURCE_ROOT; };
+		67C732031750939400F1BA07 /* MathValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathValidation.m; path = math/MathValidation.m; sourceTree = "<group>"; };
 		67CCECE21743EAC400AE8940 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CCECE51743EAC400AE8940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67CCECE71743EAC400AE8940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,15 +178,9 @@
 		67E04D6E1745427800B3FCFC /* DisplayInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayInformation.m; path = objects/DisplayInformation.m; sourceTree = "<group>"; };
 		67E04D701745429100B3FCFC /* Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Identifier.h; path = objects/Identifier.h; sourceTree = "<group>"; };
 		67E04D711745429100B3FCFC /* Identifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Identifier.m; path = objects/Identifier.m; sourceTree = "<group>"; };
-		67E04D7517460C2700B3FCFC /* TestSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestSpec.h; path = game/code/entitySpecs/TestSpec.h; sourceTree = SOURCE_ROOT; };
-		67E04D7617460C2700B3FCFC /* TestSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSpec.m; path = game/code/entitySpecs/TestSpec.m; sourceTree = SOURCE_ROOT; };
-		67E04D7817460C4500B3FCFC /* TestComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestComponents.h; path = game/code/components/TestComponents.h; sourceTree = SOURCE_ROOT; };
-		67E04D7917460C4500B3FCFC /* TestComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestComponents.m; path = game/code/components/TestComponents.m; sourceTree = SOURCE_ROOT; };
 		67E04D7B17460C9E00B3FCFC /* EntitySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySpec.h; sourceTree = "<group>"; };
 		67E04D7C17460C9E00B3FCFC /* EntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySpec.m; sourceTree = "<group>"; };
 		67E04D89174746FE00B3FCFC /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
-		67E04D8C1749E82A00B3FCFC /* TestingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingManager.h; path = game/code/managers/testing/TestingManager.h; sourceTree = SOURCE_ROOT; };
-		67E04D8D1749E82A00B3FCFC /* TestingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestingManager.m; path = game/code/managers/testing/TestingManager.m; sourceTree = SOURCE_ROOT; };
 		67FF24E0174C60CB008EE9A2 /* ServerTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerTimeManager.h; sourceTree = "<group>"; };
 		67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerTimeManager.m; sourceTree = "<group>"; };
 		67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -199,6 +217,19 @@
 				6715454C1744ABC4000E767B /* TestMainMenu.xib */,
 			);
 			name = TestMainMenu;
+			sourceTree = "<group>";
+		};
+		6728650D174FC8F9003B1A65 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				6728650E174FC91F003B1A65 /* Vec3D.h */,
+				6728650F174FC91F003B1A65 /* Vec3D.m */,
+				67286511174FC92B003B1A65 /* Quat.h */,
+				67286512174FC92B003B1A65 /* Quat.m */,
+				67C731EA1750407000F1BA07 /* MathValidation.h */,
+				67C732031750939400F1BA07 /* MathValidation.m */,
+			);
+			name = math;
 			sourceTree = "<group>";
 		};
 		6736AEDA174E71A0006FA778 /* graphics */ = {
@@ -244,6 +275,55 @@
 				6715CE5F174F509200D29F4E /* graphicsBase.h */,
 			);
 			name = base;
+			sourceTree = "<group>";
+		};
+		67C731EF1750710F00F1BA07 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				67C731F31750712A00F1BA07 /* TestCases */,
+				67C731F21750712200F1BA07 /* Manager */,
+				67C731F11750711A00F1BA07 /* EntitySpecs */,
+				67C731F01750711400F1BA07 /* Components */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
+		67C731F01750711400F1BA07 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				67C731FA1750715D00F1BA07 /* TestComponents.h */,
+				67C731FB1750715D00F1BA07 /* TestComponents.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		67C731F11750711A00F1BA07 /* EntitySpecs */ = {
+			isa = PBXGroup;
+			children = (
+				67C731FD1750716800F1BA07 /* TestSpec.h */,
+				67C731FE1750716800F1BA07 /* TestSpec.m */,
+			);
+			name = EntitySpecs;
+			sourceTree = "<group>";
+		};
+		67C731F21750712200F1BA07 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				67C731F41750714500F1BA07 /* TestingManager.h */,
+				67C731F51750714500F1BA07 /* TestingManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		67C731F31750712A00F1BA07 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				67C731F71750715400F1BA07 /* TestCase.h */,
+				67C731F81750715400F1BA07 /* TestCase.m */,
+				67C732001750755F00F1BA07 /* MathTesting.h */,
+				67C732011750755F00F1BA07 /* MathTesting.m */,
+			);
+			name = TestCases;
 			sourceTree = "<group>";
 		};
 		67CCECD91743EAC400AE8940 = {
@@ -302,6 +382,7 @@
 		67CCED171743EBA700AE8940 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				67C731EF1750710F00F1BA07 /* Testing */,
 				67E04D7417460C0400B3FCFC /* Components */,
 				67E04D7317460BF900B3FCFC /* EntitySpecs */,
 				67CCED1F1743EBA700AE8940 /* Game.h */,
@@ -332,7 +413,6 @@
 		67CCED201743EBA700AE8940 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				67E04D8B1749E7F100B3FCFC /* Testing */,
 				67CCED211743EBA700AE8940 /* Loading */,
 				67CCED241743EBA700AE8940 /* Menu */,
 				67CCED271743EBA700AE8940 /* Offline */,
@@ -539,6 +619,7 @@
 		67E04D52174539C000B3FCFC /* gameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				6728650D174FC8F9003B1A65 /* math */,
 				67FF24E5174C81FF008EE9A2 /* UI */,
 				67E04D53174539C000B3FCFC /* component */,
 				67E04D54174539C000B3FCFC /* entity */,
@@ -607,8 +688,6 @@
 		67E04D7317460BF900B3FCFC /* EntitySpecs */ = {
 			isa = PBXGroup;
 			children = (
-				67E04D7517460C2700B3FCFC /* TestSpec.h */,
-				67E04D7617460C2700B3FCFC /* TestSpec.m */,
 			);
 			name = EntitySpecs;
 			sourceTree = "<group>";
@@ -616,19 +695,10 @@
 		67E04D7417460C0400B3FCFC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				67E04D7817460C4500B3FCFC /* TestComponents.h */,
-				67E04D7917460C4500B3FCFC /* TestComponents.m */,
+				6728650A174FC6FA003B1A65 /* TransformComponent.h */,
+				6728650B174FC6FA003B1A65 /* TransformComponent.m */,
 			);
 			name = Components;
-			sourceTree = "<group>";
-		};
-		67E04D8B1749E7F100B3FCFC /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				67E04D8C1749E82A00B3FCFC /* TestingManager.h */,
-				67E04D8D1749E82A00B3FCFC /* TestingManager.m */,
-			);
-			name = Testing;
 			sourceTree = "<group>";
 		};
 		67FF24E5174C81FF008EE9A2 /* UI */ = {
@@ -751,10 +821,7 @@
 				67E04D6317453C4D00B3FCFC /* Component.m in Sources */,
 				67E04D6F1745427800B3FCFC /* DisplayInformation.m in Sources */,
 				67E04D721745429100B3FCFC /* Identifier.m in Sources */,
-				67E04D7717460C2700B3FCFC /* TestSpec.m in Sources */,
-				67E04D7A17460C4500B3FCFC /* TestComponents.m in Sources */,
 				67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */,
-				67E04D8E1749E82A00B3FCFC /* TestingManager.m in Sources */,
 				67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */,
 				67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */,
 				67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */,
@@ -762,6 +829,15 @@
 				67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */,
 				6736AEE1174E723D006FA778 /* RenderManager.m in Sources */,
 				6736AEE5174E7257006FA778 /* EAGLView.m in Sources */,
+				6728650C174FC6FA003B1A65 /* TransformComponent.m in Sources */,
+				67286510174FC91F003B1A65 /* Vec3D.m in Sources */,
+				67286513174FC92B003B1A65 /* Quat.m in Sources */,
+				67C731F61750714500F1BA07 /* TestingManager.m in Sources */,
+				67C731F91750715400F1BA07 /* TestCase.m in Sources */,
+				67C731FC1750715D00F1BA07 /* TestComponents.m in Sources */,
+				67C731FF1750716800F1BA07 /* TestSpec.m in Sources */,
+				67C732021750755F00F1BA07 /* MathTesting.m in Sources */,
+				67C732041750939400F1BA07 /* MathValidation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

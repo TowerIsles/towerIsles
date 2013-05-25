@@ -1,5 +1,6 @@
 #import "TestingManager.h"
 #import "TestSpec.h"
+#import "MathTesting.h"
 
 @interface TestingManager ()
 {
@@ -15,6 +16,14 @@
 
 - (void)load
 {
+    NSLog(@"RUNNING TESTS");
+    NSLog(@"=============");
+    NSLog(@"=============");
+    
+    RunTestSuite(MathTesting);
+    
+    NSLog(@"=============");
+    
 //    performBlockAfterDelay(2, ^{
 //        [self.director reload];
 //    });

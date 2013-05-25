@@ -12,4 +12,6 @@
 
 #define OFFLINE 1
 
+#define ASSERT_IN_TESTS 0
+
 #import "GameService.h"

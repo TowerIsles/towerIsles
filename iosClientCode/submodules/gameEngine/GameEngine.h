@@ -8,6 +8,8 @@
 #import "FrameTimeManager.h"
 #import "ServerTimeManager.h"
 
-
+#import "MathValidation.h"
+#import "Vec3D.h"
+#import "Quat.h"
 
 
