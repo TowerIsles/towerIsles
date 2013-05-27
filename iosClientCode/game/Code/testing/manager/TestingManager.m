@@ -43,7 +43,7 @@
 //                                }];
     
     performBlockAfterDelay(0, ^{
-            [entityManager createEntitySpecFromEntityConfigId:@"entityConfig_box"];
+        [entityManager createEntitySpecFromEntityConfigId:@"entityConfig_box"];
     });
 
 }

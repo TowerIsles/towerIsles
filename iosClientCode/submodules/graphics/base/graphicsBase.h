@@ -37,6 +37,10 @@ else if (er == 32817)\
 {\
 printf("GL_TABLE_TOO_LARGE\n");\
 }\
+else\
+{\
+NSLog(@"OpenGL Error = %d", er);\
+}\
 }\
 
 

@@ -94,6 +94,11 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
                                              currentClass:self];
 }
 
+- (NSString*)description
+{
+    return _entity.description;
+}
+
 - (void)internal_injectIvarsRecursive:(Class)currentClass
 {
     if (currentClass == [EntitySpec class])
