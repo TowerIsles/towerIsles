@@ -41,6 +41,11 @@
 //                                updateBlock:^{
 //                                    NSLog(@"1 HZ");
 //                                }];
+    
+    performBlockAfterDelay(0, ^{
+            [entityManager createEntitySpecFromEntityConfigId:@"entityConfig_box"];
+    });
+
 }
 
 - (void)reload

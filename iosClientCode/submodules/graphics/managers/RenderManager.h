@@ -1,5 +1,5 @@
 #import "Core.h"
-#import "graphicsBase.h"
+#import "GraphicsBase.h"
 
 @interface RenderManager : Manager
 

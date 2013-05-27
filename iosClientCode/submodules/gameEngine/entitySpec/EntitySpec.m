@@ -3,7 +3,7 @@
 #import "Entity.h"
 #import "EntityManager.h"
 
-#define keyFromIvar(ivar) Integer((int)ivar)
+#define keyFromIvar(ivarArg) Format(@"%s", ivar_getTypeEncoding(ivarArg))
 
 @interface EntitySpec ()
 {
@@ -37,7 +37,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 		for (unsigned int ivarIndex = 0; ivarIndex < ivarCount; ivarIndex++)
 		{
 			Ivar ivar = ivars[ivarIndex];
-			
+
 			Class potentialClass = [NSObject classForIvar:ivar];
 			
 			if ([potentialClass isSubclassOfClass:[Component class]])
@@ -63,7 +63,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
         return YES;
     
     unsigned int ivarCount;
-    Ivar* ivars = class_copyIvarList(self.class, &ivarCount);
+    Ivar* ivars = class_copyIvarList(currentClass, &ivarCount);
     
     for (unsigned int i = 0; i < ivarCount; ++i)
     {
@@ -80,17 +80,6 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
             }
             
             continue;
-        }
-        
-        Class specClass = [injectableSpecClassesByIvar objectForKey:keyFromIvar(ivar)];
-        
-        if (specClass != nil)
-        {
-            if ([entity entitySpecForClass:specClass] == nil)
-            {
-                free(ivars);
-                return NO;
-            }
         }
     }
     

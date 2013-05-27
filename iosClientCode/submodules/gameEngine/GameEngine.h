@@ -9,7 +9,8 @@
 #import "ServerTimeManager.h"
 
 #import "MathValidation.h"
-#import "Vec3D.h"
+#import "Vec3.h"
 #import "Quat.h"
+#import "Mat4.h"
 
 

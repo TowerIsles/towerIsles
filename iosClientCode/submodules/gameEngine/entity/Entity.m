@@ -3,20 +3,9 @@
 #import "Component.h"
 #import "EntitySpec.h"
 
-@implementation EntityIdentifier
-
-+ (EntityIdentifier*)objectWithIntIdentfier:(int64_t)intIdentifier
-{
-    EntityIdentifier* entityIdentifier = [EntityIdentifier object];
-    [entityIdentifier setIntIdentifier:intIdentifier];
-    return entityIdentifier;
-}
-
-@end
-
 @interface Entity ()
 {
-    EntityIdentifier* _entityIdentifier;
+    Identifier* _entityIdentifier;
     EntityConfig* _entityConfig;
 }
 
@@ -59,8 +48,8 @@
     return self;
 }
 
-+ (Entity*)objectWithEntityIdentifier:(EntityIdentifier*)entityIdentifier
-                         entityConfig:(EntityConfig*)entityConfig
++ (Entity*)objectWithIdentifier:(Identifier*)entityIdentifier
+                   entityConfig:(EntityConfig*)entityConfig
 {
     Entity* entity = [Entity object];
     entity->_entityIdentifier = [entityIdentifier retain];

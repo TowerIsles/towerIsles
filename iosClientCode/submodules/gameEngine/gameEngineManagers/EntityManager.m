@@ -49,7 +49,8 @@
         [self internal_removeQueuedEntities]; 
     }];
     
-    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary.json"];
+    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_renderables.json"];
+    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_test.json"];
 }
 
 - (void)reload
@@ -70,6 +71,7 @@
     CheckTrue(_allSpecClasses.count > 0);
 #endif
 }
+
 // Entity Config
 - (void)loadEntityConfigsFromFile:(NSString*)filename
 {
@@ -77,11 +79,11 @@
     
     for (NSString* entityConfigId in entityConfigDataByEntityConfigId)
     {
-        CheckTrue([_entityConfigsByIdentifier objectForKey:entityConfigId] == nil);
+        CheckTrue([_entityConfigsByIdentifier objectForKey:[Identifier objectWithStringIdentifier:entityConfigId]] == nil);
         
         NSDictionary* entityConfigData = [entityConfigDataByEntityConfigId objectForKey:entityConfigId];
         
-        EntityConfig* entityConfig = [EntityConfig objectWithEntityConfigIdentifier:[EntityConfigIdentifier objectWithStringIdentifier:entityConfigId]
+        EntityConfig* entityConfig = [EntityConfig objectWithEntityConfigIdentifier:[Identifier objectWithStringIdentifier:entityConfigId]
                                                        componentDataByComponentType:[entityConfigData objectForKey:@"componentData"]
                                                  orderedBaseEntityConfigIdentifiers:[entityConfigData objectForKey:@"orderedBaseEntityConfigIdentifiers"]];
         
@@ -113,7 +115,7 @@
 
 - (EntitySpec*)createEntitySpecFromEntityConfigId:(NSString*)entityConfigId
 {
-    EntityConfigIdentifier* entityConfigIdentifier = [EntityConfigIdentifier objectWithStringIdentifier:entityConfigId];
+    Identifier* entityConfigIdentifier = [Identifier objectWithStringIdentifier:entityConfigId];
     
     Entity* entity = [self internal_createEntityFromEntityConfigIdentifier:entityConfigIdentifier];
 
@@ -166,17 +168,17 @@
     [_entitiesToRemove addObject:entityToRemove];
 }
 
-- (EntityIdentifier*)internal_nextEntityIdentifier
+- (Identifier*)internal_nextEntityIdentifier
 {
-    return [EntityIdentifier objectWithIntIdentfier:_nextEntityIdentifierIndex++];
+    return [Identifier objectWithIntIdentifier:_nextEntityIdentifierIndex++];
 }
 
-- (EntityConfig*)entityConfigForEntityConfigIdentifier:(EntityConfigIdentifier*)entityConfigIdentifier
+- (EntityConfig*)entityConfigForEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
 {
     return [_entityConfigsByIdentifier objectForKey:entityConfigIdentifier];
 }
 
-- (Entity*)internal_createEntityFromEntityConfigIdentifier:(EntityConfigIdentifier*)entityConfigIdentifier
+- (Entity*)internal_createEntityFromEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
 {
     EntityConfig* entityConfig = [self entityConfigForEntityConfigIdentifier:entityConfigIdentifier];
     
@@ -196,7 +198,7 @@
     
     for (NSString* entityConfigIdentifierToAdd in entityConfig.orderedBaseEntityConfigIdentifiers)
     {
-        EntityConfig* entityConfigToAdd = [self entityConfigForEntityConfigIdentifier:[EntityConfigIdentifier objectWithStringIdentifier:entityConfigIdentifierToAdd]];
+        EntityConfig* entityConfigToAdd = [self entityConfigForEntityConfigIdentifier:[Identifier objectWithStringIdentifier:entityConfigIdentifierToAdd]];
         
         CheckNotNull(entityConfigToAdd);
 
@@ -204,8 +206,8 @@
                            toTargetDictionary:componentConfigurationData];
     }
     
-    Entity* entity = [Entity objectWithEntityIdentifier:[self internal_nextEntityIdentifier]
-                                           entityConfig:entityConfig];
+    Entity* entity = [Entity objectWithIdentifier:[self internal_nextEntityIdentifier]
+                                     entityConfig:entityConfig];
     
     for (NSString* componentType in componentConfigurationData.allKeys)
     {

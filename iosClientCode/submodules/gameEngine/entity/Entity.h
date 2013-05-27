@@ -5,19 +5,13 @@
 @class Component;
 @class EntitySpec;
 
-@interface EntityIdentifier : Identifier
-
-+ (EntityIdentifier*)objectWithIntIdentfier:(int64_t)intIdentifier;
-
-@end
-
 @interface Entity : ManagedPropertiesObject
-@property (nonatomic, retain, readonly) EntityIdentifier* entityIdentifier;
+@property (nonatomic, retain, readonly) Identifier* entityIdentifier;
 @property (nonatomic, retain, readonly) EntityConfig* entityConfig;
 @property (nonatomic, assign) BOOL queuedForDestruction;
 
-+ (Entity*)objectWithEntityIdentifier:(EntityIdentifier*)entityIdentifier
-                         entityConfig:(EntityConfig*)entityConfig;
++ (Entity*)objectWithIdentifier:(Identifier*)entityIdentifier
+                   entityConfig:(EntityConfig*)entityConfig;
 
 - (Component*)componentForClass:(Class)componentClass;
 

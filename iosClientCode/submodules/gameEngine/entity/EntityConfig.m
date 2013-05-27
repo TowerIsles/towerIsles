@@ -1,23 +1,12 @@
 #import "EntityConfig.h"
 #import "DisplayInformation.h"
 
-@implementation EntityConfigIdentifier
-
-+ (EntityConfigIdentifier*)objectWithStringIdentifier:(NSString*)stringIdentifier
-{
-    EntityConfigIdentifier* entityConfigIdentifier = [EntityConfigIdentifier object];
-    [entityConfigIdentifier setStringIdentifier:stringIdentifier];
-    return entityConfigIdentifier;
-}
-
-@end
-
 @interface EntityConfig ()
 {
 	NSDictionary* _componentDataByComponentType;
     NSArray* _orderedBaseEntityConfigIdentifiers;
     DisplayInformation* _displayInformation;
-    EntityConfigIdentifier* _identifier;
+    Identifier* _identifier;
 }
 
 @end
@@ -33,7 +22,7 @@
     [super dealloc];
 }
 
-+ (EntityConfig*)objectWithEntityConfigIdentifier:(EntityConfigIdentifier*)entityConfigIdentifier
++ (EntityConfig*)objectWithEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
                      componentDataByComponentType:(NSDictionary*)componentDataByComponentType
                orderedBaseEntityConfigIdentifiers:(NSArray*)orderedBaseEntityConfigIdentifiers
 {

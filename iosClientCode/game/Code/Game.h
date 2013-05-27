@@ -1,4 +1,5 @@
 #import "GameEngine.h"
+#import "Graphics.h"
 
 #define kOpenGLViewLayer @"openGL"
 #define kStatusViewLayer @"status"

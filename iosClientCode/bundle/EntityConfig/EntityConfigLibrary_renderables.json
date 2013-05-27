@@ -1,0 +1,73 @@
+{
+  "entityConfig_box": {
+    "orderedBaseEntityConfigIdentifiers": [
+    ],
+    "componentData": {
+      "LightComponent": {
+        "lightConfig": {
+          "type": "POINT",
+          "color": {
+            "r": 1,
+            "b": 0.5,
+            "g": 0.5,
+            "a": 1
+          }
+        },
+        "nodeIndex": 1
+      },
+      "NodeComponent": {
+        "sceneNodeConfigs": [
+          {
+            "orientation": {
+              "y": 0,
+              "w": 1,
+              "z": 0,
+              "x": 0
+            },
+            "inheritScale": false,
+            "inheritOrientation": false,
+            "position": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          {
+            "orientation": {
+              "y": 0,
+              "w": 1,
+              "z": 0,
+              "x": 0
+            },
+            "inheritScale": false,
+            "inheritOrientation": false,
+            "position": {
+              "x": 2,
+              "y": 2,
+              "z": 2
+            },
+            "scale": {
+              "x": 2,
+              "y": 2,
+              "z": 2
+            }
+          }
+        ]
+      },
+      "RenderableComponent": {
+        "renderResourceIdentifier": {
+          "identifier": "PRIMITIVE_BOX"
+        },
+        "materialIdentifier": {
+          "identifier": "stone"
+        },
+        "nodeIndex": 0
+      }
+    }
+  }
+}

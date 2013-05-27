@@ -10,13 +10,35 @@
 		6715454D1744ABC4000E767B /* TestMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6715454B1744ABC4000E767B /* TestMainMenu.m */; };
 		6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6715454C1744ABC4000E767B /* TestMainMenu.xib */; };
 		67171C1F174B566600B20F2A /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */; };
-		6728650C174FC6FA003B1A65 /* TransformComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650B174FC6FA003B1A65 /* TransformComponent.m */; };
-		67286510174FC91F003B1A65 /* Vec3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650F174FC91F003B1A65 /* Vec3D.m */; };
+		67286510174FC91F003B1A65 /* Vec3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650F174FC91F003B1A65 /* Vec3.m */; };
 		67286513174FC92B003B1A65 /* Quat.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286512174FC92B003B1A65 /* Quat.m */; };
+		6732D51817515D5A00B39912 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51717515D5A00B39912 /* SceneManager.m */; };
+		6732D51B17515D9C00B39912 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51A17515D9C00B39912 /* Scene.m */; };
+		6732D51E17515DAC00B39912 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51D17515DAC00B39912 /* Node.m */; };
+		6732D52117515DC300B39912 /* SceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D52017515DC300B39912 /* SceneNode.m */; };
+		6732D525175166AA00B39912 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
 		6736AEE5174E7257006FA778 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE3174E7257006FA778 /* EAGLView.m */; };
 		6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6736AEE4174E7257006FA778 /* EAGLView.xib */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		67B7A6931752A2600040362A /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
+		67B7A6961752A2720040362A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
+		67B7A69C1752A2890040362A /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
+		67B7A69F1752A2940040362A /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69E1752A2940040362A /* Camera.m */; };
+		67B7A6A21752A2A90040362A /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A11752A2A90040362A /* Mesh.m */; };
+		67B7A6A51752A2B40040362A /* RenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A41752A2B40040362A /* RenderResource.m */; };
+		67B7A6A81752C1E70040362A /* RenderableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A71752C1E70040362A /* RenderableSpec.m */; };
+		67B7A6AB1752C25A0040362A /* LightSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6AA1752C25A0040362A /* LightSpec.m */; };
+		67B7A6AE1752C26B0040362A /* CameraSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6AD1752C26B0040362A /* CameraSpec.m */; };
+		67B7A6B41752C30B0040362A /* LightComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B31752C30B0040362A /* LightComponent.m */; };
+		67B7A6B71752C31C0040362A /* CameraComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B61752C31C0040362A /* CameraComponent.m */; };
+		67B7A6BA1752C3370040362A /* RenderableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B91752C3370040362A /* RenderableComponent.m */; };
+		67B7A6BD1752C3450040362A /* NodeComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6BC1752C3450040362A /* NodeComponent.m */; };
+		67B7A6C51752C5660040362A /* GameSceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6C41752C5660040362A /* GameSceneManager.m */; };
+		67B7A6C81752C5E20040362A /* NodeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6C71752C5E20040362A /* NodeSpec.m */; };
+		67B7A6CC1752CE0E0040362A /* Movable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6CB1752CE0D0040362A /* Movable.m */; };
+		67B7A6D0175348A30040362A /* DefrostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6CF175348A30040362A /* DefrostManager.m */; };
+		67B7A6D317534DA20040362A /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6D217534DA10040362A /* Color.m */; };
 		67C731F61750714500F1BA07 /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F51750714500F1BA07 /* TestingManager.m */; };
 		67C731F91750715400F1BA07 /* TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F81750715400F1BA07 /* TestCase.m */; };
 		67C731FC1750715D00F1BA07 /* TestComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FB1750715D00F1BA07 /* TestComponents.m */; };
@@ -76,21 +98,66 @@
 		6715454A1744ABC4000E767B /* TestMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestMainMenu.h; path = TestMainMenu/TestMainMenu.h; sourceTree = "<group>"; };
 		6715454B1744ABC4000E767B /* TestMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestMainMenu.m; path = TestMainMenu/TestMainMenu.m; sourceTree = "<group>"; };
 		6715454C1744ABC4000E767B /* TestMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestMainMenu.xib; path = TestMainMenu/TestMainMenu.xib; sourceTree = "<group>"; };
-		6715CE5F174F509200D29F4E /* graphicsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = graphicsBase.h; path = graphics/base/graphicsBase.h; sourceTree = "<group>"; };
 		67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformBlockAfterDelay.h; sourceTree = "<group>"; };
 		67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformBlockAfterDelay.m; sourceTree = "<group>"; };
-		6728650A174FC6FA003B1A65 /* TransformComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransformComponent.h; path = game/code/components/TransformComponent.h; sourceTree = SOURCE_ROOT; };
-		6728650B174FC6FA003B1A65 /* TransformComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransformComponent.m; path = game/code/components/TransformComponent.m; sourceTree = SOURCE_ROOT; };
-		6728650E174FC91F003B1A65 /* Vec3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3D.h; path = math/Vec3D.h; sourceTree = "<group>"; };
-		6728650F174FC91F003B1A65 /* Vec3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vec3D.m; path = math/Vec3D.m; sourceTree = "<group>"; };
+		6728650E174FC91F003B1A65 /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vec3.h; path = math/Vec3.h; sourceTree = "<group>"; };
+		6728650F174FC91F003B1A65 /* Vec3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vec3.m; path = math/Vec3.m; sourceTree = "<group>"; };
 		67286511174FC92B003B1A65 /* Quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quat.h; path = math/Quat.h; sourceTree = "<group>"; };
 		67286512174FC92B003B1A65 /* Quat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quat.m; path = math/Quat.m; sourceTree = "<group>"; };
+		6732D51617515D5A00B39912 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneManager.h; path = graphics/managers/SceneManager.h; sourceTree = "<group>"; };
+		6732D51717515D5A00B39912 /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SceneManager.m; path = graphics/managers/SceneManager.m; sourceTree = "<group>"; };
+		6732D51917515D9C00B39912 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scene.h; path = graphics/objects/Scene.h; sourceTree = "<group>"; };
+		6732D51A17515D9C00B39912 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scene.m; path = graphics/objects/Scene.m; sourceTree = "<group>"; };
+		6732D51C17515DAC00B39912 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = graphics/objects/Node.h; sourceTree = "<group>"; };
+		6732D51D17515DAC00B39912 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = graphics/objects/Node.m; sourceTree = "<group>"; };
+		6732D51F17515DC300B39912 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneNode.h; path = graphics/objects/SceneNode.h; sourceTree = "<group>"; };
+		6732D52017515DC300B39912 /* SceneNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SceneNode.m; path = graphics/objects/SceneNode.m; sourceTree = "<group>"; };
+		6732D52217515E4100B39912 /* GraphicsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicsBase.h; path = graphics/base/GraphicsBase.h; sourceTree = "<group>"; };
+		6732D523175166AA00B39912 /* Mat4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mat4.h; path = math/Mat4.h; sourceTree = "<group>"; };
+		6732D524175166AA00B39912 /* Mat4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mat4.m; path = math/Mat4.m; sourceTree = "<group>"; };
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
 		6736AEE2174E7257006FA778 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = graphics/views/EAGLView.h; sourceTree = "<group>"; };
 		6736AEE3174E7257006FA778 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EAGLView.m; path = graphics/views/EAGLView.m; sourceTree = "<group>"; };
 		6736AEE4174E7257006FA778 /* EAGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EAGLView.xib; path = graphics/views/EAGLView.xib; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		67B7A6911752A2600040362A /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = graphics/objects/Renderable.h; sourceTree = "<group>"; };
+		67B7A6921752A2600040362A /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Renderable.m; path = graphics/objects/Renderable.m; sourceTree = "<group>"; };
+		67B7A6941752A2720040362A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = graphics/objects/Model.h; sourceTree = "<group>"; };
+		67B7A6951752A2720040362A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = graphics/objects/Model.m; sourceTree = "<group>"; };
+		67B7A69A1752A2880040362A /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Light.h; path = graphics/objects/Light.h; sourceTree = "<group>"; };
+		67B7A69B1752A2890040362A /* Light.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Light.m; path = graphics/objects/Light.m; sourceTree = "<group>"; };
+		67B7A69D1752A2940040362A /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = graphics/objects/Camera.h; sourceTree = "<group>"; };
+		67B7A69E1752A2940040362A /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Camera.m; path = graphics/objects/Camera.m; sourceTree = "<group>"; };
+		67B7A6A01752A2A90040362A /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mesh.h; path = graphics/objects/Mesh.h; sourceTree = "<group>"; };
+		67B7A6A11752A2A90040362A /* Mesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mesh.m; path = graphics/objects/Mesh.m; sourceTree = "<group>"; };
+		67B7A6A31752A2B40040362A /* RenderResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderResource.h; path = graphics/objects/RenderResource.h; sourceTree = "<group>"; };
+		67B7A6A41752A2B40040362A /* RenderResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderResource.m; path = graphics/objects/RenderResource.m; sourceTree = "<group>"; };
+		67B7A6A61752C1E70040362A /* RenderableSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderableSpec.h; path = game/code/entitySpecs/RenderableSpec.h; sourceTree = SOURCE_ROOT; };
+		67B7A6A71752C1E70040362A /* RenderableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderableSpec.m; path = game/code/entitySpecs/RenderableSpec.m; sourceTree = SOURCE_ROOT; };
+		67B7A6A91752C25A0040362A /* LightSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightSpec.h; path = game/code/entitySpecs/LightSpec.h; sourceTree = SOURCE_ROOT; };
+		67B7A6AA1752C25A0040362A /* LightSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightSpec.m; path = game/code/entitySpecs/LightSpec.m; sourceTree = SOURCE_ROOT; };
+		67B7A6AC1752C26B0040362A /* CameraSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraSpec.h; path = game/code/entitySpecs/CameraSpec.h; sourceTree = SOURCE_ROOT; };
+		67B7A6AD1752C26B0040362A /* CameraSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraSpec.m; path = game/code/entitySpecs/CameraSpec.m; sourceTree = SOURCE_ROOT; };
+		67B7A6B21752C30B0040362A /* LightComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightComponent.h; path = game/code/components/LightComponent.h; sourceTree = SOURCE_ROOT; };
+		67B7A6B31752C30B0040362A /* LightComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightComponent.m; path = game/code/components/LightComponent.m; sourceTree = SOURCE_ROOT; };
+		67B7A6B51752C31C0040362A /* CameraComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraComponent.h; path = game/code/components/CameraComponent.h; sourceTree = SOURCE_ROOT; };
+		67B7A6B61752C31C0040362A /* CameraComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraComponent.m; path = game/code/components/CameraComponent.m; sourceTree = SOURCE_ROOT; };
+		67B7A6B81752C3370040362A /* RenderableComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderableComponent.h; path = game/code/components/RenderableComponent.h; sourceTree = SOURCE_ROOT; };
+		67B7A6B91752C3370040362A /* RenderableComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderableComponent.m; path = game/code/components/RenderableComponent.m; sourceTree = SOURCE_ROOT; };
+		67B7A6BB1752C3450040362A /* NodeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeComponent.h; path = game/code/components/NodeComponent.h; sourceTree = SOURCE_ROOT; };
+		67B7A6BC1752C3450040362A /* NodeComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NodeComponent.m; path = game/code/components/NodeComponent.m; sourceTree = SOURCE_ROOT; };
+		67B7A6C31752C5660040362A /* GameSceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameSceneManager.h; path = game/code/managers/gameScene/GameSceneManager.h; sourceTree = SOURCE_ROOT; };
+		67B7A6C41752C5660040362A /* GameSceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameSceneManager.m; path = game/code/managers/gameScene/GameSceneManager.m; sourceTree = SOURCE_ROOT; };
+		67B7A6C61752C5E10040362A /* NodeSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NodeSpec.h; path = game/code/entitySpecs/NodeSpec.h; sourceTree = SOURCE_ROOT; };
+		67B7A6C71752C5E20040362A /* NodeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NodeSpec.m; path = game/code/entitySpecs/NodeSpec.m; sourceTree = SOURCE_ROOT; };
+		67B7A6C91752CD870040362A /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = graphics/Graphics.h; sourceTree = "<group>"; };
+		67B7A6CA1752CE0C0040362A /* Movable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movable.h; path = graphics/objects/Movable.h; sourceTree = "<group>"; };
+		67B7A6CB1752CE0D0040362A /* Movable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movable.m; path = graphics/objects/Movable.m; sourceTree = "<group>"; };
+		67B7A6CE175348A30040362A /* DefrostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefrostManager.h; path = game/code/managers/defrost/DefrostManager.h; sourceTree = SOURCE_ROOT; };
+		67B7A6CF175348A30040362A /* DefrostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefrostManager.m; path = game/code/managers/defrost/DefrostManager.m; sourceTree = SOURCE_ROOT; };
+		67B7A6D117534D9F0040362A /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Color.h; path = graphics/objects/Color.h; sourceTree = "<group>"; };
+		67B7A6D217534DA10040362A /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Color.m; path = graphics/objects/Color.m; sourceTree = "<group>"; };
 		67C731EA1750407000F1BA07 /* MathValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathValidation.h; path = math/MathValidation.h; sourceTree = "<group>"; };
 		67C731F41750714500F1BA07 /* TestingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestingManager.h; path = game/code/testing/manager/TestingManager.h; sourceTree = SOURCE_ROOT; };
 		67C731F51750714500F1BA07 /* TestingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestingManager.m; path = game/code/testing/manager/TestingManager.m; sourceTree = SOURCE_ROOT; };
@@ -222,12 +289,14 @@
 		6728650D174FC8F9003B1A65 /* math */ = {
 			isa = PBXGroup;
 			children = (
-				6728650E174FC91F003B1A65 /* Vec3D.h */,
-				6728650F174FC91F003B1A65 /* Vec3D.m */,
+				6728650E174FC91F003B1A65 /* Vec3.h */,
+				6728650F174FC91F003B1A65 /* Vec3.m */,
 				67286511174FC92B003B1A65 /* Quat.h */,
 				67286512174FC92B003B1A65 /* Quat.m */,
 				67C731EA1750407000F1BA07 /* MathValidation.h */,
 				67C732031750939400F1BA07 /* MathValidation.m */,
+				6732D523175166AA00B39912 /* Mat4.h */,
+				6732D524175166AA00B39912 /* Mat4.m */,
 			);
 			name = math;
 			sourceTree = "<group>";
@@ -239,6 +308,7 @@
 				6736AEDD174E71ED006FA778 /* objects */,
 				6736AEDC174E71E8006FA778 /* views */,
 				6736AEDB174E71BE006FA778 /* managers */,
+				67B7A6C91752CD870040362A /* Graphics.h */,
 			);
 			name = graphics;
 			sourceTree = "<group>";
@@ -248,6 +318,8 @@
 			children = (
 				6736AEDF174E723D006FA778 /* RenderManager.h */,
 				6736AEE0174E723D006FA778 /* RenderManager.m */,
+				6732D51617515D5A00B39912 /* SceneManager.h */,
+				6732D51717515D5A00B39912 /* SceneManager.m */,
 			);
 			name = managers;
 			sourceTree = "<group>";
@@ -265,6 +337,28 @@
 		6736AEDD174E71ED006FA778 /* objects */ = {
 			isa = PBXGroup;
 			children = (
+				6732D51917515D9C00B39912 /* Scene.h */,
+				6732D51A17515D9C00B39912 /* Scene.m */,
+				67B7A6CA1752CE0C0040362A /* Movable.h */,
+				67B7A6CB1752CE0D0040362A /* Movable.m */,
+				6732D51C17515DAC00B39912 /* Node.h */,
+				6732D51D17515DAC00B39912 /* Node.m */,
+				6732D51F17515DC300B39912 /* SceneNode.h */,
+				6732D52017515DC300B39912 /* SceneNode.m */,
+				67B7A6911752A2600040362A /* Renderable.h */,
+				67B7A6921752A2600040362A /* Renderable.m */,
+				67B7A6941752A2720040362A /* Model.h */,
+				67B7A6951752A2720040362A /* Model.m */,
+				67B7A69A1752A2880040362A /* Light.h */,
+				67B7A69B1752A2890040362A /* Light.m */,
+				67B7A69D1752A2940040362A /* Camera.h */,
+				67B7A69E1752A2940040362A /* Camera.m */,
+				67B7A6A01752A2A90040362A /* Mesh.h */,
+				67B7A6A11752A2A90040362A /* Mesh.m */,
+				67B7A6A31752A2B40040362A /* RenderResource.h */,
+				67B7A6A41752A2B40040362A /* RenderResource.m */,
+				67B7A6D117534D9F0040362A /* Color.h */,
+				67B7A6D217534DA10040362A /* Color.m */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -272,9 +366,27 @@
 		6736AEDE174E71F6006FA778 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				6715CE5F174F509200D29F4E /* graphicsBase.h */,
+				6732D52217515E4100B39912 /* GraphicsBase.h */,
 			);
 			name = base;
+			sourceTree = "<group>";
+		};
+		67B7A6C21752C54E0040362A /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				67B7A6C31752C5660040362A /* GameSceneManager.h */,
+				67B7A6C41752C5660040362A /* GameSceneManager.m */,
+			);
+			name = GameScene;
+			sourceTree = "<group>";
+		};
+		67B7A6CD1753488C0040362A /* Defrost */ = {
+			isa = PBXGroup;
+			children = (
+				67B7A6CE175348A30040362A /* DefrostManager.h */,
+				67B7A6CF175348A30040362A /* DefrostManager.m */,
+			);
+			name = Defrost;
 			sourceTree = "<group>";
 		};
 		67C731EF1750710F00F1BA07 /* Testing */ = {
@@ -396,6 +508,7 @@
 			name = Code;
 			path = game/Code;
 			sourceTree = SOURCE_ROOT;
+			usesTabs = 0;
 		};
 		67CCED181743EBA700AE8940 /* AppDelegate */ = {
 			isa = PBXGroup;
@@ -413,6 +526,8 @@
 		67CCED201743EBA700AE8940 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				67B7A6CD1753488C0040362A /* Defrost */,
+				67B7A6C21752C54E0040362A /* GameScene */,
 				67CCED211743EBA700AE8940 /* Loading */,
 				67CCED241743EBA700AE8940 /* Menu */,
 				67CCED271743EBA700AE8940 /* Offline */,
@@ -688,6 +803,14 @@
 		67E04D7317460BF900B3FCFC /* EntitySpecs */ = {
 			isa = PBXGroup;
 			children = (
+				67B7A6A91752C25A0040362A /* LightSpec.h */,
+				67B7A6AA1752C25A0040362A /* LightSpec.m */,
+				67B7A6AC1752C26B0040362A /* CameraSpec.h */,
+				67B7A6AD1752C26B0040362A /* CameraSpec.m */,
+				67B7A6A61752C1E70040362A /* RenderableSpec.h */,
+				67B7A6A71752C1E70040362A /* RenderableSpec.m */,
+				67B7A6C61752C5E10040362A /* NodeSpec.h */,
+				67B7A6C71752C5E20040362A /* NodeSpec.m */,
 			);
 			name = EntitySpecs;
 			sourceTree = "<group>";
@@ -695,8 +818,14 @@
 		67E04D7417460C0400B3FCFC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6728650A174FC6FA003B1A65 /* TransformComponent.h */,
-				6728650B174FC6FA003B1A65 /* TransformComponent.m */,
+				67B7A6B21752C30B0040362A /* LightComponent.h */,
+				67B7A6B31752C30B0040362A /* LightComponent.m */,
+				67B7A6B51752C31C0040362A /* CameraComponent.h */,
+				67B7A6B61752C31C0040362A /* CameraComponent.m */,
+				67B7A6B81752C3370040362A /* RenderableComponent.h */,
+				67B7A6B91752C3370040362A /* RenderableComponent.m */,
+				67B7A6BB1752C3450040362A /* NodeComponent.h */,
+				67B7A6BC1752C3450040362A /* NodeComponent.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -829,8 +958,7 @@
 				67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */,
 				6736AEE1174E723D006FA778 /* RenderManager.m in Sources */,
 				6736AEE5174E7257006FA778 /* EAGLView.m in Sources */,
-				6728650C174FC6FA003B1A65 /* TransformComponent.m in Sources */,
-				67286510174FC91F003B1A65 /* Vec3D.m in Sources */,
+				67286510174FC91F003B1A65 /* Vec3.m in Sources */,
 				67286513174FC92B003B1A65 /* Quat.m in Sources */,
 				67C731F61750714500F1BA07 /* TestingManager.m in Sources */,
 				67C731F91750715400F1BA07 /* TestCase.m in Sources */,
@@ -838,6 +966,29 @@
 				67C731FF1750716800F1BA07 /* TestSpec.m in Sources */,
 				67C732021750755F00F1BA07 /* MathTesting.m in Sources */,
 				67C732041750939400F1BA07 /* MathValidation.m in Sources */,
+				6732D51817515D5A00B39912 /* SceneManager.m in Sources */,
+				6732D51B17515D9C00B39912 /* Scene.m in Sources */,
+				6732D51E17515DAC00B39912 /* Node.m in Sources */,
+				6732D52117515DC300B39912 /* SceneNode.m in Sources */,
+				6732D525175166AA00B39912 /* Mat4.m in Sources */,
+				67B7A6931752A2600040362A /* Renderable.m in Sources */,
+				67B7A6961752A2720040362A /* Model.m in Sources */,
+				67B7A69C1752A2890040362A /* Light.m in Sources */,
+				67B7A69F1752A2940040362A /* Camera.m in Sources */,
+				67B7A6A21752A2A90040362A /* Mesh.m in Sources */,
+				67B7A6A51752A2B40040362A /* RenderResource.m in Sources */,
+				67B7A6A81752C1E70040362A /* RenderableSpec.m in Sources */,
+				67B7A6AB1752C25A0040362A /* LightSpec.m in Sources */,
+				67B7A6AE1752C26B0040362A /* CameraSpec.m in Sources */,
+				67B7A6B41752C30B0040362A /* LightComponent.m in Sources */,
+				67B7A6B71752C31C0040362A /* CameraComponent.m in Sources */,
+				67B7A6BA1752C3370040362A /* RenderableComponent.m in Sources */,
+				67B7A6BD1752C3450040362A /* NodeComponent.m in Sources */,
+				67B7A6C51752C5660040362A /* GameSceneManager.m in Sources */,
+				67B7A6C81752C5E20040362A /* NodeSpec.m in Sources */,
+				67B7A6CC1752CE0E0040362A /* Movable.m in Sources */,
+				67B7A6D0175348A30040362A /* DefrostManager.m in Sources */,
+				67B7A6D317534DA20040362A /* Color.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
