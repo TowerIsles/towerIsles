@@ -6,6 +6,7 @@
 @interface GameAppDelegate ()
 {
     ViewManager* viewManager;
+    RenderManager* renderManager;
 }
 @end
 
@@ -81,7 +82,9 @@
 
 - (void)internal_setupViewLayers
 {
-    [viewManager setEAGLView:_viewDirector.eaglView];
+    _viewDirector->renderManager = renderManager;
+    
+    [viewManager setGLKView:_viewDirector.glkView];
     
     [viewManager setDefaultViewLayer:_viewDirector.defaultViewLayer];
     

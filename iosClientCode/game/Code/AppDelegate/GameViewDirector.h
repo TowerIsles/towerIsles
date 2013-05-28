@@ -1,10 +1,15 @@
 #import "Game.h"
+#import <GLKit/GLKit.h>
 
 @class EAGLView;
 
-@interface GameViewDirector : UIViewController
+@interface GameViewDirector : GLKViewController
+{
+@public
+    RenderManager* renderManager;
+}
 
-@property (nonatomic, assign) IBOutlet EAGLView* eaglView;
+@property (nonatomic, assign) IBOutlet GLKView* glkView;
 @property (nonatomic, assign) IBOutlet ViewLayer* defaultViewLayer;
 @property (nonatomic, assign) IBOutlet ViewLayer* statusViewLayer;
 @property (nonatomic, assign) IBOutlet ViewLayer* popupViewLayer;

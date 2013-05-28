@@ -9,4 +9,11 @@
     [super dealloc];
 }
 
+- (void)glkView:(GLKView*)view
+     drawInRect:(CGRect)rect
+{
+    [renderManager glkView:view
+                drawInRect:rect];
+}
+
 @end

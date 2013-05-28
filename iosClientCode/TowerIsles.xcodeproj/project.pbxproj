@@ -21,6 +21,7 @@
 		6736AEE5174E7257006FA778 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE3174E7257006FA778 /* EAGLView.m */; };
 		6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6736AEE4174E7257006FA778 /* EAGLView.xib */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		6797717E175488D40013FB6E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797717D175488D40013FB6E /* GLKit.framework */; };
 		67B7A6931752A2600040362A /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
 		67B7A6961752A2720040362A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
 		67B7A69C1752A2890040362A /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
@@ -121,6 +122,7 @@
 		6736AEE3174E7257006FA778 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EAGLView.m; path = graphics/views/EAGLView.m; sourceTree = "<group>"; };
 		6736AEE4174E7257006FA778 /* EAGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EAGLView.xib; path = graphics/views/EAGLView.xib; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6797717D175488D40013FB6E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		67B7A6911752A2600040362A /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = graphics/objects/Renderable.h; sourceTree = "<group>"; };
 		67B7A6921752A2600040362A /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Renderable.m; path = graphics/objects/Renderable.m; sourceTree = "<group>"; };
 		67B7A6941752A2720040362A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = graphics/objects/Model.h; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6797717E175488D40013FB6E /* GLKit.framework in Frameworks */,
 				6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */,
 				67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */,
 				67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */,
@@ -441,6 +444,7 @@
 		67CCECD91743EAC400AE8940 = {
 			isa = PBXGroup;
 			children = (
+				6797717D175488D40013FB6E /* GLKit.framework */,
 				67E04D89174746FE00B3FCFC /* bundle */,
 				67CCECEB1743EAC400AE8940 /* TowerIsles */,
 				67CCECE41743EAC400AE8940 /* Frameworks */,

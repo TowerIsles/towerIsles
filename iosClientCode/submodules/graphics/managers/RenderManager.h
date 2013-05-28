@@ -3,4 +3,7 @@
 
 @interface RenderManager : Manager
 
+- (void)glkView:(GLKView*)view
+     drawInRect:(CGRect)rect;
+
 @end

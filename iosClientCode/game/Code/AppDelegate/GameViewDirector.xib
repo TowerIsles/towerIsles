@@ -39,25 +39,12 @@
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIView" id="811162062">
-						<reference key="NSNextResponder" ref="7972772"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{320, 480}</string>
-						<reference key="NSSuperview" ref="7972772"/>
-						<reference key="NSNextKeyView" ref="136782031"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC45OTY1OTE3NTggMC45NjQ1MjMzOTM1IDAAA</bytes>
-						</object>
-						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-					</object>
 					<object class="IBUIView" id="136782031">
 						<reference key="NSNextResponder" ref="7972772"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="706871618"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor" id="364567772">
@@ -74,6 +61,7 @@
 						</object>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="445404772"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="364567772"/>
@@ -84,6 +72,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="845382829"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="364567772"/>
@@ -94,6 +83,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="176735142"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="364567772"/>
@@ -104,6 +94,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 480}</string>
 						<reference key="NSSuperview" ref="7972772"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="364567772"/>
@@ -112,7 +103,8 @@
 				</object>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView" ref="811162062"/>
+				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="136782031"/>
 				<reference key="IBUIBackgroundColor" ref="364567772"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 					<int key="IBUIInterfaceOrientation">3</int>
@@ -189,11 +181,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">eaglView</string>
+						<string key="label">glkView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="811162062"/>
+						<reference key="destination" ref="7972772"/>
 					</object>
-					<int key="connectionID">295</int>
+					<int key="connectionID">298</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -267,11 +259,10 @@
 							<reference ref="176735142"/>
 							<reference ref="706871618"/>
 							<reference ref="845382829"/>
-							<reference ref="811162062"/>
 							<reference ref="136782031"/>
 						</object>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Base</string>
+						<string key="objectName">GLKView</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">272</int>
@@ -331,12 +322,6 @@
 						<string key="objectName">DebugView</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">294</int>
-						<reference key="object" ref="811162062"/>
-						<reference key="parent" ref="7972772"/>
-						<string key="objectName">EAGLView</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">276</int>
 						<reference key="object" ref="136782031"/>
 						<reference key="parent" ref="7972772"/>
@@ -352,6 +337,7 @@
 					<string>-1.IBPluginDependency</string>
 					<string>-2.CustomClassName</string>
 					<string>-2.IBPluginDependency</string>
+					<string>18.CustomClassName</string>
 					<string>18.IBPluginDependency</string>
 					<string>272.CustomClassName</string>
 					<string>272.IBPluginDependency</string>
@@ -373,8 +359,6 @@
 					<string>289.IBPluginDependency</string>
 					<string>291.CustomClassName</string>
 					<string>291.IBPluginDependency</string>
-					<string>294.CustomClassName</string>
-					<string>294.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -382,6 +366,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>GLKView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>ViewLayer</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -402,8 +387,6 @@
 					<string>ViewLayer</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>PassthroughView</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>EAGLView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -419,9 +402,108 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">295</int>
+			<int key="maxID">298</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">GameViewDirector</string>
+					<string key="superclassName">GLKViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>debugViewLayer</string>
+							<string>defaultViewLayer</string>
+							<string>glkView</string>
+							<string>loadingViewLayer</string>
+							<string>popupViewLayer</string>
+							<string>statusViewLayer</string>
+						</object>
+						<object class="NSArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>ViewLayer</string>
+							<string>ViewLayer</string>
+							<string>GLKView</string>
+							<string>ViewLayer</string>
+							<string>ViewLayer</string>
+							<string>ViewLayer</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>debugViewLayer</string>
+							<string>defaultViewLayer</string>
+							<string>glkView</string>
+							<string>loadingViewLayer</string>
+							<string>popupViewLayer</string>
+							<string>statusViewLayer</string>
+						</object>
+						<object class="NSArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">debugViewLayer</string>
+								<string key="candidateClassName">ViewLayer</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">defaultViewLayer</string>
+								<string key="candidateClassName">ViewLayer</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">glkView</string>
+								<string key="candidateClassName">GLKView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">loadingViewLayer</string>
+								<string key="candidateClassName">ViewLayer</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">popupViewLayer</string>
+								<string key="candidateClassName">ViewLayer</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">statusViewLayer</string>
+								<string key="candidateClassName">ViewLayer</string>
+							</object>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/GameViewDirector.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">PassthroughView</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/PassthroughView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ViewLayer</string>
+					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">view</string>
+						<string key="NS.object.0">UIView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">view</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">view</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ViewLayer.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
