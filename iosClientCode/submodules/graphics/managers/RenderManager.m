@@ -74,6 +74,24 @@ GLfloat gTexCoordData[] =
 
 @implementation RenderManager
 
+
+- (void)displayMatrix4:(GLKMatrix4)matrix
+{
+    NSLog(@"displayMatrix4");
+    NSLog(@"%f, %f, %f, %f", matrix.m00, matrix.m01, matrix.m02, matrix.m03);
+    NSLog(@"%f, %f, %f, %f", matrix.m10, matrix.m11, matrix.m12, matrix.m13);
+    NSLog(@"%f, %f, %f, %f", matrix.m20, matrix.m21, matrix.m22, matrix.m23);
+    NSLog(@"%f, %f, %f, %f", matrix.m30, matrix.m31, matrix.m32, matrix.m33);
+}
+
+- (void)displayMatrix3:(GLKMatrix3)matrix
+{
+    NSLog(@"displayMatrix3");
+    NSLog(@"%f, %f, %f", matrix.m00, matrix.m01, matrix.m02);
+    NSLog(@"%f, %f, %f", matrix.m10, matrix.m11, matrix.m12);
+    NSLog(@"%f, %f, %f", matrix.m20, matrix.m21, matrix.m22);
+}
+
 - (void)dealloc
 {
 	[RenderManager releaseRetainedPropertiesOfObject:self];
@@ -265,6 +283,21 @@ GLfloat gTexCoordData[] =
 
 - (void)update
 {
+    float aspect = fabsf(320.0f / 480.0f);
+    NSLog(@"%f", aspect);
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 0.1f, 100.0f);
+//    [self displayMatrix4:projectionMatrix];
+    // Compute the model view matrix for the object rendered with ES2
+    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -10.0f);
+    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
+    
+    _normalMatrix = GLKMatrix3InvertAndTranspose(GLKMatrix4GetMatrix3(modelViewMatrix), NULL);
+    //[self displayMatrix3:_normalMatrix];
+    
+    _modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
+    //[self displayMatrix4:_modelViewProjectionMatrix];
+    
+    _rotation += .14;//16f * 0.5f;
 }
 
 - (void)postUpdate
