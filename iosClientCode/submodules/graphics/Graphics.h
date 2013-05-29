@@ -1,8 +1,6 @@
 #import "RenderManager.h"
 #import "SceneManager.h"
 
-#import "EAGLView.h"
-
 #import "Scene.h"
 #import "Node.h"
 #import "SceneNode.h"
