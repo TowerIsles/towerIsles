@@ -18,10 +18,10 @@
 		6732D52117515DC300B39912 /* SceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D52017515DC300B39912 /* SceneNode.m */; };
 		6732D525175166AA00B39912 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
-		6736AEE5174E7257006FA778 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE3174E7257006FA778 /* EAGLView.m */; };
-		6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6736AEE4174E7257006FA778 /* EAGLView.xib */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
 		6797717E175488D40013FB6E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797717D175488D40013FB6E /* GLKit.framework */; };
+		67977181175505460013FB6E /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977180175505460013FB6E /* RenderResourceManager.m */; };
+		67977184175505C20013FB6E /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977183175505C20013FB6E /* Shader.m */; };
 		67B7A6931752A2600040362A /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
 		67B7A6961752A2720040362A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
 		67B7A69C1752A2890040362A /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
@@ -118,11 +118,12 @@
 		6732D524175166AA00B39912 /* Mat4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mat4.m; path = math/Mat4.m; sourceTree = "<group>"; };
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
-		6736AEE2174E7257006FA778 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = graphics/views/EAGLView.h; sourceTree = "<group>"; };
-		6736AEE3174E7257006FA778 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EAGLView.m; path = graphics/views/EAGLView.m; sourceTree = "<group>"; };
-		6736AEE4174E7257006FA778 /* EAGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EAGLView.xib; path = graphics/views/EAGLView.xib; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6797717D175488D40013FB6E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6797717F175505460013FB6E /* RenderResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderResourceManager.h; path = graphics/managers/RenderResourceManager.h; sourceTree = "<group>"; };
+		67977180175505460013FB6E /* RenderResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderResourceManager.m; path = graphics/managers/RenderResourceManager.m; sourceTree = "<group>"; };
+		67977182175505C20013FB6E /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = graphics/objects/Shader.h; sourceTree = "<group>"; };
+		67977183175505C20013FB6E /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shader.m; path = graphics/objects/Shader.m; sourceTree = "<group>"; };
 		67B7A6911752A2600040362A /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = graphics/objects/Renderable.h; sourceTree = "<group>"; };
 		67B7A6921752A2600040362A /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Renderable.m; path = graphics/objects/Renderable.m; sourceTree = "<group>"; };
 		67B7A6941752A2720040362A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = graphics/objects/Model.h; sourceTree = "<group>"; };
@@ -309,7 +310,6 @@
 			children = (
 				6736AEDE174E71F6006FA778 /* base */,
 				6736AEDD174E71ED006FA778 /* objects */,
-				6736AEDC174E71E8006FA778 /* views */,
 				6736AEDB174E71BE006FA778 /* managers */,
 				67B7A6C91752CD870040362A /* Graphics.h */,
 			);
@@ -323,18 +323,10 @@
 				6736AEE0174E723D006FA778 /* RenderManager.m */,
 				6732D51617515D5A00B39912 /* SceneManager.h */,
 				6732D51717515D5A00B39912 /* SceneManager.m */,
+				6797717F175505460013FB6E /* RenderResourceManager.h */,
+				67977180175505460013FB6E /* RenderResourceManager.m */,
 			);
 			name = managers;
-			sourceTree = "<group>";
-		};
-		6736AEDC174E71E8006FA778 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				6736AEE2174E7257006FA778 /* EAGLView.h */,
-				6736AEE3174E7257006FA778 /* EAGLView.m */,
-				6736AEE4174E7257006FA778 /* EAGLView.xib */,
-			);
-			name = views;
 			sourceTree = "<group>";
 		};
 		6736AEDD174E71ED006FA778 /* objects */ = {
@@ -362,6 +354,8 @@
 				67B7A6A41752A2B40040362A /* RenderResource.m */,
 				67B7A6D117534D9F0040362A /* Color.h */,
 				67B7A6D217534DA10040362A /* Color.m */,
+				67977182175505C20013FB6E /* Shader.h */,
+				67977183175505C20013FB6E /* Shader.m */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -913,7 +907,6 @@
 				6715454E1744ABC4000E767B /* TestMainMenu.xib in Resources */,
 				67E04D8A174746FF00B3FCFC /* bundle in Resources */,
 				67FF24F3174CB5F0008EE9A2 /* FPSCounter.xib in Resources */,
-				6736AEE6174E7257006FA778 /* EAGLView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,7 +954,6 @@
 				67FF24F2174CB5F0008EE9A2 /* FPSCounter.m in Sources */,
 				67FF24F6174CBD92008EE9A2 /* UpdateBlockAtInterval.m in Sources */,
 				6736AEE1174E723D006FA778 /* RenderManager.m in Sources */,
-				6736AEE5174E7257006FA778 /* EAGLView.m in Sources */,
 				67286510174FC91F003B1A65 /* Vec3.m in Sources */,
 				67286513174FC92B003B1A65 /* Quat.m in Sources */,
 				67C731F61750714500F1BA07 /* TestingManager.m in Sources */,
@@ -993,6 +985,8 @@
 				67B7A6CC1752CE0E0040362A /* Movable.m in Sources */,
 				67B7A6D0175348A30040362A /* DefrostManager.m in Sources */,
 				67B7A6D317534DA20040362A /* Color.m in Sources */,
+				67977181175505460013FB6E /* RenderResourceManager.m in Sources */,
+				67977184175505C20013FB6E /* Shader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
