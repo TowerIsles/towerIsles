@@ -4,6 +4,8 @@
 #import <OpenGLES/ES2/glext.h>
 #import <GLKit/GLKit.h>
 
+#define BUFFER_OFFSET(i) ((char *)NULL + (i))
+
 #define PrintGLErrorStr(er) \
 {\
 if (er == 1286)\

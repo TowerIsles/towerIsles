@@ -127,6 +127,8 @@
     glBindAttribLocation(_programHandle, ShaderAttributeNormal, "normal");
     
     CheckGLError
+    
+    glBindAttribLocation(_programHandle, GLKVertexAttribTexCoord0, "aTexCoord");
 }
 
 - (void)internal_link

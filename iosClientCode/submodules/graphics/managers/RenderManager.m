@@ -1,6 +1,8 @@
 #import "RenderManager.h"
 #import "RenderResourceManager.h"
 #import "Shader.h"
+#import "Mesh.h"
+#import "PrimitiveData.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -12,22 +14,30 @@ enum
     NUM_UNIFORMS
 };
 GLint uniforms[NUM_UNIFORMS];
+//
+//GLfloat gVertexData[] =
+//{
+//    0.5f, 0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
+//    -0.5f, 0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
+//    0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
+//    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f
+//};
+//
+//GLfloat gVertexData2[] =
+//{
+//    0.5f, 0.5f, 5.0f,    0.0f, 0.0f, 1.0f,
+//    -0.5f, 0.5f, 5.0f,    0.0f, 0.0f, 1.0f,
+//    0.5f, -0.5f, 5.0f,   0.0f, 0.0f, 1.0f,
+//    -0.5f, -0.5f, 5.0f,   0.0f, 0.0f, 1.0f
+//};
 
-GLfloat gVertexData[] =
-{
-    0.5f, 0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
-    -0.5f, 0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
-    0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f
-};
-
-GLfloat gTexCoordData[] =
-{
-    1.0f, 1.0f,
-    0.0f, 1.0f,
-    1.0f, 0.0f,
-    0.0f, 0.0f
-};
+//GLfloat gTexCoordData[] =
+//{
+//    1.0f, 1.0f,
+//    0.0f, 1.0f,
+//    1.0f, 0.0f,
+//    0.0f, 0.0f
+//};
 
 @interface RenderManager ()
 {
@@ -38,12 +48,14 @@ GLfloat gTexCoordData[] =
     GLKMatrix3 _normalMatrix;
     float _rotation;
     
-    GLuint _vertexArray;
-    GLuint _vertexBuffer;
+    //GLuint _vertexBuffer;
+
     GLuint _texCoordBuffer;
     
     int uSamplerLoc;
     int aTexCoordLoc;
+    
+    //GLuint _vertexBuffer2;
     
     // FBO variables
     GLuint fboHandle;
@@ -60,6 +72,7 @@ GLfloat gTexCoordData[] =
     
     GLint defaultFBO;
 }
+
 @end
 
 
@@ -124,23 +137,7 @@ GLfloat gTexCoordData[] =
     
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);
     
-    // FBO status check
-    GLenum status;
-    status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
-    switch(status) {
-        case GL_FRAMEBUFFER_COMPLETE:
-            NSLog(@"fbo complete");
-            break;
-            
-        case GL_FRAMEBUFFER_UNSUPPORTED:
-            NSLog(@"fbo unsupported");
-            break;
-            
-        default:
-            /* programming error; will fail on all hardware */
-            NSLog(@"Framebuffer Error");
-            break;
-    }
+    CheckGLError
     
     glBindFramebuffer(GL_FRAMEBUFFER, defaultFBO);
 }
@@ -160,28 +157,26 @@ GLfloat gTexCoordData[] =
     [EAGLContext setCurrentContext:glContext];
     
     [renderResourceManager loadShaders];
+    [renderResourceManager loadModels];
     
     Shader* shader = [renderResourceManager shaderForIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]];
     
     glEnable(GL_DEPTH_TEST);
+        
+ 
     
-    glGenBuffers(1, &_vertexBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(gVertexData), gVertexData, GL_STATIC_DRAW);
-    
-    glEnableVertexAttribArray(GLKVertexAttribPosition);
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(0));
-    glEnableVertexAttribArray(GLKVertexAttribNormal);
-    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(12));
-    
-    glGenBuffers(1, &_texCoordBuffer);
-    glBindBuffer(GL_ARRAY_BUFFER, _texCoordBuffer);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(gTexCoordData), gTexCoordData, GL_STATIC_DRAW);
+//    glGenBuffers(1, &_vertexBuffer);
+//    glGenBuffers(1, &_vertexBuffer2);
+
+//    glGenBuffers(1, &_texCoordBuffer);
+//    glBindBuffer(GL_ARRAY_BUFFER, _texCoordBuffer);
+//    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8, gTexCoordData, GL_STATIC_DRAW);
     // get text coord attribute index
     
-    aTexCoordLoc = [shader getAttributeLocation:"aTexCoord"];
-    glEnableVertexAttribArray(aTexCoordLoc);
-    glVertexAttribPointer(aTexCoordLoc, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
+    
+//    aTexCoordLoc = [shader getAttributeLocation:"aTexCoord"];
+//    glEnableVertexAttribArray(aTexCoordLoc);
+//    glVertexAttribPointer(aTexCoordLoc, 2, GL_FLOAT, GL_FALSE, 0, BUFFER_OFFSET(0));
     // get sampler location
     uSamplerLoc = [shader getUniformLocation:"uSampler"];
 
@@ -191,13 +186,13 @@ GLfloat gTexCoordData[] =
     // initialize FBO
     [self setupFBO];
     
-    // to test texturing
+    // Generate texture
     GLubyte tex[] = {255, 0, 0, 255, 0, 255, 0, 255, 0, 255, 0, 255, 255, 0, 0, 255};
     glActiveTexture(GL_TEXTURE0);
     glGenTextures(1, &texId);
     glBindTexture(GL_TEXTURE_2D, texId);
-    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 2, 2, 0, GL_RGBA, GL_UNSIGNED_BYTE, tex);
@@ -222,9 +217,9 @@ GLfloat gTexCoordData[] =
      drawInRect:(CGRect)rect
 {
     // render FBO tex
-    [self renderFBO];
+//    [self renderFBO];
     
-    // reset to main framebuffer
+//    reset to main framebuffer
     [view bindDrawable];
     
     glViewport(0, 0, view.bounds.size.width, view.bounds.size.height);
@@ -232,27 +227,65 @@ GLfloat gTexCoordData[] =
     glClearColor(0.65f, 0.65f, 0.65f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    //glEnable(GL_TEXTURE_2D);
-    glActiveTexture(GL_TEXTURE0);
-    
-    // Render
-    Shader* shader = [renderResourceManager shaderForIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]];
-    [shader useProgram];
+    {
+        
+        Mesh* mesh = [renderResourceManager meshForIdentifier:[Identifier objectWithStringIdentifier:@"test"]];
+        [mesh prepareForRender];
 
-    glUniform1i(uSamplerLoc, 0);
-    
-    glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjectionMatrix.m);
-    glUniformMatrix3fv(uniforms[UNIFORM_NORMAL_MATRIX], 1, 0, _normalMatrix.m);
-    
-    // bind to fbo texture
-    glBindTexture(GL_TEXTURE_2D, fboTex);
-    
-    // uncomment line below and comment out[self renderFBO]; above to test with normal texture
-    // glBindTexture(GL_TEXTURE_2D, texId);
-    
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-    
-    //glDisable(GL_TEXTURE_2D);
+        CheckGLError
+        
+        glActiveTexture(GL_TEXTURE0);
+        
+        // Render Objects
+        Shader* shader = [renderResourceManager shaderForIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]];
+        [shader useProgram];
+        
+        glUniform1i(uSamplerLoc, 0);
+        
+        glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjectionMatrix.m);
+        glUniformMatrix3fv(uniforms[UNIFORM_NORMAL_MATRIX], 1, 0, _normalMatrix.m);
+        
+        // bind to fbo texture
+        glBindTexture(GL_TEXTURE_2D, fboTex);
+        
+        
+        // uncomment line below and comment out[self renderFBO]; above to test with normal texture
+        //glBindTexture(GL_TEXTURE_2D, texId);
+        
+        CheckGLError
+        
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        
+    }
+    {
+        
+        Mesh* mesh = [renderResourceManager meshForIdentifier:[Identifier objectWithStringIdentifier:@"test2"]];
+        [mesh prepareForRender];
+
+        CheckGLError
+        
+        glActiveTexture(GL_TEXTURE0);
+        
+        // Render Objects
+        Shader* shader = [renderResourceManager shaderForIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]];
+        [shader useProgram];
+        
+        glUniform1i(uSamplerLoc, 0);
+        
+        glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjectionMatrix.m);
+        glUniformMatrix3fv(uniforms[UNIFORM_NORMAL_MATRIX], 1, 0, _normalMatrix.m);
+        
+        // bind to fbo texture
+        glBindTexture(GL_TEXTURE_2D, fboTex);
+        
+        
+        // uncomment line below and comment out[self renderFBO]; above to test with normal texture
+        //glBindTexture(GL_TEXTURE_2D, texId);
+        
+        
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        
+    }
     
     CheckGLError
 }

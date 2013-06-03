@@ -2,4 +2,6 @@
 
 @interface RenderResource : ManagedPropertiesObject
 
+- (void)prepareForRender;
+
 @end

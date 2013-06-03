@@ -11,4 +11,6 @@
 
 @implementation RenderResource
 
+- (void)prepareForRender {}
+
 @end
