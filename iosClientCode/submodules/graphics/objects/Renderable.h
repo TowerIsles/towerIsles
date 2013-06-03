@@ -2,4 +2,6 @@
 
 @interface Renderable : Movable
 
+- (void)render;
+
 @end

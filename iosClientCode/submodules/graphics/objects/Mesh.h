@@ -13,4 +13,6 @@ typedef enum
 - (void)createFromData:(float*)data
               dataSize:(int)dataSize;
 
+- (int)vertexCount;
+
 @end

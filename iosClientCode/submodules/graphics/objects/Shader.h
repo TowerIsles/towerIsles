@@ -1,20 +1,10 @@
 #import "RenderResource.h"
 
-typedef enum
-{
-    ShaderAttributeVertex,
-    ShaderAttributeNormal,
-    ShaderAttributeCount
-} ShaderAttribute;
-
 @interface Shader : RenderResource
 @property (nonatomic, assign) GLuint programHandle;
-@property (nonatomic, retain) NSString* vertexShaderFilename;
-@property (nonatomic, retain) NSString* fragmentShaderFilename;
 
-- (void)create;
-
-- (void)compileAndLink;
++ (Shader*)objectWithVertexShaderFilename:(NSString*)vertexShaderFilename
+                   fragmentShaderFilename:(NSString*)fragmentShaderFilename;
 
 - (void)useProgram;
 

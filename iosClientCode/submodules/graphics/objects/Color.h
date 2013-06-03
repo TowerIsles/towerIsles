@@ -9,7 +9,10 @@ struct Color {
 typedef struct Color Color;
 
 Color ColorMake(float r, float g, float b, float a);
-
+unsigned int ColorUnsignedR(Color* color);
+unsigned int ColorUnsignedG(Color* color);
+unsigned int ColorUnsignedB(Color* color);
+unsigned int ColorUnsignedA(Color* color);
 
 #define SerializationHandler_Color(propertyNameArg, ivarNameArg)          \
 - (NSDictionary*)serialize_##propertyNameArg                              \

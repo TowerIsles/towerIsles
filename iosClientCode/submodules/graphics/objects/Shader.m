@@ -5,7 +5,8 @@
 @interface Shader ()
 {	
 }
-
+@property (nonatomic, retain) NSString* vertexShaderFilename;
+@property (nonatomic, retain) NSString* fragmentShaderFilename;
 @end
 
 
@@ -31,14 +32,28 @@
     return glGetUniformLocation(_programHandle, uniformName);
 }
 
-- (void)create
++ (Shader*)objectWithVertexShaderFilename:(NSString*)vertexShaderFilename
+                   fragmentShaderFilename:(NSString*)fragmentShaderFilename
+{
+    Shader* shader = [Shader object];
+    shader.vertexShaderFilename = vertexShaderFilename;
+    shader.fragmentShaderFilename = fragmentShaderFilename;
+    
+    [shader internal_create];
+    
+    [shader internal_compileAndLink];
+    
+    return shader;
+}
+
+- (void)internal_create
 {
     self.programHandle = glCreateProgram();
     
     CheckGLError
 }
 
-- (void)compileAndLink
+- (void)internal_compileAndLink
 {
     GLuint vertexShader = [self internal_compileShaderWithFilename:_vertexShaderFilename
                                                               type:GL_VERTEX_SHADER];
@@ -120,11 +135,11 @@
 
 - (void)internal_bindAttributes
 {
-    glBindAttribLocation(_programHandle, ShaderAttributeVertex, "position");
+    glBindAttribLocation(_programHandle, GLKVertexAttribPosition, "position");
     
     CheckGLError
     
-    glBindAttribLocation(_programHandle, ShaderAttributeNormal, "normal");
+    glBindAttribLocation(_programHandle, GLKVertexAttribNormal, "normal");
     
     CheckGLError
     

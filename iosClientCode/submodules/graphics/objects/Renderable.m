@@ -1,14 +1,7 @@
 #import "Renderable.h"
 
-
-@interface Renderable ()
-{
-	
-}
-
-@end
-
-
 @implementation Renderable
+
+- (void)render {}
 
 @end

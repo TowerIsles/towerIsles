@@ -19,6 +19,7 @@
 		6732D525175166AA00B39912 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		6787808C175C6A2B0014B5E4 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787808B175C6A2B0014B5E4 /* Material.m */; };
 		678CC0341758EE320094CC98 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678CC0331758EE310094CC98 /* PrimitiveData.m */; };
 		6797717E175488D40013FB6E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797717D175488D40013FB6E /* GLKit.framework */; };
 		67977181175505460013FB6E /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977180175505460013FB6E /* RenderResourceManager.m */; };
@@ -120,6 +121,8 @@
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6787808A175C6A2B0014B5E4 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = graphics/objects/Material.h; sourceTree = "<group>"; };
+		6787808B175C6A2B0014B5E4 /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Material.m; path = graphics/objects/Material.m; sourceTree = "<group>"; };
 		678CC0321758EE310094CC98 /* PrimitiveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimitiveData.h; path = graphics/objects/PrimitiveData.h; sourceTree = "<group>"; };
 		678CC0331758EE310094CC98 /* PrimitiveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimitiveData.m; path = graphics/objects/PrimitiveData.m; sourceTree = "<group>"; };
 		6797717D175488D40013FB6E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -361,6 +364,8 @@
 				67977183175505C20013FB6E /* Shader.m */,
 				678CC0321758EE310094CC98 /* PrimitiveData.h */,
 				678CC0331758EE310094CC98 /* PrimitiveData.m */,
+				6787808A175C6A2B0014B5E4 /* Material.h */,
+				6787808B175C6A2B0014B5E4 /* Material.m */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -993,6 +998,7 @@
 				67977181175505460013FB6E /* RenderResourceManager.m in Sources */,
 				67977184175505C20013FB6E /* Shader.m in Sources */,
 				678CC0341758EE320094CC98 /* PrimitiveData.m in Sources */,
+				6787808C175C6A2B0014B5E4 /* Material.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

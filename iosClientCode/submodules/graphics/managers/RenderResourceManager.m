@@ -1,6 +1,7 @@
 #import "RenderResourceManager.h"
 #import "Shader.h"
 #import "Mesh.h"
+#import "Material.h"
 #import "PrimitiveData.h"
 
 @interface RenderResourceManager ()
@@ -9,6 +10,7 @@
 }
 @property (nonatomic, retain) NSMutableDictionary* shadersByIdentifier;
 @property (nonatomic, retain) NSMutableDictionary* meshesByIdentifier;
+@property (nonatomic, retain) NSMutableDictionary* materialsByIdentifier;
 @end
 
 
@@ -20,6 +22,7 @@
     {
         _shadersByIdentifier = [NSMutableDictionary new];
         _meshesByIdentifier = [NSMutableDictionary new];
+        _materialsByIdentifier = [NSMutableDictionary new];
     }
     return self;
 }
@@ -38,6 +41,13 @@
     return [_meshesByIdentifier objectForKey:identifier];
 }
 
+- (Material*)materialForIdentifier:(Identifier*)identifier
+{
+    CheckNotNull([_materialsByIdentifier objectForKey:identifier]);
+    
+    return [_materialsByIdentifier objectForKey:identifier];
+}
+
 - (void)loadShaders
 {
     [self internal_createShaderWithIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]
@@ -49,14 +59,9 @@
                           vertexShaderFilename:(NSString*)vertexShaderFilename
                         fragmentShaderFilename:(NSString*)fragmentShaderFilename
 {
-    Shader* shader = [Shader object];
-    shader.vertexShaderFilename = vertexShaderFilename;
-    shader.fragmentShaderFilename = fragmentShaderFilename;
-    
-    [shader create];
-    
-    [shader compileAndLink];
-    
+    Shader* shader = [Shader objectWithVertexShaderFilename:vertexShaderFilename
+                                     fragmentShaderFilename:fragmentShaderFilename];
+ 
     [_shadersByIdentifier setObject:shader
                              forKey:identifier];
     
@@ -78,6 +83,18 @@
                 dataSize:sizeof(GL_FLOAT) * 32];
     [_meshesByIdentifier setObject:mesh2
                             forKey:[Identifier objectWithStringIdentifier:@"test2"]];
+}
+
+- (void)loadMaterials
+{
+    [_materialsByIdentifier setObject:[Material objectWithColor:ColorMake(.5, .1, .5, 1)]
+                               forKey:[Identifier objectWithStringIdentifier:@"colorPurple"]];
+    
+    [_materialsByIdentifier setObject:[Material objectWithColor:ColorMake(0, 0, 1, 1)]
+                               forKey:[Identifier objectWithStringIdentifier:@"colorBlue"]];
+    
+    [_materialsByIdentifier setObject:[Material objectWithColor:ColorMake(.9, .9, .1, 1)]
+                               forKey:[Identifier objectWithStringIdentifier:@"colorYellow"]];
 }
 
 @end

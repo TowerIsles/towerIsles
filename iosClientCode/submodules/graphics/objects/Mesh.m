@@ -7,8 +7,8 @@
 }
 @property (nonatomic, assign) float* data;
 @property (nonatomic, assign) int dataSize;
+@property (nonatomic, assign) int calculatedVertexCount;
 @end
-
 
 @implementation Mesh
 
@@ -17,7 +17,7 @@
 {
     self.data = data;
     self.dataSize = dataSize;
-    
+    self.calculatedVertexCount = dataSize / sizeof(GL_FLOAT);
     glGenBuffers(1, &_vertexHandle);
 }
 
@@ -33,6 +33,11 @@
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 32, BUFFER_OFFSET(24));
     
+}
+
+- (int)vertexCount
+{
+    return _calculatedVertexCount;
 }
 
 @end
