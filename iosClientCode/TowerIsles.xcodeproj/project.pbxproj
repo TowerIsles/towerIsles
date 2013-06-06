@@ -19,6 +19,7 @@
 		6732D525175166AA00B39912 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		675150C7175DB5EB00A1C439 /* GraphicsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 675150C6175DB51300A1C439 /* GraphicsBase.m */; };
 		6787808C175C6A2B0014B5E4 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787808B175C6A2B0014B5E4 /* Material.m */; };
 		678CC0341758EE320094CC98 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678CC0331758EE310094CC98 /* PrimitiveData.m */; };
 		6797717E175488D40013FB6E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797717D175488D40013FB6E /* GLKit.framework */; };
@@ -89,6 +90,9 @@
 		67E04D721745429100B3FCFC /* Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D711745429100B3FCFC /* Identifier.m */; };
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
 		67E04D8A174746FF00B3FCFC /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E04D89174746FE00B3FCFC /* bundle */; };
+		67FC55151760536100A72D9C /* TouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC55141760536100A72D9C /* TouchManager.m */; };
+		67FC55191760E6F000A72D9C /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC55181760E6F000A72D9C /* TouchChannel.m */; };
+		67FC551C1760EB2A00A72D9C /* TouchGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC551B1760EB2A00A72D9C /* TouchGesture.m */; };
 		67FF24E2174C60CB008EE9A2 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */; };
 		67FF24E4174C7F2E008EE9A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */; };
 		67FF24EE174CB373008EE9A2 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */; };
@@ -121,6 +125,7 @@
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		675150C6175DB51300A1C439 /* GraphicsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphicsBase.m; path = graphics/base/GraphicsBase.m; sourceTree = "<group>"; };
 		6787808A175C6A2B0014B5E4 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = graphics/objects/Material.h; sourceTree = "<group>"; };
 		6787808B175C6A2B0014B5E4 /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Material.m; path = graphics/objects/Material.m; sourceTree = "<group>"; };
 		678CC0321758EE310094CC98 /* PrimitiveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimitiveData.h; path = graphics/objects/PrimitiveData.h; sourceTree = "<group>"; };
@@ -257,6 +262,12 @@
 		67E04D7B17460C9E00B3FCFC /* EntitySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySpec.h; sourceTree = "<group>"; };
 		67E04D7C17460C9E00B3FCFC /* EntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySpec.m; sourceTree = "<group>"; };
 		67E04D89174746FE00B3FCFC /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
+		67FC55131760536100A72D9C /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
+		67FC55141760536100A72D9C /* TouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchManager.m; sourceTree = "<group>"; };
+		67FC55171760E6F000A72D9C /* TouchChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchChannel.h; path = objects/TouchChannel.h; sourceTree = "<group>"; };
+		67FC55181760E6F000A72D9C /* TouchChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchChannel.m; path = objects/TouchChannel.m; sourceTree = "<group>"; };
+		67FC551A1760EB2A00A72D9C /* TouchGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchGesture.h; path = objects/TouchGesture.h; sourceTree = "<group>"; };
+		67FC551B1760EB2A00A72D9C /* TouchGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchGesture.m; path = objects/TouchGesture.m; sourceTree = "<group>"; };
 		67FF24E0174C60CB008EE9A2 /* ServerTimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerTimeManager.h; sourceTree = "<group>"; };
 		67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerTimeManager.m; sourceTree = "<group>"; };
 		67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -374,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				6732D52217515E4100B39912 /* GraphicsBase.h */,
+				675150C6175DB51300A1C439 /* GraphicsBase.m */,
 			);
 			name = base;
 			sourceTree = "<group>";
@@ -742,6 +754,7 @@
 		67E04D52174539C000B3FCFC /* gameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				67FC55161760E6DA00A72D9C /* objects */,
 				6728650D174FC8F9003B1A65 /* math */,
 				67FF24E5174C81FF008EE9A2 /* UI */,
 				67E04D53174539C000B3FCFC /* component */,
@@ -782,6 +795,8 @@
 				67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */,
 				67FF24EC174CB373008EE9A2 /* FrameTimeManager.h */,
 				67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */,
+				67FC55131760536100A72D9C /* TouchManager.h */,
+				67FC55141760536100A72D9C /* TouchManager.m */,
 			);
 			path = gameEngineManagers;
 			sourceTree = "<group>";
@@ -836,6 +851,17 @@
 				67B7A6BC1752C3450040362A /* NodeComponent.m */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		67FC55161760E6DA00A72D9C /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				67FC55171760E6F000A72D9C /* TouchChannel.h */,
+				67FC55181760E6F000A72D9C /* TouchChannel.m */,
+				67FC551A1760EB2A00A72D9C /* TouchGesture.h */,
+				67FC551B1760EB2A00A72D9C /* TouchGesture.m */,
+			);
+			name = objects;
 			sourceTree = "<group>";
 		};
 		67FF24E5174C81FF008EE9A2 /* UI */ = {
@@ -999,6 +1025,10 @@
 				67977184175505C20013FB6E /* Shader.m in Sources */,
 				678CC0341758EE320094CC98 /* PrimitiveData.m in Sources */,
 				6787808C175C6A2B0014B5E4 /* Material.m in Sources */,
+				675150C7175DB5EB00A1C439 /* GraphicsBase.m in Sources */,
+				67FC55151760536100A72D9C /* TouchManager.m in Sources */,
+				67FC55191760E6F000A72D9C /* TouchChannel.m in Sources */,
+				67FC551C1760EB2A00A72D9C /* TouchGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

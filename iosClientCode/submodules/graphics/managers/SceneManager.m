@@ -27,10 +27,8 @@
     CheckNotNull(sceneConfig);
     CheckTrue([_sceneForIdentifier objectForKey:sceneIdentifier] == nil);
     
-    Scene* scene = [Scene object];
-    
-    [scene configureWithIdentifier:sceneIdentifier
-                       sceneConfig:sceneConfig];
+    Scene* scene = [Scene objectWithIdentifier:sceneIdentifier
+                                   sceneConfig:sceneConfig];
     
     [_sceneForIdentifier setObject:scene
                             forKey:sceneIdentifier];
@@ -45,7 +43,17 @@
 
 - (void)setActiveScene:(Scene*)scene
 {
-    self.activeScene = scene;
+    if (scene != _activeScene)
+    {
+        [_activeScene release];
+        _activeScene = [scene retain];
+    }
 }
+
+- (void)renderActiveScene
+{
+    [_activeScene renderVisibleNodes];
+}
+
 
 @end

@@ -2,6 +2,7 @@
 #import "Vec3.h"
 #import "Quat.h"
 #import "Asserts.h"
+#import "Camera.h"
 
 @implementation NodeConfig
 
@@ -22,7 +23,7 @@
 @property (nonatomic, retain) NSMutableArray* childNodes;
 
 @property (nonatomic, assign) Vec3 initialPosition;
-@property (nonatomic, assign) Vec3 intialScale;
+@property (nonatomic, assign) Vec3 initialScale;
 @property (nonatomic, assign) Quat initialOrientation;
 
 @property (nonatomic, assign) Vec3 nodePosition;
@@ -33,7 +34,7 @@
 @property (nonatomic, assign) Vec3 derivedScale;
 @property (nonatomic, assign) Quat derivedOrientation;
 
-@property (nonatomic, assign) Mat4 cachedTransform;
+@property (nonatomic, assign) GLKMatrix4 cachedTransform;
 @property (nonatomic, assign) BOOL cachedTransformUpToDate;
 
 @end
@@ -45,7 +46,7 @@
 {
     if (self = [super init])
     {
-        _childNodes = [NSMutableArray object];
+        _childNodes = [NSMutableArray new];
     }
     return self;
 }
@@ -64,10 +65,13 @@
     self.identifier = [Identifier objectWithStringIdentifier:nodeIdentifier.stringValue];
     
     Vec3Set(&_nodePosition, nodeConfig.positionPointer);
+    Vec3Set(&_initialPosition, nodeConfig.positionPointer);
     
     Vec3Set(&_nodeScale, nodeConfig.scalePointer);
+    Vec3Set(&_initialScale, nodeConfig.scalePointer);
     
     QuatSet(&_nodeOrientation, nodeConfig.orientationPointer);
+    QuatSet(&_initialOrientation, nodeConfig.orientationPointer);
     
     _inheritScale = nodeConfig.inheritScale;
     
@@ -80,7 +84,7 @@
     
     [_childNodes addObject:child];
     
-    child->_parentNode = self;
+    child.parentNode = self;
 }
 
 - (void)removeChild:(Node*)child
@@ -90,6 +94,111 @@
     [_childNodes removeObject:child];
     
     child->_parentNode = nil;
+}
+
+- (void)bakeTransformAndRenderWithCamera:(Camera*)camera
+{
+    [self internal_bakeTransform];
+
+    [self renderWithCamera:camera];
+    
+    for (Node* node in _childNodes)
+    {
+        [node bakeTransformAndRenderWithCamera:camera];
+    }
+}
+
+- (void)renderWithCamera:(Camera*)camera
+{
+#if DEBUG 
+    // Render debug renderable
+#endif
+}
+
+GLKMatrix4* Node_getTransform(Node* node)
+{
+    if (!node->_cachedTransformUpToDate)
+    {
+        // SRT
+        GLKMatrix4* m = &node->_cachedTransform;
+        
+        Vec3* scale = &node->_derivedScale;
+        
+        Vec3* position = &node->_derivedPosition;
+        
+        GLKMatrix3 orientation = QuatToMat3(&node->_derivedOrientation);
+        
+        m->m00 = scale->x * orientation.m00;
+        m->m10 = scale->y * orientation.m01;
+        m->m20 = scale->z * orientation.m02;
+        m->m30 = position->x;
+        
+        m->m01 = scale->x * orientation.m10;
+        m->m11 = scale->y * orientation.m11;
+        m->m21 = scale->z * orientation.m12;
+        m->m31 = position->y;
+        
+        m->m02 = scale->x * orientation.m20;
+        m->m12 = scale->y * orientation.m21;
+        m->m22 = scale->z * orientation.m22;
+        m->m32 = position->z;
+        
+        m->m03 = 0;
+        m->m13 = 0;
+        m->m23 = 0;
+        m->m33 = 1;
+        
+        node->_cachedTransformUpToDate = true;
+    }
+    return &node->_cachedTransform;
+}
+
+- (void)internal_bakeTransform
+{
+    if (_parentNode != nil)
+    {
+        Quat* parentOrientation = &_parentNode->_derivedOrientation;
+        
+        if (_inheritOrientation)
+        {
+            _derivedOrientation = QuatMultiplied(&_nodeOrientation, parentOrientation);
+        }
+        else
+        {
+            _derivedOrientation = _nodeOrientation;
+        }
+        
+        Vec3* parentScale = &_parentNode->_derivedScale;
+        
+        if (_inheritScale)
+        {
+            _derivedScale = Vec3VecScaled(&_nodeScale, parentScale);
+        }
+        else
+        {
+            _derivedScale = _nodeScale;
+        }
+        
+        CheckTrue(Vec3IsNotZero(parentScale));
+        CheckTrue(Vec3IsNotZero(&_nodeScale));
+        CheckTrue(Vec3IsNotZero(&_derivedScale));
+        
+        Vec3 scaledPosition = Vec3VecScaled(&_nodePosition, parentScale);
+        
+        _derivedPosition = QuatRotatedVec3(&scaledPosition, parentOrientation);
+        
+        Vec3Add(&_derivedPosition, &_parentNode->_derivedPosition);
+    }
+    else
+    {
+        _derivedPosition = _nodePosition;
+        
+        _derivedOrientation =  _nodeOrientation;
+        
+        _derivedScale = _nodeScale;
+    }
+    
+    _cachedTransformUpToDate = false;
 }
 
 

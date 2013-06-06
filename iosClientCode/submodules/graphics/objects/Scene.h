@@ -9,13 +9,17 @@
 
 @interface Scene : ManagedPropertiesObject
 
-- (void)configureWithIdentifier:(Identifier*)sceneIdentifier
-                    sceneConfig:(SceneConfig*)sceneConfig;
++ (Scene*)objectWithIdentifier:(Identifier*)sceneIdentifier
+                   sceneConfig:(SceneConfig*)sceneConfig;
 
 - (SceneNode*)rootSceneNode;
+
+- (SceneNode*)cameraOneNode;
 
 - (SceneNode*)createAndAddSceneNodeWithIdentifer:(Identifier*)nodeIdentifier
                                  sceneNodeConfig:(SceneNodeConfig*)sceneNodeConfig
                             parentNodeIdentifier:(Identifier*)parentNodeIdentifier;
+
+- (void)renderVisibleNodes;
 
 @end

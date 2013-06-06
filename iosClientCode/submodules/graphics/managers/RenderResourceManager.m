@@ -95,6 +95,9 @@
     
     [_materialsByIdentifier setObject:[Material objectWithColor:ColorMake(.9, .9, .1, 1)]
                                forKey:[Identifier objectWithStringIdentifier:@"colorYellow"]];
+    
+    [_materialsByIdentifier setObject:[Material objectWithColor:ColorMake(1, 1, 1, 1)]
+                               forKey:[Identifier objectWithStringIdentifier:@"colorWhite"]];
 }
 
 @end

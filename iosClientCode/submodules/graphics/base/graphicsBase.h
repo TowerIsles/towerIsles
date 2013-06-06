@@ -3,52 +3,28 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 #import <GLKit/GLKit.h>
+#import "Asserts.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
-#define PrintGLErrorStr(er) \
-{\
-if (er == 1286)\
-{\
-printf("INVALID_FRAMEBUFFER_OPERATION\n");\
-}\
-else if (er == 1280)\
-{\
-printf("GL_INVALID_ENUM\n");\
-}\
-else if (er == 1281)\
-{\
-printf("GL_INVALID_VALUE\n");\
-}\
-else if (er == 1282)\
-{\
-printf("GL_INVALID_OPERATION\n");\
-}\
-else if (er == 1283)\
-{\
-printf("GL_STACK_OVERFLOW\n");\
-}\
-else if (er == 1284)\
-{\
-printf("GL_STACK_UNDERFLOW\n");\
-}\
-else if (er == 1285)\
-{\
-printf("GL_OUT_OF_MEMORY\n");\
-}\
-else if (er == 32817)\
-{\
-printf("GL_TABLE_TOO_LARGE\n");\
-}\
-else\
-{\
-NSLog(@"OpenGL Error = %d", er);\
-}\
-}\
+void displayGLKMatrix4(NSString* name, GLKMatrix4* matrix);
 
+void displayGLKMatrix3(NSString* name, GLKMatrix3* matrix);
 
-#if defined(DEBUG) && !ENGINE_MAC
-#define CheckGLError { int _gl_err = glGetError(); if (_gl_err != 0) { printf("\n\nGL ERROR %d:  ", _gl_err); PrintGLErrorStr(_gl_err); printf("\n\n"); AssertNow(); } }
+void displayGLError(int error);
+
+#if DEBUG
+
+#define CheckGLError                    \
+{                                       \
+    int error = glGetError();           \
+    if (error != 0)                     \
+    {                                   \
+        displayGLError(error);          \
+        AssertNow();                    \
+    }                                   \
+}
+
 #else
 #define CheckGLError
 #endif

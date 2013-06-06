@@ -3,6 +3,9 @@
 #import "Quat.h"
 #import "Mat4.h"
 #import "Identifier.h"
+#import <GLKit/GLKit.h>
+
+@class Camera;
 
 @interface NodeConfig : ManagedPropertiesObject
 @property (nonatomic, assign) BOOL inheritScale;
@@ -25,6 +28,12 @@
 - (void)addChildNode:(Node*)child;
 
 - (void)removeChild:(Node*)child;
+
+- (void)bakeTransformAndRenderWithCamera:(Camera*)camera;
+
+- (void)renderWithCamera:(Camera*)camera;
+
+GLKMatrix4* Node_getTransform(Node* node);
 
 Vec3 Node_getPosition(Node* node);
 

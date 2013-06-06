@@ -39,6 +39,8 @@ Quat QuatMake(float x, float y, float z, float w)
 
 Quat QuatMakeAxisAngle(const Vec3* axis, float radianAngle)
 {
+    CheckTrue(areFloatsEqual(Vec3Magnitude(axis), 1));
+    
     float halfAngle = radianAngle * .5f;
     float sin = sinf(halfAngle);
     
@@ -71,6 +73,54 @@ Quat QuatMultiplied(const Quat* q1, const Quat* q2)
     ret.z = q1->w * q2->z + q1->z * q2->w + q1->x * q2->y - q1->y * q2->x;
     ret.w = q1->w * q2->w - q1->x * q2->x - q1->y * q2->y - q1->z * q2->z;
     return ret;
+}
+
+void QuatRotateVec3(Vec3* v1, const Quat* q1)
+{
+    *v1 = QuatRotatedVec3(v1, q1);
+}
+
+Vec3 QuatRotatedVec3(const Vec3* v1, const Quat* q1)
+{
+    Vec3 qvec = Vec3Make(q1->x, q1->y, q1->z);
+    
+    Vec3 uv = Vec3CrossProduct(&qvec, v1);
+    
+    Vec3 uuv = Vec3CrossProduct(&qvec, &uv);
+    
+    Vec3Scale(&uv, 2.0f * q1->w);
+    
+    Vec3Scale(&uuv, 2.0f);
+    
+    Vec3Add(&uuv, &uv);
+    
+    return  Vec3Added(v1, &uuv);
+}
+
+GLKMatrix3 QuatToMat3(const Quat* q1)
+{
+    float fTx  = q1->x + q1->x;
+    float fTy  = q1->y + q1->y;
+    float fTz  = q1->z + q1->z;
+    float fTwx = fTx * q1->w;
+    float fTwy = fTy * q1->w;
+    float fTwz = fTz * q1->w;
+    float fTxx = fTx * q1->x;
+    float fTxy = fTy * q1->x;
+    float fTxz = fTz * q1->x;
+    float fTyy = fTy * q1->y;
+    float fTyz = fTz * q1->y;
+    float fTzz = fTz * q1->z;
+    
+    return GLKMatrix3Make(1.0f-(fTyy+fTzz),
+                          fTxy-fTwz,
+                          fTxz+fTwy,
+                          fTxy+fTwz,
+                          1.0f-(fTxx+fTzz),
+                          fTyz-fTwx,
+                          fTxz-fTwy,
+                          fTyz+fTwx,
+                          1.0f-(fTxx+fTyy));
 }
 
 void QuatDispaly(const Quat* q1)

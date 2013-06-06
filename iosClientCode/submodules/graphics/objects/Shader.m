@@ -3,7 +3,9 @@
 #import "GraphicsBase.h"
 
 @interface Shader ()
-{	
+{
+    GLuint modelViewProjectionMatrixHandle;
+    GLuint normalMatrixHandle;
 }
 @property (nonatomic, retain) NSString* vertexShaderFilename;
 @property (nonatomic, retain) NSString* fragmentShaderFilename;
@@ -11,6 +13,16 @@
 
 
 @implementation Shader
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        modelViewProjectionMatrixHandle = -1;
+        normalMatrixHandle = -1;
+    }
+    return self;
+}
 
 - (GLuint)getModelViewProjectionMatrixUniform
 {
@@ -20,16 +32,6 @@
 - (GLuint)getNormalMatrixUniform
 {
     return glGetUniformLocation(_programHandle, "normalMatrix");
-}
-
-- (GLuint)getAttributeLocation:(const char*)attributeName
-{
-    return glGetAttribLocation(_programHandle, attributeName);
-}
-
-- (GLuint)getUniformLocation:(const char*)uniformName
-{
-    return glGetUniformLocation(_programHandle, uniformName);
 }
 
 + (Shader*)objectWithVertexShaderFilename:(NSString*)vertexShaderFilename
@@ -170,6 +172,33 @@
     CheckGLError
     
     glDeleteShader(shader);
+    
+    CheckGLError
+}
+
+- (void)sendModelViewProjectionMatrix:(GLKMatrix4*)modelViewProjectionMatrix
+{
+    if (modelViewProjectionMatrixHandle == -1)
+    {
+        modelViewProjectionMatrixHandle = glGetUniformLocation(_programHandle, "modelViewProjectionMatrix");
+        
+        CheckGLError
+    }
+    glUniformMatrix4fv(modelViewProjectionMatrixHandle, 1, 0, (GLfloat*)modelViewProjectionMatrix);
+    
+    CheckGLError
+}
+
+- (void)sendNormalMatrix:(GLKMatrix3*)normalMatrix
+{
+    if (normalMatrixHandle == -1)
+    {
+        normalMatrixHandle = glGetUniformLocation(_programHandle, "normalMatrix");
+        
+        CheckGLError
+    }
+    
+    glUniformMatrix3fv(normalMatrixHandle, 1, 0, (GLfloat*)normalMatrix);
     
     CheckGLError
 }

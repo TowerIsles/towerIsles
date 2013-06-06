@@ -2,6 +2,6 @@
 
 @implementation Renderable
 
-- (void)render {}
+- (void)renderWithCamera:(Camera*)camera {}
 
 @end

@@ -1,4 +1,5 @@
 #import "RenderResource.h"
+#import <GLKit/GLKit.h>
 
 @interface Shader : RenderResource
 @property (nonatomic, assign) GLuint programHandle;
@@ -12,8 +13,8 @@
 
 - (GLuint)getNormalMatrixUniform;
 
-- (GLuint)getAttributeLocation:(const char*)attributeName;
+- (void)sendModelViewProjectionMatrix:(GLKMatrix4*)modelViewProjectionMatrix;
 
-- (GLuint)getUniformLocation:(const char*)uniformName;
+- (void)sendNormalMatrix:(GLKMatrix3*)normalMatrix;
 
 @end

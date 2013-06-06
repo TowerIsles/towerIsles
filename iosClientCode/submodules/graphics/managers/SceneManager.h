@@ -13,4 +13,6 @@
 
 - (void)setActiveScene:(Scene*)scene;
 
+- (void)renderActiveScene;
+
 @end

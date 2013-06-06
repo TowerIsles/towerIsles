@@ -1,8 +1,6 @@
 #import "Game.h"
 #import <GLKit/GLKit.h>
 
-@class EAGLView;
-
 @interface GameViewDirector : GLKViewController
 {
 @public

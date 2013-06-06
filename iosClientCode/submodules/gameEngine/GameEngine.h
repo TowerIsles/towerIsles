@@ -13,4 +13,9 @@
 #import "Quat.h"
 #import "Mat4.h"
 
+#import "TouchManager.h"
+#import "TouchChannel.h"
+#import "TouchGesture.h"
+
+
 
