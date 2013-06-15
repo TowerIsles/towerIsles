@@ -184,6 +184,8 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
     return [_entity entitySpecForClass:entitySpecClass];    
 }
 
+- (void)load {}
+
 - (void)teardown
 {
     self.entity = nil;

@@ -3,6 +3,7 @@
 @class Identifier;
 @class SceneNode;
 @class SceneNodeConfig;
+@class Camera;
 
 @interface SceneConfig : ManagedPropertiesObject
 @end
@@ -15,6 +16,8 @@
 - (SceneNode*)rootSceneNode;
 
 - (SceneNode*)cameraOneNode;
+
+- (Camera*)getActiveCamera;
 
 - (SceneNode*)createAndAddSceneNodeWithIdentifer:(Identifier*)nodeIdentifier
                                  sceneNodeConfig:(SceneNodeConfig*)sceneNodeConfig

@@ -2,16 +2,16 @@
 #import "MenuManager.h"
 #import "PlayerManager.h"
 #import "TestSpec.h"
+#import "SettingsManager.h"
 
 @interface LoadingManager ()
 {
 	PlayerManager* playerManager;
     MenuManager* menuManager;
     EntityManager* entityManager;
+    SettingsManager* settingsManager;
 }
-
 @end
-
 
 @implementation LoadingManager
 
@@ -21,7 +21,7 @@
     [menuManager showDebugMenu];
 #endif
     
-    if ([playerManager shouldLoginImplicitly])
+    if ([settingsManager.shouldLoginImplicitly getSettingValue])
     {
         [playerManager attemptImplicitLogin];
     }

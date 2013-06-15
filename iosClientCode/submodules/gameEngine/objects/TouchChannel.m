@@ -72,8 +72,12 @@
     {
         self.longPressGesture = [LongPressGesture object];
         
-        [viewToObserve addGestureRecognizer:[[[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                           action:@selector(handleLongPressFrom:)] autorelease]];
+        UILongPressGestureRecognizer* gesture = [[[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                       action:@selector(handleLongPressFrom:)] autorelease];
+        
+        [viewToObserve addGestureRecognizer:gesture];
+        
+        // gesture.allowableMovement = 100;
     }
     
     if (config.observePan)

@@ -20,6 +20,8 @@
 
 - (id)possiblyTransformedSpec:(Class)entitySpecClass;
 
+- (void)load;
+
 - (void)teardown;
 
 @end

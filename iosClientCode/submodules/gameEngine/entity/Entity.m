@@ -92,6 +92,14 @@
     }
 }
 
+- (void)loadAllSpecs
+{
+    for (EntitySpec* entitySpec in _entitySpecsByEntitySpecClass.allValues)
+    {
+        [entitySpec load];
+    }
+}
+
 - (void)teardown
 {
     for (EntitySpec* entitySpec in _entitySpecsByEntitySpecClass.allValues)

@@ -7,6 +7,5 @@
 
 @property (nonatomic, retain) Camera* camera;
 @property (nonatomic, retain) CameraConfig* cameraConfig;
-@property (nonatomic, assign) int nodeIndex;
 
 @end

@@ -1,10 +1,12 @@
+#import "Utilities.h"
 
-struct Vec3 {
+struct Quat;
+
+typedef struct Vec3 {
     float x;
     float y;
     float z;
-};
-typedef struct Vec3 Vec3;
+} Vec3;
 
 extern const Vec3 Vec3_Zero;
 extern const Vec3 Vec3_UnitX;
@@ -57,15 +59,16 @@ float Vec3RadianAngleBetween(const Vec3* v1, const Vec3* v2);
 
 Vec3 Vec3CrossProduct(const Vec3* v1, const Vec3* v2);
 
-void Vec3Display(const Vec3* v1);
+void Vec3Display(NSString* name, const Vec3* v1);
 
+struct Quat Vec3RotationTo(const Vec3* v1, const Vec3* v2);
 
 #define SerializationHandler_Vec3(propertyNameArg, ivarNameArg)      \
 - (NSDictionary*)serialize_##propertyNameArg                         \
 {                                                                    \
-    return DictionaryKO(@"x", Float(ivarNameArg.x),                  \
-                        @"y", Float(ivarNameArg.y),                  \
-                        @"z", Float(ivarNameArg.z));                 \
+    return Dictionary(@"x", Float(ivarNameArg.x),                    \
+                      @"y", Float(ivarNameArg.y),                    \
+                      @"z", Float(ivarNameArg.z));                   \
 }
 
 #define DeserializationHandler_Vec3(classArg, propertyNameArg, ivarNameArg)       \

@@ -11,6 +11,8 @@
 
 - (Scene*)sceneForConfig:(Identifier*)sceneIdentifier;
 
+- (Scene*)getActiveScene;
+
 - (void)setActiveScene:(Scene*)scene;
 
 - (void)renderActiveScene;

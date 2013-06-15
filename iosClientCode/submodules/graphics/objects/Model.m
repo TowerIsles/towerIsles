@@ -23,7 +23,7 @@
 - (void)renderWithCamera:(Camera*)camera
 {
     // TODO: calculate on camera. pass in camera. some gl matrix stack?
-    float aspect = fabsf(320.0f / 480.0f); // TODO : derivce this from viewport
+    float aspect = fabsf(320.0f / 480.0f); // TODO : derive this from viewport
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 0.1f, 100.0f);
     
     [_mesh prepareForRender];
@@ -56,9 +56,7 @@
     
     [_shader sendNormalMatrix:&normalMatrix];
     
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, [_mesh vertexCount]);
-    
-    CheckGLError
+    [_mesh drawBuffers];
 }
 
 - (void)addMesh:(Mesh*)mesh

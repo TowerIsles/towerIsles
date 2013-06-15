@@ -6,8 +6,6 @@
 
 @interface PlayerManager : Manager
 
-- (BOOL)shouldLoginImplicitly;
-
 - (void)attemptImplicitLogin;
 
 - (void)createNewPlayerWithLoginId:(NSString*)loginId

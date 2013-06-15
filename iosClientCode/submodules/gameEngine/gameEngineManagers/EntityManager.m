@@ -50,7 +50,7 @@
     }];
     
     [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_renderables.json"];
-    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_test.json"];
+    //[self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_test.json"];
 }
 
 - (void)reload
@@ -159,6 +159,8 @@
     }
     
     [entity injectIvarsIntoAllSpecs];
+    
+    [entity loadAllSpecs];
         
     return [entity entitySpecForClass:EntitySpec.class];
 }

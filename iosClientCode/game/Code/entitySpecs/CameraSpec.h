@@ -1,11 +1,11 @@
 #import "Game.h"
 
-@class NodeSpec;
+@class MovableSpec;
 @class CameraComponent;
 
 EntitySpecInterface(CameraSpec, EntitySpec)
 {
-    NodeSpec* nodeSpec;
+    MovableSpec* movableSpec;
     CameraComponent* cameraComponent;
 }
 

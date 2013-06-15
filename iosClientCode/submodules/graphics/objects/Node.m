@@ -10,6 +10,17 @@
 - (Vec3*)scalePointer { return &_scale; }
 - (Quat*)orientationPointer { return &_orientation; }
 
++ (void)setupSerialization
+{
+    DeserializationHandler_Vec3(NodeConfig, position, _position);
+    DeserializationHandler_Vec3(NodeConfig, scale, _scale);
+    DeserializationHandler_Vec3(NodeConfig, orientation, _orientation);
+}
+
+SerializationHandler_Vec3(position, _position);
+SerializationHandler_Vec3(scale, _scale);
+SerializationHandler_Vec3(orientation, _orientation);
+
 @end
 
 @interface Node ()

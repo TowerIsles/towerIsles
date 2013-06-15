@@ -1,7 +1,9 @@
 #import "Game.h"
 
+@class LoginResponse;
+
 @interface DefrostManager : Manager
 
-//- (void)defrostGameStateFromServer
+- (void)defrostLoginResponse:(LoginResponse*)loginResponse;
 
 @end

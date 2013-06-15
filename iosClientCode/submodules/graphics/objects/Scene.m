@@ -58,6 +58,11 @@
     return _cameraOneNode;
 }
 
+- (Camera*)getActiveCamera
+{
+    return _activeCamera;
+}
+
 - (SceneNode*)createAndAddSceneNodeWithIdentifer:(Identifier*)nodeIdentifier
                                  sceneNodeConfig:(SceneNodeConfig*)sceneNodeConfig
                             parentNodeIdentifier:(Identifier*)parentNodeIdentifier

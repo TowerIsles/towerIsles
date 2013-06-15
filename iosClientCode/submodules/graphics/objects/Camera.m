@@ -57,4 +57,56 @@
     return &_viewMatrix;
 }
 
+- (void)lookAt:(Vec3)targetLocation
+{
+    Vec3 nodePosition = Node_getPosition(self.node);
+    //Vec3Display(@"nodePosition", &nodePosition);
+    [self setDirection:Vec3Subtracted(&targetLocation, &nodePosition)];
+}
+
+- (void)setDirection:(Vec3)direction
+{
+    CheckTrue(Vec3IsNotZero(&direction));
+    
+    //Vec3Scale(&direction, -1);
+    Vec3Normalize(&direction);
+    
+    Quat currentWorldOrientation = Node_getOrientation(self.node);
+    Quat rotationTo;
+    Quat targetWorldOrientation;
+    
+    if (YES)
+    {
+        Vec3 xVec = Vec3CrossProduct(&Vec3_UnitY, &direction);
+        Vec3Normalize(&xVec);
+        
+        Vec3 yVec = Vec3CrossProduct(&direction, &xVec);
+        Vec3Normalize(&yVec);
+        
+        targetWorldOrientation = QuatMakeFromAxes(&xVec, &yVec, &direction);
+    }
+    else
+    {
+        Vec3 axes[3];
+        
+        QuatToAxes(&currentWorldOrientation, axes);
+        
+        Vec3 temp = Vec3Added(&axes[1], &direction);
+        
+        if (Vec3MagnitudeSquared(&temp) < 0.00005f)
+        {
+            rotationTo = QuatMakeAxisAngle(&axes[1], M_PI);
+        }
+        else
+        {
+            rotationTo = Vec3RotationTo(&axes[2], &direction);
+        }
+        
+        targetWorldOrientation = QuatMultiplied(&rotationTo, &currentWorldOrientation);
+    }
+    QuatNormalize(&targetWorldOrientation);
+
+    Node_setOrientation(self.node, &targetWorldOrientation);
+}
+
 @end

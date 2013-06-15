@@ -72,17 +72,35 @@
 {
     Mesh* mesh = [Mesh object];
     mesh.type = MeshTypeMovablePrimitive;
-    [mesh createFromData:gVertexData
-                dataSize:sizeof(GL_FLOAT) * 32];
+    
+    [mesh createFromVertexData:gVertexData
+         vertexDataSizeInBytes:sizeof(GL_FLOAT) * 32
+                     indexData:gIndexData
+          indexDataSizeInBytes:sizeof(int) * 6];
+    
     [_meshesByIdentifier setObject:mesh
                             forKey:[Identifier objectWithStringIdentifier:@"test"]];
     
     Mesh* mesh2 = [Mesh object];
     mesh2.type = MeshTypeMovablePrimitive;
-    [mesh2 createFromData:gVertexData2
-                dataSize:sizeof(GL_FLOAT) * 32];
+    
+    [mesh2 createFromVertexData:gVertexData2
+          vertexDataSizeInBytes:sizeof(GL_FLOAT) * 32
+                      indexData:gIndexData2
+           indexDataSizeInBytes:sizeof(int) * 6];
+    
     [_meshesByIdentifier setObject:mesh2
                             forKey:[Identifier objectWithStringIdentifier:@"test2"]];
+    
+    Mesh* mesh3 = [Mesh object];
+    mesh3.type = MeshTypeMovablePrimitive;
+    [mesh3 createFromVertexData:primitiveMesh_Axes_VertexData
+          vertexDataSizeInBytes:sizeof(GL_FLOAT) * 32
+                      indexData:primitiveMesh_Axes_IndexData
+           indexDataSizeInBytes:sizeof(int) * 6];
+    [_meshesByIdentifier setObject:mesh3
+                            forKey:[Identifier objectWithStringIdentifier:@"axes"]];
+
 }
 
 - (void)loadMaterials

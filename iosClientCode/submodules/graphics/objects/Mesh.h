@@ -10,9 +10,11 @@ typedef enum
 @interface Mesh : RenderResource
 @property (nonatomic, assign) MeshType type;
 
-- (void)createFromData:(float*)data
-              dataSize:(int)dataSize;
+- (void)createFromVertexData:(float*)vertexData
+       vertexDataSizeInBytes:(int)vertexDataSizeInBytes
+                   indexData:(int*)indexData
+        indexDataSizeInBytes:(int)indexDataSizeInBytes;
 
-- (int)vertexCount;
+- (void)drawBuffers;
 
 @end

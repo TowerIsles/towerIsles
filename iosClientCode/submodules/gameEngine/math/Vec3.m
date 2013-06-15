@@ -1,6 +1,7 @@
 #import "Vec3.h"
 #import "MathValidation.h"
 #import "Asserts.h"
+#import "Quat.h"
 
 const Vec3 Vec3_Zero = {0, 0, 0};
 const Vec3 Vec3_UnitX = {1, 0, 0};
@@ -234,7 +235,48 @@ Vec3 Vec3CrossProduct(const Vec3* v1, const Vec3* v2)
     return ret;
 }
 
-void Vec3Display(const Vec3* v1)
+void Vec3Display(NSString* name, const Vec3* v1)
 {
-    NSLog(@"Vec3  x: %f, y: %f, z: %f", v1->x, v1->y, v1->z);
+    NSLog(@"Vec3 : %@\nx: %f\ny: %f\nz: %f", name, v1->x, v1->y, v1->z);
+}
+
+Quat Vec3RotationTo(const Vec3* v1, const Vec3* v2)
+{
+    CheckTrue(Vec3IsNotZero(v1));
+    CheckTrue(Vec3IsNotZero(v2));
+    
+    Vec3 source = Vec3Normalized(v1);
+    Vec3 destination = Vec3Normalized(v2);
+    
+    float dot = Vec3Dot(&source, &destination);
+    
+    if (dot >= 1.0f)
+    {
+        return Quat_Identity;
+    }
+    else if (dot < (1e-6f - 1.0f))
+    {
+        // Generate an axis
+        Vec3 axis = Vec3CrossProduct(&Vec3_UnitX, v1);
+        
+        if (Vec3IsZero(&axis))
+        {
+            axis = Vec3CrossProduct(&Vec3_UnitY, v1);
+        }
+        
+        Vec3Normalize(&axis);
+        
+        return QuatMakeAxisAngle(&axis, M_PI);
+    }
+    else
+    {
+        float s = sqrtf((1.0f + dot) * 2.0f);
+        float inverse = 1.0f / s;
+        
+        Vec3 cross = Vec3CrossProduct(&source, &destination);
+        
+        Quat quat = QuatMake(cross.x * inverse, cross.y * inverse, cross.z * inverse, s * .5f);
+        
+        return QuatNormalized(&quat);
+    }
 }

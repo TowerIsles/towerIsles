@@ -25,6 +25,8 @@
 
 - (void)injectIvarsIntoAllSpecs;
 
+- (void)loadAllSpecs;
+
 - (void)teardown;
 
 @end

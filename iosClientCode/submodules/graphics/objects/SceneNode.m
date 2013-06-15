@@ -47,7 +47,7 @@
     SceneNode* cameraNode = [SceneNode object];
     
     SceneNodeConfig* sceneNodeConfig = [SceneNodeConfig object];
-    sceneNodeConfig.position = Vec3_Zero;
+    sceneNodeConfig.position = Vec3Make(0, 0, -1);
     sceneNodeConfig.scale = Vec3_UnitScale;
     sceneNodeConfig.orientation = Quat_Identity;
     
@@ -62,8 +62,8 @@
 - (SceneNode*)createAndAddNodeWithIdentifier:(Identifier*)nodeIdentifier
                              sceneNodeConfig:(SceneNodeConfig*)sceneNodeConfig
 {
-    CheckNotNull(nodeIdentifier);
     CheckNotNull(sceneNodeConfig);
+    CheckNotNull(nodeIdentifier);
     
     SceneNode* childNode = [SceneNode object];
 

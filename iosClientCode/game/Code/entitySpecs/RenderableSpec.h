@@ -1,11 +1,11 @@
 #import "Game.h"
 
-@class NodeSpec;
+@class MovableSpec;
 @class RenderableComponent;
 
 EntitySpecInterface(RenderableSpec, EntitySpec)
 {
-    NodeSpec* nodeSpec;
+    MovableSpec* movableSpec;
     RenderableComponent* renderableComponent;
 }
 

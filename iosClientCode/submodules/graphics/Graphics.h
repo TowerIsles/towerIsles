@@ -1,4 +1,5 @@
 #import "RenderManager.h"
+#import "RenderResourceManager.h"
 #import "SceneManager.h"
 
 #import "Scene.h"

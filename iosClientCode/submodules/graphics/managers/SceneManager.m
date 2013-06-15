@@ -41,6 +41,11 @@
     return [_sceneForIdentifier objectForKey:sceneIdentifier];
 }
 
+- (Scene*)getActiveScene
+{
+    return _activeScene;
+}
+
 - (void)setActiveScene:(Scene*)scene
 {
     if (scene != _activeScene)
