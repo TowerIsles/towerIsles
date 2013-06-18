@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "submodules/core/base/NSObject+Serialization.m"
-         timestampString = "390495812.510494"
+         timestampString = "393266179.973992"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "362"
-         endingLineNumber = "362"
+         startingLineNumber = "360"
+         endingLineNumber = "360"
          landmarkName = "-serializedRepresentation"
          landmarkType = "5">
       </FileBreakpoint>
@@ -43,7 +43,7 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "game/Code/Managers/Loading/LoadingManager.m"
@@ -56,16 +56,29 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "game/Code/Managers/Loading/LoadingManager.m"
-         timestampString = "392711066.92183"
+         filePath = "game/code/testing/testCases/SerializationTesting.m"
+         timestampString = "393266677.513389"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
-         landmarkName = "-load"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
+         landmarkName = "-setup"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "game/code/testing/testCases/SerializationTesting.m"
+         timestampString = "393266677.513389"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "69"
+         endingLineNumber = "69"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

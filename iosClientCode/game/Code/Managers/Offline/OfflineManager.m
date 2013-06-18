@@ -13,15 +13,6 @@
 
 @implementation OfflineManager
 
-- (void)load
-{
-    
-}
-
-- (void)reload
-{
-    
-}
 
 + (OfflineManager*)sharedInstance
 {

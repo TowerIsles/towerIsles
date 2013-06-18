@@ -2,4 +2,6 @@
 
 @interface PlayerData : ManagedPropertiesObject
 
+- (NSDictionary*)serializedRepresentationForOfflineDatabase;
+
 @end

@@ -29,4 +29,8 @@
 
 - (void)teardown;
 
+- (NSDictionary*)serializedRepresentationForConfigFile;
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase;
+
 @end

@@ -29,7 +29,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
         injectableSpecClassesByIvar = [NSMutableDictionary new];
     }
     
-	if (self != [EntitySpec class])
+	if (self != kEntitySpecClass)
 	{
 		unsigned int ivarCount;
 		Ivar* ivars = class_copyIvarList(self, &ivarCount);
@@ -40,12 +40,12 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 
 			Class potentialClass = [NSObject classForIvar:ivar];
 			
-			if ([potentialClass isSubclassOfClass:[Component class]])
+			if ([potentialClass isSubclassOfClass:kComponentClass])
 			{
 				[injectableComponentClassesByIvar setObject:potentialClass
                                                      forKey:keyFromIvar(ivar)];
 			}
-			else if ([potentialClass isSubclassOfClass:[EntitySpec class]])
+			else if ([potentialClass isSubclassOfClass:kEntitySpecClass])
 			{
 				[injectableSpecClassesByIvar setObject:potentialClass
                                                 forKey:keyFromIvar(ivar)];
@@ -59,7 +59,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 + (BOOL)internal_verifyIvarsMatchRecursive:(Entity*)entity
                               currentClass:(Class)currentClass
 {
-    if (currentClass == [EntitySpec class])
+    if (currentClass == kEntitySpecClass)
         return YES;
     
     unsigned int ivarCount;
@@ -101,7 +101,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 
 - (void)internal_injectIvarsRecursive:(Class)currentClass
 {
-    if (currentClass == [EntitySpec class])
+    if (currentClass == kEntitySpecClass)
         return;
     
     unsigned int ivarCount;

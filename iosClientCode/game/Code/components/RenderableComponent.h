@@ -2,7 +2,7 @@
 
 @class Renderable;
 
-@interface RenderableComponent : Component <SerializeByDefault>
+@interface RenderableComponent : Component
 
 @property (nonatomic, retain) Renderable* renderable;
 

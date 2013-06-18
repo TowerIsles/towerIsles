@@ -10,8 +10,8 @@ typedef BOOL(^TestBlock)(void);
 
 #define RunTestSuite(testSuiteClassName)                        \
 {                                                               \
-    MathTesting* mathSuite = [MathTesting object];              \
-    [mathSuite setup];                                          \
+    testSuiteClassName* suite = [testSuiteClassName object];    \
+    [suite setup];                                              \
 }
 
 #if ASSERT_IN_TESTS

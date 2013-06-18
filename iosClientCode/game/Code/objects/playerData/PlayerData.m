@@ -5,10 +5,14 @@
 {
 	
 }
-
 @end
 
 
 @implementation PlayerData
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase
+{
+    return @{};
+}
 
 @end

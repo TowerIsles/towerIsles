@@ -3,7 +3,7 @@
 
 @class Renderable;
 
-@interface SceneNodeConfig : NodeConfig
+@interface SceneNodeConfig : NodeConfig <SerializeByDefault>
 @end
 
 @interface SceneNode : Node

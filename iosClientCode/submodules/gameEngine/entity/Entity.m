@@ -107,6 +107,7 @@
         [entitySpec teardown];
     }
     [_entitySpecsByEntitySpecClass removeAllObjects];
+    
     self.entitySpecsByEntitySpecClass = nil;
     
     for (Component* component in _componentsByClass.allValues)
@@ -114,7 +115,38 @@
         [component teardown];
     }
     [_componentsByClass removeAllObjects];
+    
     self.componentsByClass = nil;
+}
+
+- (NSDictionary*)internal_serializedRepresentationUsingComponentSelector:(SEL)componentSelector
+{
+    NSMutableDictionary* output = [NSMutableDictionary object];
+    
+    for (Class componentClass in [_componentsByClass allKeys])
+    {
+        Component* component = [_componentsByClass objectForKey:componentClass];
+        
+        NSDictionary* componentOutput = [component performSelector:componentSelector];
+        
+        if (componentOutput != nil)
+        {
+            [output setObject:componentOutput
+                       forKey:NSStringFromClass(componentClass)];
+        }
+    }
+    
+    return output;
+}
+
+- (NSDictionary*)serializedRepresentationForConfigFile
+{
+    return [self internal_serializedRepresentationUsingComponentSelector:@selector(serializedRepresentationForConfigFile)];
+}
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase
+{
+    return [self internal_serializedRepresentationUsingComponentSelector:@selector(serializedRepresentationForOfflineDatabase)];
 }
 
 @end

@@ -3,7 +3,7 @@
 @class Light;
 @class LightConfig;
 
-@interface LightComponent : Component <SerializeByDefault>
+@interface LightComponent : Component
 
 @property (nonatomic, retain) Light* light;
 @property (nonatomic, retain) LightConfig* lightConfig;

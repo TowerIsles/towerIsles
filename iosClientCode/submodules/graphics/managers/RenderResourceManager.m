@@ -51,8 +51,8 @@
 - (void)loadShaders
 {
     [self internal_createShaderWithIdentifier:[Identifier objectWithStringIdentifier:@"baseShader"]
-                         vertexShaderFilename:[ResourceManager formatPathForResourceWithName:@"Shaders/vertexShader.vsh"]
-                       fragmentShaderFilename:[ResourceManager formatPathForResourceWithName:@"Shaders/fragmentShader.fsh"]];
+                         vertexShaderFilename:[ResourceManager formatPathForResourceInBundleWithName:@"Shaders/vertexShader.vsh"]
+                       fragmentShaderFilename:[ResourceManager formatPathForResourceInBundleWithName:@"Shaders/fragmentShader.fsh"]];
 }
 
 - (Shader*)internal_createShaderWithIdentifier:(Identifier*)identifier

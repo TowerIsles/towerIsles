@@ -32,7 +32,7 @@
         _entitiesByIdentifier = [NSMutableDictionary new];
         _entityConfigsByIdentifier = [NSMutableDictionary new];
         _entitySpecsByEntitySpecClass = [NSMutableDictionary new];
-        _allSpecClasses = [[[Util allClassesWithSuperClass:EntitySpec.class] arrayByAddingObject:EntitySpec.class] retain];
+        _allSpecClasses = [[[Util allClassesWithSuperClass:kEntitySpecClass] arrayByAddingObject:kEntitySpecClass] retain];
         _conformingEntitySpecClassesByEntityConfigIdentifier = [NSMutableDictionary new];
     }
     return self;
@@ -55,7 +55,7 @@
 
 - (void)reload
 {
-    for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:EntitySpec.class])
+    for (EntitySpec* entitySpec in [self entitySpecInstancesConformingToSpec:kEntitySpecClass])
     {
         [entitySpec queueDestruction];
     }
@@ -75,7 +75,8 @@
 // Entity Config
 - (void)loadEntityConfigsFromFile:(NSString*)filename
 {
-    NSDictionary* entityConfigDataByEntityConfigId = [ResourceManager configurationForResource:filename];
+    NSDictionary* entityConfigDataByEntityConfigId = [ResourceManager configurationObjectForResourceInBundleWithName:filename
+                                                                                                          usingClass:kDictionaryClass];
     
     for (NSString* entityConfigId in entityConfigDataByEntityConfigId)
     {
@@ -162,7 +163,7 @@
     
     [entity loadAllSpecs];
         
-    return [entity entitySpecForClass:EntitySpec.class];
+    return [entity entitySpecForClass:kEntitySpecClass];
 }
 
 - (void)queueEntityForRemoval:(Entity*)entityToRemove

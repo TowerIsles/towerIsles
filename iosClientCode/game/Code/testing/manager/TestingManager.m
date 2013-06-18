@@ -2,6 +2,7 @@
 #import "Game.h"
 #import "TestSpec.h"
 #import "MathTesting.h"
+#import "SerializationTesting.h"
 #import "RenderResourceManager.h"
 #import "MovableSpec.h"
 #import "MovableComponent.h"
@@ -28,6 +29,7 @@
     NSLog(@"=============");
     
     RunTestSuite(MathTesting);
+    RunTestSuite(SerializationTesting);
     
     NSLog(@"=============");
     
@@ -80,7 +82,7 @@
         
     };
     
-addSceneNode =    addSceneNode;
+    addSceneNode = addSceneNode;
     
 //    Vec3 axis = Vec3Normalized(&Vec3_UnitScale);
 //    addSceneNode(Vec3Make(0, -2, -10.f), Vec3_UnitScale, QuatMakeAxisAngle(&axis, 0.5f), @"node1", @"test", @"baseShader", @"colorPurple");

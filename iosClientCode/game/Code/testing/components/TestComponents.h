@@ -1,12 +1,12 @@
 #import "Game.h"
 
-@interface TestComponentOne : Component <SerializeByDefault>
+@interface TestComponentOne : Component
 @property (nonatomic, assign) int testParamOne;
 @property (nonatomic, assign) float testParamTwo;
 @end
 
 
-@interface TestComponentTwo : Component <SerializeByDefault>
+@interface TestComponentTwo : Component
 @property (nonatomic, assign) int testParamOne;
 @property (nonatomic, assign) float testParamTwo;
 @end

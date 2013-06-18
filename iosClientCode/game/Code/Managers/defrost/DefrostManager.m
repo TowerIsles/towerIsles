@@ -18,6 +18,8 @@
     PlayerData* playerData = loginResponse.playerData;
     LandData* landData = loginResponse.landData;
     
+    playerData = playerData;
+    landData = landData;
     // create entities
     // record player data in playermanager? may or may not need - may have been done on login
     

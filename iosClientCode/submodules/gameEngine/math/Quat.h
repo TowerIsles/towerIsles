@@ -44,3 +44,24 @@ GLKMatrix3 QuatToMat3(const Quat* q1);
 void QuatToAxes(const Quat* q1, Vec3* axes);
 
 void QuatDisplay(NSString* name, const Quat* q1);
+
+#define SerializationHandler_Quat(propertyNameArg, ivarNameArg)      \
+- (NSDictionary*)serialize_##propertyNameArg                         \
+{                                                                    \
+    return Dictionary(@"x", Float(ivarNameArg.x),                    \
+                      @"y", Float(ivarNameArg.y),                    \
+                      @"z", Float(ivarNameArg.z),                    \
+                      @"w", Float(ivarNameArg.w));                   \
+}
+
+#define DeserializationHandler_Quat(classArg, propertyNameArg, ivarNameArg)       \
+{                                                                                 \
+    CheckTrue([self isSubclassOfClass:[classArg class]])                          \
+    [self registerDeserializer:^(classArg* instance, NSDictionary* value) {       \
+        instance->ivarNameArg.x = [[value objectForKey:@"x"] floatValue];         \
+        instance->ivarNameArg.y = [[value objectForKey:@"y"] floatValue];         \
+        instance->ivarNameArg.z = [[value objectForKey:@"z"] floatValue];         \
+        instance->ivarNameArg.w = [[value objectForKey:@"w"] floatValue];         \
+    }                                                                             \
+    forProperty:@#propertyNameArg];                                               \
+}

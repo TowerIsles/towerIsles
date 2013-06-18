@@ -7,12 +7,17 @@
 
 @class Camera;
 
-@interface NodeConfig : ManagedPropertiesObject
+@interface NodeConfig : ManagedPropertiesObject <SerializeByDefault>
 @property (nonatomic, assign) BOOL inheritScale;
 @property (nonatomic, assign) BOOL inheritOrientation;
 @property (nonatomic, assign) Vec3 position;
 @property (nonatomic, assign) Vec3 scale;
 @property (nonatomic, assign) Quat orientation;
+
+@property (nonatomic, assign) BOOL useInitialTransform;
+@property (nonatomic, assign) Vec3 initialPosition;
+@property (nonatomic, assign) Vec3 initialScale;
+@property (nonatomic, assign) Quat initialOrientation;
 @end
 
 @interface Node : ManagedPropertiesObject

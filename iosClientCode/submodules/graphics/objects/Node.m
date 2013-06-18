@@ -6,20 +6,32 @@
 
 @implementation NodeConfig
 
+- (Vec3*)initialPositionPointer { return &_initialPosition; }
+- (Vec3*)initialScalePointer { return &_initialScale; }
+- (Quat*)initialOrientationPointer { return &_initialOrientation; }
+
 - (Vec3*)positionPointer { return &_position; }
 - (Vec3*)scalePointer { return &_scale; }
 - (Quat*)orientationPointer { return &_orientation; }
 
 + (void)setupSerialization
 {
+    DeserializationHandler_Vec3(NodeConfig, initialPosition, _initialPosition);
+    DeserializationHandler_Vec3(NodeConfig, initialScale, _initialScale);
+    DeserializationHandler_Quat(NodeConfig, initialOrientation, _initialOrientation);
+    
     DeserializationHandler_Vec3(NodeConfig, position, _position);
     DeserializationHandler_Vec3(NodeConfig, scale, _scale);
-    DeserializationHandler_Vec3(NodeConfig, orientation, _orientation);
+    DeserializationHandler_Quat(NodeConfig, orientation, _orientation);
 }
+
+SerializationHandler_Vec3(initialPosition, _initialPosition);
+SerializationHandler_Vec3(initialScale, _initialScale);
+SerializationHandler_Quat(initialOrientation, _initialOrientation);
 
 SerializationHandler_Vec3(position, _position);
 SerializationHandler_Vec3(scale, _scale);
-SerializationHandler_Vec3(orientation, _orientation);
+SerializationHandler_Quat(orientation, _orientation);
 
 @end
 
@@ -76,13 +88,21 @@ SerializationHandler_Vec3(orientation, _orientation);
     self.identifier = [Identifier objectWithStringIdentifier:nodeIdentifier.stringValue];
     
     Vec3Set(&_nodePosition, nodeConfig.positionPointer);
-    Vec3Set(&_initialPosition, nodeConfig.positionPointer);
-    
     Vec3Set(&_nodeScale, nodeConfig.scalePointer);
-    Vec3Set(&_initialScale, nodeConfig.scalePointer);
-    
     QuatSet(&_nodeOrientation, nodeConfig.orientationPointer);
-    QuatSet(&_initialOrientation, nodeConfig.orientationPointer);
+    
+    if (nodeConfig.useInitialTransform)
+    {
+        Vec3Set(&_initialPosition, nodeConfig.initialPositionPointer);
+        Vec3Set(&_initialScale, nodeConfig.initialScalePointer);
+        QuatSet(&_initialOrientation, nodeConfig.initialOrientationPointer);
+    }
+    else
+    {
+        Vec3Set(&_initialPosition, nodeConfig.positionPointer);
+        Vec3Set(&_initialScale, nodeConfig.scalePointer);
+        QuatSet(&_initialOrientation, nodeConfig.orientationPointer);
+    }
     
     _inheritScale = nodeConfig.inheritScale;
     

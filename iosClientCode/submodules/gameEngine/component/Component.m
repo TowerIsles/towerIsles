@@ -13,4 +13,14 @@
 
 - (void)teardown {}
 
+- (NSDictionary*)serializedRepresentationForConfigFile
+{
+    return nil;
+}
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase
+{
+    return nil;
+}
+
 @end

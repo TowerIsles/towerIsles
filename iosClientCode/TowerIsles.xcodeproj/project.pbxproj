@@ -26,6 +26,7 @@
 		6797717E175488D40013FB6E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797717D175488D40013FB6E /* GLKit.framework */; };
 		67977181175505460013FB6E /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977180175505460013FB6E /* RenderResourceManager.m */; };
 		67977184175505C20013FB6E /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977183175505C20013FB6E /* Shader.m */; };
+		67B158241770BA5F009B0BE0 /* SerializationTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B158231770BA5E009B0BE0 /* SerializationTesting.m */; };
 		67B7A6931752A2600040362A /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
 		67B7A6961752A2720040362A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
 		67B7A69C1752A2890040362A /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
@@ -94,6 +95,7 @@
 		67E04D721745429100B3FCFC /* Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D711745429100B3FCFC /* Identifier.m */; };
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
 		67E04D8A174746FF00B3FCFC /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E04D89174746FE00B3FCFC /* bundle */; };
+		67F0DF61176C296D0079CEB0 /* OfflineDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F0DF60176C296D0079CEB0 /* OfflineDatabaseManager.m */; };
 		67FC55151760536100A72D9C /* TouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC55141760536100A72D9C /* TouchManager.m */; };
 		67FC55191760E6F000A72D9C /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC55181760E6F000A72D9C /* TouchChannel.m */; };
 		67FC551C1760EB2A00A72D9C /* TouchGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FC551B1760EB2A00A72D9C /* TouchGesture.m */; };
@@ -141,6 +143,8 @@
 		67977180175505460013FB6E /* RenderResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderResourceManager.m; path = graphics/managers/RenderResourceManager.m; sourceTree = "<group>"; };
 		67977182175505C20013FB6E /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = graphics/objects/Shader.h; sourceTree = "<group>"; };
 		67977183175505C20013FB6E /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shader.m; path = graphics/objects/Shader.m; sourceTree = "<group>"; };
+		67B158221770BA5E009B0BE0 /* SerializationTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializationTesting.h; path = game/code/testing/testCases/SerializationTesting.h; sourceTree = SOURCE_ROOT; };
+		67B158231770BA5E009B0BE0 /* SerializationTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SerializationTesting.m; path = game/code/testing/testCases/SerializationTesting.m; sourceTree = SOURCE_ROOT; };
 		67B7A6911752A2600040362A /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = graphics/objects/Renderable.h; sourceTree = "<group>"; };
 		67B7A6921752A2600040362A /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Renderable.m; path = graphics/objects/Renderable.m; sourceTree = "<group>"; };
 		67B7A6941752A2720040362A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = graphics/objects/Model.h; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 		67E04D7B17460C9E00B3FCFC /* EntitySpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntitySpec.h; sourceTree = "<group>"; };
 		67E04D7C17460C9E00B3FCFC /* EntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntitySpec.m; sourceTree = "<group>"; };
 		67E04D89174746FE00B3FCFC /* bundle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundle; sourceTree = "<group>"; };
+		67F0DF5F176C296D0079CEB0 /* OfflineDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OfflineDatabaseManager.h; path = game/code/managers/offline/OfflineDatabaseManager.h; sourceTree = SOURCE_ROOT; };
+		67F0DF60176C296D0079CEB0 /* OfflineDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OfflineDatabaseManager.m; path = game/code/managers/offline/OfflineDatabaseManager.m; sourceTree = SOURCE_ROOT; };
 		67FC55131760536100A72D9C /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
 		67FC55141760536100A72D9C /* TouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchManager.m; sourceTree = "<group>"; };
 		67FC55171760E6F000A72D9C /* TouchChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchChannel.h; path = objects/TouchChannel.h; sourceTree = "<group>"; };
@@ -474,6 +480,8 @@
 				67C731F81750715400F1BA07 /* TestCase.m */,
 				67C732001750755F00F1BA07 /* MathTesting.h */,
 				67C732011750755F00F1BA07 /* MathTesting.m */,
+				67B158221770BA5E009B0BE0 /* SerializationTesting.h */,
+				67B158231770BA5E009B0BE0 /* SerializationTesting.m */,
 			);
 			name = TestCases;
 			sourceTree = "<group>";
@@ -602,6 +610,8 @@
 			children = (
 				67CCED281743EBA700AE8940 /* OfflineManager.h */,
 				67CCED291743EBA700AE8940 /* OfflineManager.m */,
+				67F0DF5F176C296D0079CEB0 /* OfflineDatabaseManager.h */,
+				67F0DF60176C296D0079CEB0 /* OfflineDatabaseManager.m */,
 			);
 			path = Offline;
 			sourceTree = "<group>";
@@ -1085,6 +1095,8 @@
 				67D3DF1117684AE70060B70A /* LandData.m in Sources */,
 				67D3DF1517684BC60060B70A /* SettingsManager.m in Sources */,
 				67D3DF1917684BE50060B70A /* Setting.m in Sources */,
+				67F0DF61176C296D0079CEB0 /* OfflineDatabaseManager.m in Sources */,
+				67B158241770BA5F009B0BE0 /* SerializationTesting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

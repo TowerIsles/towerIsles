@@ -24,6 +24,8 @@
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    [Util initializeCachedClasses];
+    
     [self.viewDirector loadView];
     
     if (SystemVersionGreaterThanOrEqualTo(@"6.0"))
