@@ -6,6 +6,8 @@
 #import "RenderResourceManager.h"
 #import "MovableSpec.h"
 #import "MovableComponent.h"
+#import "PlayerManager.h"
+#import "DefrostManager.h"
 
 @interface TestingManager ()
 {
@@ -15,6 +17,8 @@
     SceneManager* sceneManager;
     RenderResourceManager* renderResourceManager;
     ViewManager* viewManager;
+    PlayerManager* playerManager;
+    DefrostManager* defrostManager;
 }
 
 @end
@@ -37,7 +41,11 @@
         [self update];
     }];
 
-    performBlockAfterDelay(0, ^{
+    performBlockAfterDelay(1, ^{
+//        [self internal_createAndLoginWithPlayer];
+    });
+    
+    performBlockAfterDelay(2, ^{
         [self internal_createAndPopulateTestScene];
     });
 }
@@ -48,6 +56,26 @@
 
 - (void)update
 {
+}
+
+- (void)internal_createAndLoginWithPlayer
+{
+    [playerManager createNewPlayerWithLoginId:@"caleb"
+                                     password:@"caleb"
+                                      confirm:@"caleb"
+                                 successBlock:^(CreateNewPlayerResponse* createNewPlayerResponse) {
+                                     [playerManager loginPlayerWithLoginId:@"caleb"
+                                                                  password:@"caleb"
+                                                              successBlock:^(LoginResponse* loginResponse) {
+                                                                  [defrostManager defrostLoginResponse:loginResponse];
+                                                              }
+                                                              failureBlock:^{
+                                                                  AssertNow();
+                                                              }];
+                                 }
+                                 failureBlock:^{
+                                     AssertNow();
+                                 }];
 }
 
 - (void)internal_createAndPopulateTestScene

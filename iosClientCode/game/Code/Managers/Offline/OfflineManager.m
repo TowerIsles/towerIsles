@@ -2,10 +2,11 @@
 #import "GameAppDelegate.h"
 #import "LoginResponse.h"
 #import "PlayerService.h"
+#import "OfflineDatabaseManager.h"
 
 @interface OfflineManager ()
 {
-	
+	OfflineDatabaseManager* offlineDatabaseManager;
 }
 
 @end
@@ -22,7 +23,11 @@
 - (CreateNewPlayerResponse*)createNewPlayerWithLoginId:(NSString*)loginId
                                               password:(NSString*)password
 {
+    [offlineDatabaseManager createPlayerWithLoginId:loginId
+                                           password:password];
+    
     CreateNewPlayerResponse* response = [CreateNewPlayerResponse object];
+    response.playerData = [offlineDatabaseManager retreivePlayerData:loginId];
     return response;
 }
 
@@ -30,6 +35,8 @@
                           password:(NSString*)password
 {
     LoginResponse* response = [LoginResponse object];
+    response.playerData = [offlineDatabaseManager retreivePlayerData:loginId];
+    response.landData = [offlineDatabaseManager retreiveLandData:loginId];
     return response;
 }
 

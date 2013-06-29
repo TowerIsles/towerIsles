@@ -60,7 +60,7 @@
 - (void)lookAt:(Vec3)targetLocation
 {
     Vec3 nodePosition = Node_getPosition(self.node);
-    //Vec3Display(@"nodePosition", &nodePosition);
+
     [self setDirection:Vec3Subtracted(&targetLocation, &nodePosition)];
 }
 

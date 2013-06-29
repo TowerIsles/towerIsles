@@ -1,16 +1,15 @@
 {
+  "orderedBaseEntityConfigIdentifiers": {
+  },
   "entityConfig_camera": {
-    "orderedBaseEntityConfigIdentifiers": {
-    },
-    "componentData": {
+    "componentDataByComponentType": {
       "MovableComponent": {
         "sceneNodeConfig": {
           "inheritScale": false,
-          "orientation": {
-            "y": 0,
-            "w": 1,
-            "z": 0,
-            "x": 0
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
           },
           "inheritOrientation": false,
           "position": {
@@ -18,10 +17,11 @@
             "y": 1,
             "z": 1
           },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
+          "orientation": {
+            "y": 0,
+            "w": 1,
+            "z": 0,
+            "x": 0
           }
         }
       },
@@ -32,7 +32,19 @@
   "entityConfig_box": {
     "orderedBaseEntityConfigIdentifiers": [
     ],
-    "componentData": {
+    "componentDataByComponentType": {
+      "LightComponent": {
+        "lightConfig": {
+          "type": "POINT",
+          "color": {
+            "r": 1,
+            "b": 0.5,
+            "g": 0.5,
+            "a": 1
+          }
+        },
+        "nodeIndex": 1
+      },
       "RenderableComponent": {
         "shaderIdentifier": {
           "identifier": "baseShader"
@@ -48,10 +60,11 @@
       "MovableComponent": {
         "sceneNodeConfig": {
           "inheritScale": false,
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
+          "orientation": {
+            "y": 0,
+            "w": 1,
+            "z": 0,
+            "x": 0
           },
           "inheritOrientation": false,
           "position": {
@@ -59,25 +72,12 @@
             "y": 1,
             "z": -5
           },
-          "orientation": {
-            "y": 0,
-            "w": 1,
-            "z": 0,
-            "x": 0
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
           }
         }
-      },
-      "LightComponent": {
-        "lightConfig": {
-          "type": "POINT",
-          "color": {
-            "r": 1,
-            "b": 0.5,
-            "g": 0.5,
-            "a": 1
-          }
-        },
-        "nodeIndex": 1
       }
     }
   }

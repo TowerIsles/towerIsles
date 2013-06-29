@@ -58,9 +58,9 @@
 - (BOOL)internal_validateNewUserWithLoginId:(NSString*)loginId
                                    password:(NSString*)password
                                     confirm:(NSString*)confirm
- {
-     return [password isEqualToString:confirm];
- }
+{
+    return ![loginId isEqualToString:kDefaultPlayerName] && [password isEqualToString:confirm];
+}
 
 - (void)createNewPlayerWithLoginId:(NSString*)loginId
                           password:(NSString*)password
@@ -78,7 +78,7 @@
     {
         [PlayerService createNewPlayer:request
                        responseHandler:^(CreateNewPlayerResponse* response) {
-                            if (response != nil)
+                            if (response == nil)
                             {
                                 failureBlock();
                             }
@@ -100,16 +100,18 @@
                   failureBlock:(VoidBlock)failureBlock
 {
     CheckTrue(_activePlayerData == nil);
-    LoginRequest* request = [LoginRequest object];
-    request.loginId = loginId;
-    request.password = password;
-    
+
     if (loginId != nil &&
+        ![loginId isEqualToString:kDefaultPlayerName] &&
         password != nil)
     {
+        LoginRequest* request = [LoginRequest object];
+        request.loginId = loginId;
+        request.password = password;
+        
         [PlayerService login:request
              responseHandler:^(LoginResponse* response) {
-               if (response != nil)
+               if (response == nil)
                {
                    [self clearUserDefaults];
                    
@@ -139,7 +141,6 @@
     self.activePlayerData = nil;
     
     [PlayerService logout];
-    
 }
 
 @end

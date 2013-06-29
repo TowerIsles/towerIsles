@@ -3,7 +3,7 @@
 
 @class DisplayInformation;
 
-@interface EntityConfig : ManagedPropertiesObject
+@interface EntityConfig : ManagedPropertiesObject<SerializeByDefault>
 @property (nonatomic, retain, readonly) NSDictionary* componentDataByComponentType;
 @property (nonatomic, retain, readonly) NSArray* orderedBaseEntityConfigIdentifiers;
 @property (nonatomic, retain, readonly) DisplayInformation* displayInformation;
@@ -12,5 +12,13 @@
 + (EntityConfig*)objectWithEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
                      componentDataByComponentType:(NSDictionary*)componentDataByComponentType
                orderedBaseEntityConfigIdentifiers:(NSArray*)orderedBaseEntityConfigIdentifiers;
+
+@end
+
+@interface EntityInstanceConfig : EntityConfig<SerializeByDefault>
+
+- (void)syncIdentifier;
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase;
 
 @end

@@ -1,0 +1,44 @@
+{
+  "landData": {
+    "islandData": [
+      {
+        "entityInstanceConfigs": [
+          {
+            "componentDataByComponentType": {
+              "MovableComponent": {
+                "sceneNodeConfig": {
+                  "position": {
+                    "x": 0,
+                    "y": 1,
+                    "z": -5
+                  }
+                }
+              }
+            },
+            "displayInformation": null,
+            "identifier": null,
+            "orderedBaseEntityConfigIdentifiers": [
+              {
+                "identifier": "entityConfig_box"
+              }
+            ]
+          }
+        ],
+        "islandIndex": {
+          "xCoordinate": 0,
+          "yCoordinate": 0
+        },
+        "sceneConfig": {
+          
+        }
+      }
+    ]
+  },
+  "password": "caleb",
+  "playerData": {
+    "activeIslandIndex": {
+      "xCoordinate": 0,
+      "yCoordinate": 0
+    }
+  }
+}

@@ -1,10 +1,13 @@
 #import "Base.h"
 
 @class Entity;
+@class Identifier;
 
 @interface EntitySpec : ManagedPropertiesObject
 
 + (BOOL)doesEntityConformToSpecClass:(Entity*)entity;
+
+- (Identifier*)entityIdentifier;
 
 - (void)injectFromEntity:(Entity*)entity;
 

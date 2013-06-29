@@ -13,6 +13,12 @@
 
 @implementation EntityConfig
 
++ (void)setupSerialization
+{
+    [self registerClass:Identifier.class
+           forContainer:@"orderedBaseEntityConfigIdentifiers"];
+}
+
 - (void)dealloc
 {
     [_componentDataByComponentType release];
@@ -20,6 +26,12 @@
     [_displayInformation release];
     [_identifier release];
     [super dealloc];
+}
+
+- (void)overrideIdentifier:(Identifier*)identifier
+{
+    [_identifier release];
+    _identifier = [identifier retain];
 }
 
 + (EntityConfig*)objectWithEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
@@ -35,3 +47,35 @@
 
 @end
 
+@implementation EntityInstanceConfig
+
+//Serialize(orderedBaseEntityConfigIdentifiers);
+//Serialize(displayInformation);
+//Serialize(identifier);
+
+- (void)syncIdentifier
+{
+    [self overrideIdentifier:[self.orderedBaseEntityConfigIdentifiers objectAtIndex:0]];
+}
+
+- (NSDictionary*)serializedRepresentationForOfflineDatabase
+{
+    return [self serializedRepresentation];
+//    NSMutableDictionary* output = [self serializedRepresentation];
+//    
+//    NSMutableArray* entityInstanceConfigsOutput = [NSMutableArray object];
+//    
+//    componentDataByComponentType
+//    
+//    for (EntityInstanceConfig* entityInstanceConfig in _entityInstanceConfigs)
+//    {
+//        [entityInstanceConfigsOutput addObject:[entityInstanceConfig serializedRepresentationForOfflineDatabase]];
+//    }
+//    
+//    [output setObject:entityInstanceConfigsOutput
+//               forKey:@"entityInstanceConfigs"];
+//    
+//    return output;
+}
+
+@end

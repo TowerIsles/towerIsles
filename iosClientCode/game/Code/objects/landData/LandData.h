@@ -1,14 +1,16 @@
 #import "Game.h"
 
-@interface SceneData : ManagedPropertiesObject
-@property (nonatomic, retain) NSDictionary* entitiesByIdentifier;
+@class IslandIndex;
+@class SceneConfig;
 
-- (NSDictionary*)serializedRepresentationForOfflineDatabase;
-
+@interface IslandData : ManagedPropertiesObject
+@property (nonatomic, retain) NSArray* entityInstanceConfigs;
+@property (nonatomic, retain) IslandIndex* islandIndex;
+@property (nonatomic, retain) SceneConfig* sceneConfig;
 @end
 
 @interface LandData : ManagedPropertiesObject
-@property (nonatomic, retain) NSDictionary* sceneDataByIdentifier;
+@property (nonatomic, retain) NSArray* islandData;
 
 - (NSDictionary*)serializedRepresentationForOfflineDatabase;
 

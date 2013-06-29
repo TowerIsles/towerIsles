@@ -85,7 +85,7 @@
         NSDictionary* entityConfigData = [entityConfigDataByEntityConfigId objectForKey:entityConfigId];
         
         EntityConfig* entityConfig = [EntityConfig objectWithEntityConfigIdentifier:[Identifier objectWithStringIdentifier:entityConfigId]
-                                                       componentDataByComponentType:[entityConfigData objectForKey:@"componentData"]
+                                                       componentDataByComponentType:[entityConfigData objectForKey:@"componentDataByComponentType"]
                                                  orderedBaseEntityConfigIdentifiers:[entityConfigData objectForKey:@"orderedBaseEntityConfigIdentifiers"]];
         
         [_entityConfigsByIdentifier setObject:entityConfig
@@ -119,7 +119,84 @@
     Identifier* entityConfigIdentifier = [Identifier objectWithStringIdentifier:entityConfigId];
     
     Entity* entity = [self internal_createEntityFromEntityConfigIdentifier:entityConfigIdentifier];
+        
+    return [entity entitySpecForClass:kEntitySpecClass];
+}
 
+- (EntitySpec*)createEntitySpecFromEntityInstanceConfig:(EntityInstanceConfig*)entityInstanceConfig
+{
+    NSDictionary* componentConfigurationData = [self internal_componentConfigurationDataForEntityConfig:entityInstanceConfig];
+    
+    Entity* entity = [self internal_createEntityFromComponentConfigurationData:componentConfigurationData
+                                                                  entityConfig:entityInstanceConfig];
+    
+    return [entity entitySpecForClass:kEntitySpecClass];
+}
+
+- (void)queueEntityForRemoval:(Entity*)entityToRemove
+{
+    [_entitiesToRemove addObject:entityToRemove];
+}
+
+- (Identifier*)internal_nextEntityIdentifier
+{
+    return [Identifier objectWithIntIdentifier:_nextEntityIdentifierIndex++];
+}
+
+- (EntityConfig*)internal_entityConfigForEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
+{
+    return [_entityConfigsByIdentifier objectForKey:entityConfigIdentifier];
+}
+
+- (NSDictionary*)internal_componentConfigurationDataForEntityConfig:(EntityConfig*)entityConfig
+{
+    NSMutableDictionary* componentConfigurationData = [NSMutableDictionary object];
+    
+    [Util addNewEntriesOfSourceDictionary:entityConfig.componentDataByComponentType
+                       toTargetDictionary:componentConfigurationData];
+    
+    for (Identifier* entityConfigIdentifierToAdd in entityConfig.orderedBaseEntityConfigIdentifiers)
+    {
+        EntityConfig* entityConfigToAdd = [self internal_entityConfigForEntityConfigIdentifier:entityConfigIdentifierToAdd];
+        
+        CheckNotNull(entityConfigToAdd);
+        
+        [Util addNewEntriesOfSourceDictionary:entityConfigToAdd.componentDataByComponentType
+                           toTargetDictionary:componentConfigurationData];
+    }
+    
+    return componentConfigurationData;
+}
+
+- (Entity*)internal_createEntityFromEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
+{
+    EntityConfig* entityConfig = [self internal_entityConfigForEntityConfigIdentifier:entityConfigIdentifier];
+    
+    NSDictionary* componentConfigurationData = [self internal_componentConfigurationDataForEntityConfig:entityConfig];
+
+    return [self internal_createEntityFromComponentConfigurationData:componentConfigurationData
+                                                        entityConfig:entityConfig];
+}
+
+- (Entity*)internal_createEntityFromComponentConfigurationData:(NSDictionary*)componentConfigurationData
+                                                  entityConfig:(EntityConfig*)entityConfig
+{
+    Entity* entity = [Entity objectWithIdentifier:[self internal_nextEntityIdentifier]
+                                     entityConfig:entityConfig];
+    
+    for (NSString* componentType in componentConfigurationData.allKeys)
+    {
+        Class componentClass = NSClassFromString(componentType);
+
+        CheckNotNull(componentClass);
+
+        NSDictionary* componentData = [componentConfigurationData objectForKey:componentType];
+        
+        id component = [componentClass objectFromSerializedRepresentation:componentData];
+        
+        [entity addComponent:component];
+    }
+    
     NSMutableArray* conformingEntitySpecClasses = [_conformingEntitySpecClassesByEntityConfigIdentifier objectForKey:entity.entityConfig.identifier];
     
     if (conformingEntitySpecClasses == nil)
@@ -162,68 +239,6 @@
     [entity injectIvarsIntoAllSpecs];
     
     [entity loadAllSpecs];
-        
-    return [entity entitySpecForClass:kEntitySpecClass];
-}
-
-- (void)queueEntityForRemoval:(Entity*)entityToRemove
-{
-    [_entitiesToRemove addObject:entityToRemove];
-}
-
-- (Identifier*)internal_nextEntityIdentifier
-{
-    return [Identifier objectWithIntIdentifier:_nextEntityIdentifierIndex++];
-}
-
-- (EntityConfig*)entityConfigForEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
-{
-    return [_entityConfigsByIdentifier objectForKey:entityConfigIdentifier];
-}
-
-- (Entity*)internal_createEntityFromEntityConfigIdentifier:(Identifier*)entityConfigIdentifier
-{
-    EntityConfig* entityConfig = [self entityConfigForEntityConfigIdentifier:entityConfigIdentifier];
-    
-    CheckNotNull(entityConfig);
-    
-    return [self internal_createEntityFromEntityConfig:entityConfig];
-}
-
-- (Entity*)internal_createEntityFromEntityConfig:(EntityConfig*)entityConfig
-{
-    CheckNotNull(entityConfig);
- 
-    NSMutableDictionary* componentConfigurationData = [NSMutableDictionary object];
-
-    [Util addNewEntriesOfSourceDictionary:entityConfig.componentDataByComponentType
-                       toTargetDictionary:componentConfigurationData];
-    
-    for (NSString* entityConfigIdentifierToAdd in entityConfig.orderedBaseEntityConfigIdentifiers)
-    {
-        EntityConfig* entityConfigToAdd = [self entityConfigForEntityConfigIdentifier:[Identifier objectWithStringIdentifier:entityConfigIdentifierToAdd]];
-        
-        CheckNotNull(entityConfigToAdd);
-
-        [Util addNewEntriesOfSourceDictionary:entityConfigToAdd.componentDataByComponentType
-                           toTargetDictionary:componentConfigurationData];
-    }
-    
-    Entity* entity = [Entity objectWithIdentifier:[self internal_nextEntityIdentifier]
-                                     entityConfig:entityConfig];
-    
-    for (NSString* componentType in componentConfigurationData.allKeys)
-    {
-        Class componentClass = NSClassFromString(componentType);
-
-        CheckNotNull(componentClass);
-
-        NSDictionary* componentData = [componentConfigurationData objectForKey:componentType];
-        
-        id component = [componentClass objectFromSerializedRepresentation:componentData];
-        
-        [entity addComponent:component];
-    }
     
     return entity;
 }

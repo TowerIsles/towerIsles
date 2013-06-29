@@ -56,7 +56,6 @@
         Quat rotationDown = QuatMakeAxisAngle(&Vec3_UnitX, -radianAngle * verticalAngleCoefficient);
         Vec3 newPosition = currentPosition;
         
-        Vec3Display(@"currentPosition", &currentPosition);
         
         BOOL changeOccurred = NO;
         
@@ -89,13 +88,7 @@
         
         if (changeOccurred)
         {
-           // newPosition = Vec3Make(0, 10, 10);
             Node_setPosition(cameraOneNode, &newPosition);
-            //Vec3Display(@"newPosition", &newPosition);
-            
-            //[activeCamera lookAt:Vec3_Zero];
-            
-
         }
     }
     if (_touchChannel.pinchGesture.isActive)
@@ -134,7 +127,7 @@
         {
             newPosition.z = 0;
         }
-        Vec3Display(@"newPosition", &newPosition);
+        
         Node_setPosition(cameraOneNode, &newPosition);
     }
 }

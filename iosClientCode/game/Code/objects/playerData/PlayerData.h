@@ -1,6 +1,9 @@
 #import "Game.h"
 
-@interface PlayerData : ManagedPropertiesObject
+@class IslandIndex;
+
+@interface PlayerData : ManagedPropertiesObject <SerializeByDefault>
+@property (nonatomic, retain) IslandIndex* activeIslandIndex;
 
 - (NSDictionary*)serializedRepresentationForOfflineDatabase;
 

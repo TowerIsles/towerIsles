@@ -1,45 +1,57 @@
 #import "LandData.h"
-#import "Entity.h"
+#import "EntityConfig.h"
 
-@implementation SceneData
+@implementation IslandData
+
+Serialize(islandIndex);
+Serialize(sceneConfig);
 
 + (void)setupSerialization
 {
-    [self registerClass:Entity.class // this doesn't make sense - component configs maybe? not sure yet.
-           forContainer:@"entitiesByIdentifier"];
+    [self registerClass:EntityInstanceConfig.class
+           forContainer:@"entityInstanceConfigs"];
 }
 
 - (NSDictionary*)serializedRepresentationForOfflineDatabase
 {
-    NSMutableDictionary* output = [NSMutableDictionary object];
+    NSMutableDictionary* output = [self serializedRepresentation];
     
-    for (Identifier* entityIdentifier in [_entitiesByIdentifier allKeys])
+    NSMutableArray* entityInstanceConfigsOutput = [NSMutableArray object];
+    
+    for (EntityInstanceConfig* entityInstanceConfig in _entityInstanceConfigs)
     {
-        Entity* entity = [_entitiesByIdentifier objectForKey:entityIdentifier];
-        
-        [output setObject:[entity serializedRepresentationForOfflineDatabase]
-                   forKey:entityIdentifier];
+        [entityInstanceConfigsOutput addObject:[entityInstanceConfig serializedRepresentationForOfflineDatabase]];
     }
+    
+    [output setObject:entityInstanceConfigsOutput
+               forKey:@"entityInstanceConfigs"];
     
     return output;
 }
 
 @end
 
-
 @implementation LandData
+
++ (void)setupSerialization
+{
+    [self registerClass:IslandData.class
+           forContainer:@"islandData"];
+}
 
 - (NSDictionary*)serializedRepresentationForOfflineDatabase
 {
     NSMutableDictionary* output = [NSMutableDictionary object];
     
-    for (Identifier* sceneIdentifier in [_sceneDataByIdentifier allKeys])
+    NSMutableArray* islandDataOutput = [NSMutableArray object];
+    
+    for (IslandData* islandData in _islandData)
     {
-        SceneData* sceneData = [_sceneDataByIdentifier objectForKey:sceneIdentifier];
-        
-        [output setObject:[sceneData serializedRepresentationForOfflineDatabase]
-                   forKey:sceneIdentifier];
+        [islandDataOutput addObject:[islandData serializedRepresentationForOfflineDatabase]];
     }
+    
+    [output setObject:islandDataOutput
+               forKey:@"islandData"];
     
     return output;
 }

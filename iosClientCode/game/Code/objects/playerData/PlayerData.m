@@ -12,7 +12,7 @@
 
 - (NSDictionary*)serializedRepresentationForOfflineDatabase
 {
-    return @{};
+    return [self serializedRepresentation];
 }
 
 @end

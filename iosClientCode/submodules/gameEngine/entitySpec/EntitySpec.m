@@ -94,6 +94,11 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
                                              currentClass:self];
 }
 
+- (Identifier*)entityIdentifier
+{
+    return _entity.entityIdentifier;
+}
+
 - (NSString*)description
 {
     return _entity.description;

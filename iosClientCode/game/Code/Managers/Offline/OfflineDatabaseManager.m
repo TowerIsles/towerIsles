@@ -1,6 +1,8 @@
 #import "OfflineDatabaseManager.h"
 #import "PlayerData.h"
 #import "LandData.h"
+#import "IslandIndex.h"
+#import "PlayerManager.h"
 
 @interface OfflineDatabasePlayerEntry : ManagedPropertiesObject <SerializeByDefault>
 @property (nonatomic, retain) PlayerData* playerData;
@@ -56,13 +58,9 @@
 - (void)createPlayerWithLoginId:(NSString*)loginId
                        password:(NSString*)password
 {
-    OfflineDatabasePlayerEntry* offlineDatabasePlayerEntry = [OfflineDatabasePlayerEntry object];
+    OfflineDatabasePlayerEntry* offlineDatabasePlayerEntry = [self internal_offlineDatabasePlayerEntryForLoginId:kDefaultPlayerName];
     
     offlineDatabasePlayerEntry.password = password;
-    
-    offlineDatabasePlayerEntry.playerData = [PlayerData object];
-
-    offlineDatabasePlayerEntry.landData = [LandData object];
     
     [_offlineDatabasePlayerEntryByLoginId setObject:offlineDatabasePlayerEntry
                                              forKey:loginId];
@@ -93,9 +91,10 @@
 {
     OfflineDatabasePlayerEntry* entry = [_offlineDatabasePlayerEntryByLoginId objectForKey:loginId];
     
-    if (entry == nil)
+    if (entry == nil ||
+        [loginId isEqualToString:kDefaultPlayerName])
     {
-        NSString* path = Format(@"%@/%@", [self internal_offlineDatabaseRoot], loginId);
+        NSString* path = Format(@"%@/%@.json", [self internal_offlineDatabaseRoot], loginId);
         
         CheckTrue([ResourceManager doesResourceAtPathExist:path])
         
@@ -109,7 +108,7 @@
 - (void)internal_saveOfflineDatabasePlayerEntry:(OfflineDatabasePlayerEntry*)offlineDatabasePlayerEntry
                                       withLogin:(NSString*)loginId
 {
-    NSString* path = Format(@"%@/%@", [self internal_offlineDatabaseRoot], loginId);
+    NSString* path = Format(@"%@/%@.json", [self internal_offlineDatabaseRoot], loginId);
     
     NSDictionary* databaseEntry = [offlineDatabasePlayerEntry serializedRepresentationForOfflineDatabase];
     

@@ -19,6 +19,7 @@
 		6732D525175166AA00B39912 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
 		6736AEE1174E723D006FA778 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
 		6736AEEB174E7536006FA778 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6736AEEA174E7536006FA778 /* OpenGLES.framework */; };
+		674CE5B3177C973D0064AC9C /* IslandConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 674CE5B2177C973D0064AC9C /* IslandConfig.m */; };
 		675150C7175DB5EB00A1C439 /* GraphicsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 675150C6175DB51300A1C439 /* GraphicsBase.m */; };
 		6787808C175C6A2B0014B5E4 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787808B175C6A2B0014B5E4 /* Material.m */; };
 		678CC0341758EE320094CC98 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678CC0331758EE310094CC98 /* PrimitiveData.m */; };
@@ -27,6 +28,8 @@
 		67977181175505460013FB6E /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977180175505460013FB6E /* RenderResourceManager.m */; };
 		67977184175505C20013FB6E /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977183175505C20013FB6E /* Shader.m */; };
 		67B158241770BA5F009B0BE0 /* SerializationTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B158231770BA5E009B0BE0 /* SerializationTesting.m */; };
+		67B1583E17720F80009B0BE0 /* IslandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1583D17720F80009B0BE0 /* IslandManager.m */; };
+		67B1584217721274009B0BE0 /* IslandIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1584117721274009B0BE0 /* IslandIndex.m */; };
 		67B7A6931752A2600040362A /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
 		67B7A6961752A2720040362A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
 		67B7A69C1752A2890040362A /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
@@ -51,6 +54,7 @@
 		67C731FF1750716800F1BA07 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FE1750716800F1BA07 /* TestSpec.m */; };
 		67C732021750755F00F1BA07 /* MathTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732011750755F00F1BA07 /* MathTesting.m */; };
 		67C732041750939400F1BA07 /* MathValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732031750939400F1BA07 /* MathValidation.m */; };
+		67CA5DBA177D246B00186AEC /* IslandInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CA5DB9177D246B00186AEC /* IslandInstance.m */; };
 		67CCECE61743EAC400AE8940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE51743EAC400AE8940 /* UIKit.framework */; };
 		67CCECE81743EAC400AE8940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE71743EAC400AE8940 /* Foundation.framework */; };
 		67CCECEA1743EAC400AE8940 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CCECE91743EAC400AE8940 /* CoreGraphics.framework */; };
@@ -131,6 +135,8 @@
 		6736AEDF174E723D006FA778 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderManager.h; path = graphics/managers/RenderManager.h; sourceTree = "<group>"; };
 		6736AEE0174E723D006FA778 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderManager.m; path = graphics/managers/RenderManager.m; sourceTree = "<group>"; };
 		6736AEEA174E7536006FA778 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		674CE5B1177C973D0064AC9C /* IslandConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandConfig.h; path = game/code/objects/islandConfig/IslandConfig.h; sourceTree = SOURCE_ROOT; };
+		674CE5B2177C973D0064AC9C /* IslandConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IslandConfig.m; path = game/code/objects/islandConfig/IslandConfig.m; sourceTree = SOURCE_ROOT; };
 		675150C6175DB51300A1C439 /* GraphicsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphicsBase.m; path = graphics/base/GraphicsBase.m; sourceTree = "<group>"; };
 		6787808A175C6A2B0014B5E4 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = graphics/objects/Material.h; sourceTree = "<group>"; };
 		6787808B175C6A2B0014B5E4 /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Material.m; path = graphics/objects/Material.m; sourceTree = "<group>"; };
@@ -145,6 +151,10 @@
 		67977183175505C20013FB6E /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shader.m; path = graphics/objects/Shader.m; sourceTree = "<group>"; };
 		67B158221770BA5E009B0BE0 /* SerializationTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SerializationTesting.h; path = game/code/testing/testCases/SerializationTesting.h; sourceTree = SOURCE_ROOT; };
 		67B158231770BA5E009B0BE0 /* SerializationTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SerializationTesting.m; path = game/code/testing/testCases/SerializationTesting.m; sourceTree = SOURCE_ROOT; };
+		67B1583C17720F80009B0BE0 /* IslandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandManager.h; path = game/code/managers/island/IslandManager.h; sourceTree = SOURCE_ROOT; };
+		67B1583D17720F80009B0BE0 /* IslandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IslandManager.m; path = game/code/managers/island/IslandManager.m; sourceTree = SOURCE_ROOT; };
+		67B1584017721274009B0BE0 /* IslandIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandIndex.h; path = game/code/objects/islandIndex/IslandIndex.h; sourceTree = SOURCE_ROOT; };
+		67B1584117721274009B0BE0 /* IslandIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IslandIndex.m; path = game/code/objects/islandIndex/IslandIndex.m; sourceTree = SOURCE_ROOT; };
 		67B7A6911752A2600040362A /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Renderable.h; path = graphics/objects/Renderable.h; sourceTree = "<group>"; };
 		67B7A6921752A2600040362A /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Renderable.m; path = graphics/objects/Renderable.m; sourceTree = "<group>"; };
 		67B7A6941752A2720040362A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = graphics/objects/Model.h; sourceTree = "<group>"; };
@@ -194,6 +204,8 @@
 		67C732001750755F00F1BA07 /* MathTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathTesting.h; path = game/code/testing/testCases/MathTesting.h; sourceTree = SOURCE_ROOT; };
 		67C732011750755F00F1BA07 /* MathTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathTesting.m; path = game/code/testing/testCases/MathTesting.m; sourceTree = SOURCE_ROOT; };
 		67C732031750939400F1BA07 /* MathValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathValidation.m; path = math/MathValidation.m; sourceTree = "<group>"; };
+		67CA5DB8177D246B00186AEC /* IslandInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandInstance.h; path = game/code/objects/islandInstance/IslandInstance.h; sourceTree = SOURCE_ROOT; };
+		67CA5DB9177D246B00186AEC /* IslandInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IslandInstance.m; path = game/code/objects/islandInstance/IslandInstance.m; sourceTree = SOURCE_ROOT; };
 		67CCECE21743EAC400AE8940 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CCECE51743EAC400AE8940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67CCECE71743EAC400AE8940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -408,6 +420,15 @@
 			name = base;
 			sourceTree = "<group>";
 		};
+		674CE5B0177C97190064AC9C /* IslandConfig */ = {
+			isa = PBXGroup;
+			children = (
+				674CE5B1177C973D0064AC9C /* IslandConfig.h */,
+				674CE5B2177C973D0064AC9C /* IslandConfig.m */,
+			);
+			name = IslandConfig;
+			sourceTree = "<group>";
+		};
 		6794996F1761BB2A007B60F0 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +436,24 @@
 				6794997417623061007B60F0 /* GameCameraManager.m */,
 			);
 			name = Camera;
+			sourceTree = "<group>";
+		};
+		67B1583B17720F6B009B0BE0 /* Island */ = {
+			isa = PBXGroup;
+			children = (
+				67B1583C17720F80009B0BE0 /* IslandManager.h */,
+				67B1583D17720F80009B0BE0 /* IslandManager.m */,
+			);
+			name = Island;
+			sourceTree = "<group>";
+		};
+		67B1583F1772125D009B0BE0 /* IslandIndex */ = {
+			isa = PBXGroup;
+			children = (
+				67B1584017721274009B0BE0 /* IslandIndex.h */,
+				67B1584117721274009B0BE0 /* IslandIndex.m */,
+			);
+			name = IslandIndex;
 			sourceTree = "<group>";
 		};
 		67B7A6C21752C54E0040362A /* GameScene */ = {
@@ -484,6 +523,15 @@
 				67B158231770BA5E009B0BE0 /* SerializationTesting.m */,
 			);
 			name = TestCases;
+			sourceTree = "<group>";
+		};
+		67CA5DB7177D245000186AEC /* IslandInstance */ = {
+			isa = PBXGroup;
+			children = (
+				67CA5DB8177D246B00186AEC /* IslandInstance.h */,
+				67CA5DB9177D246B00186AEC /* IslandInstance.m */,
+			);
+			name = IslandInstance;
 			sourceTree = "<group>";
 		};
 		67CCECD91743EAC400AE8940 = {
@@ -575,6 +623,7 @@
 		67CCED201743EBA700AE8940 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				67B1583B17720F6B009B0BE0 /* Island */,
 				67D3DF1217684BB00060B70A /* Settings */,
 				6794996F1761BB2A007B60F0 /* Camera */,
 				67B7A6CD1753488C0040362A /* Defrost */,
@@ -628,6 +677,9 @@
 		67CCED2D1743EBA700AE8940 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				67CA5DB7177D245000186AEC /* IslandInstance */,
+				674CE5B0177C97190064AC9C /* IslandConfig */,
+				67B1583F1772125D009B0BE0 /* IslandIndex */,
 				67D3DF1617684BD20060B70A /* Setting */,
 				67D3DF0E17684ACA0060B70A /* LandData */,
 				67CCED2E1743EBA700AE8940 /* LoginResponse */,
@@ -1097,6 +1149,10 @@
 				67D3DF1917684BE50060B70A /* Setting.m in Sources */,
 				67F0DF61176C296D0079CEB0 /* OfflineDatabaseManager.m in Sources */,
 				67B158241770BA5F009B0BE0 /* SerializationTesting.m in Sources */,
+				67B1583E17720F80009B0BE0 /* IslandManager.m in Sources */,
+				67B1584217721274009B0BE0 /* IslandIndex.m in Sources */,
+				674CE5B3177C973D0064AC9C /* IslandConfig.m in Sources */,
+				67CA5DBA177D246B00186AEC /* IslandInstance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

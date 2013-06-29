@@ -1,4 +1,7 @@
 #import "Game.h"
+#import "PlayerService.h"
+
+#define kDefaultPlayerName @"default"
 
 @class LoginResponse;
 @class PlayerData;

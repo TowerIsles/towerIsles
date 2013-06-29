@@ -8,8 +8,6 @@
     
     NSMutableDictionary* sceneNodeConfigOutput = [_sceneNodeConfig serializedRepresentation];
     
-    [Util removeDefaultValuesFromDictionary:sceneNodeConfigOutput];
-    
     if (!_sceneNodeConfig.useInitialTransform)
     {
         [sceneNodeConfigOutput removeObjectForKey:@"useInitialTransform"];
@@ -17,12 +15,6 @@
         [sceneNodeConfigOutput removeObjectForKey:@"initialScale"];
         [sceneNodeConfigOutput removeObjectForKey:@"initialOrientation"];
     }
-    
-    if (!_sceneNodeConfig.inheritScale)
-        [sceneNodeConfigOutput removeObjectForKey:@"inheritScale"];
-    
-    if (!_sceneNodeConfig.inheritOrientation)
-        [sceneNodeConfigOutput removeObjectForKey:@"inheritOrientation"];
     
     [output setObject:sceneNodeConfigOutput
                forKey:@"sceneNodeConfig"];
@@ -43,12 +35,6 @@
         [sceneNodeConfigOutput removeObjectForKey:@"initialScale"];
         [sceneNodeConfigOutput removeObjectForKey:@"initialOrientation"];
     }
-    
-    if (!_sceneNodeConfig.inheritScale)
-        [sceneNodeConfigOutput removeObjectForKey:@"inheritScale"];
-    
-    if (!_sceneNodeConfig.inheritOrientation)
-        [sceneNodeConfigOutput removeObjectForKey:@"inheritOrientation"];
     
     [output setObject:sceneNodeConfigOutput
                forKey:@"sceneNodeConfig"];
