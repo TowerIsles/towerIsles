@@ -1,5 +1,5 @@
 #import "OfflineManager.h"
-#import "GameAppDelegate.h"
+#import "AppDirector.h"
 #import "LoginResponse.h"
 #import "PlayerService.h"
 #import "OfflineDatabaseManager.h"
@@ -14,10 +14,9 @@
 
 @implementation OfflineManager
 
-
 + (OfflineManager*)sharedInstance
 {
-    return (OfflineManager*)[[GameAppDelegate sharedApplicationDelegate].director managerForClass:OfflineManager.class];
+    return (OfflineManager*)[[AppDirector sharedInstance] managerForClass:OfflineManager.class];
 }
 
 - (CreateNewPlayerResponse*)createNewPlayerWithLoginId:(NSString*)loginId

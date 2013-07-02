@@ -3,7 +3,7 @@
 #import "Quat.h"
 #import "Mat4.h"
 #import "Identifier.h"
-#import <GLKit/GLKit.h>
+#import "GLKit/GLKMatrix3.h"
 
 @class Camera;
 

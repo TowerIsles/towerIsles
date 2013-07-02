@@ -1,6 +1,6 @@
 #import "Entity.h"
 #import "EntityConfig.h"
-#import "Component.h"
+#import "EntityComponent.h"
 #import "EntitySpec.h"
 
 @interface Entity ()
@@ -29,7 +29,7 @@
     [description appendFormat:@"          entityConfig = %@\n", _entityConfig.identifier.stringValue];
     [description appendFormat:@"===Components===\n\n"];
     
-    for (Component* component in _componentsByClass.allValues)
+    for (EntityComponent* component in _componentsByClass.allValues)
     {
         [description appendFormat:@"%@", component.class];
         [description appendFormat:@"%@\n\n", component.serializedRepresentation];
@@ -57,12 +57,12 @@
     return entity;
 }
 
-- (Component*)componentForClass:(Class)componentClass
+- (EntityComponent*)componentForClass:(Class)componentClass
 {
     return [_componentsByClass objectForKey:componentClass];
 }
 
-- (void)addComponent:(Component*)component
+- (void)addComponent:(EntityComponent*)component
 {
     [_componentsByClass setObject:component
                            forKey:(id<NSCopying>)component.class];
@@ -110,7 +110,7 @@
     
     self.entitySpecsByEntitySpecClass = nil;
     
-    for (Component* component in _componentsByClass.allValues)
+    for (EntityComponent* component in _componentsByClass.allValues)
     {
         [component teardown];
     }
@@ -125,7 +125,7 @@
     
     for (Class componentClass in [_componentsByClass allKeys])
     {
-        Component* component = [_componentsByClass objectForKey:componentClass];
+        EntityComponent* component = [_componentsByClass objectForKey:componentClass];
         
         NSDictionary* componentOutput = [component performSelector:componentSelector];
         

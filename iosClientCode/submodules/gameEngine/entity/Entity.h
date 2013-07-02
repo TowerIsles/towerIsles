@@ -2,7 +2,7 @@
 #import "Identifier.h"
 
 @class EntityConfig;
-@class Component;
+@class EntityComponent;
 @class EntitySpec;
 
 @interface Entity : ManagedPropertiesObject
@@ -13,9 +13,9 @@
 + (Entity*)objectWithIdentifier:(Identifier*)entityIdentifier
                    entityConfig:(EntityConfig*)entityConfig;
 
-- (Component*)componentForClass:(Class)componentClass;
+- (EntityComponent*)componentForClass:(Class)componentClass;
 
-- (void)addComponent:(Component*)component;
+- (void)addComponent:(EntityComponent*)component;
 
 - (NSArray*)entitySpecClasses;
 

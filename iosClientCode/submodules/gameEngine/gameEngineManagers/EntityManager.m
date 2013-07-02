@@ -10,7 +10,7 @@
     
 }
 // Entity
-@property (nonatomic, assign) int64_t nextEntityIdentifierIndex;
+@property (nonatomic, assign) int nextEntityIdentifierIndex;
 @property (nonatomic, retain) NSMutableDictionary* entitiesByIdentifier;
 @property (nonatomic, retain) NSMutableDictionary* entityConfigsByIdentifier;
 @property (nonatomic, retain) NSMutableArray* entitiesToRemove;

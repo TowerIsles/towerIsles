@@ -7,7 +7,7 @@
 #import "SceneManager.h"
 #import "FrameTimeManager.h"
 
-#define BUFFER_OFFSET(i) ((char *)NULL + (i))
+#ifndef EDITOR
 
 // Uniform index.
 enum
@@ -176,3 +176,17 @@ GLint uniforms[NUM_UNIFORMS];
 }
 
 @end
+
+#else
+
+@implementation RenderManager
+
+- (void)glkView:(GLKView*)view
+     drawInRect:(CGRect)rect
+{
+    
+}
+
+@end
+
+#endif

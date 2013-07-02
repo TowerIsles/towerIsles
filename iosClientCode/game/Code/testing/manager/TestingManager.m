@@ -16,7 +16,6 @@
     ServerTimeManager* serverTimeManager;
     SceneManager* sceneManager;
     RenderResourceManager* renderResourceManager;
-    ViewManager* viewManager;
     PlayerManager* playerManager;
     DefrostManager* defrostManager;
 }

@@ -1,9 +1,7 @@
 #import "FrameTimeManager.h"
-#import "FPSCounter.h"
 
 @interface FrameTimeManager ()
 {
-    ViewManager* viewManager;
 }
 @property (nonatomic, assign) int frameCount;
 @property (nonatomic, assign) NSTimeInterval frameStartTimeInSec;
@@ -32,12 +30,6 @@
         self.frameTimeInSec = currentMediaTime - _frameStartTimeInSec;
         self.frameStartTimeInSec = currentMediaTime;
     }];
-
-    [viewManager showManagedViewOfClassOnLayer:FPSCounter.class
-                                     layerName:@"debug"
-                                    setupBlock:^(FPSCounter* fpsCounter) {
-                                        
-                                    }];
 }
 
 - (int)currentFrameNumber

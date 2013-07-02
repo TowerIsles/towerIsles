@@ -1,5 +1,5 @@
 #import "Movable.h"
-#import <GLKit/GLKit.h>
+#import "GLKit/GLKMatrix4.h"
 #import "Vec3.h"
 
 @interface CameraConfig : ManagedPropertiesObject

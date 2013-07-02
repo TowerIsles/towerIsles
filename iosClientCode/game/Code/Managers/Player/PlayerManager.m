@@ -1,5 +1,5 @@
 #import "PlayerManager.h"
-#import "MenuManager.h"
+#import "GameUIManager.h"
 #import "LoginResponse.h"
 #import "PlayerData.h"
 #import "PlayerService.h"
@@ -9,7 +9,7 @@
 @interface PlayerManager ()
 {
     SettingsManager* settingsManager;
-	MenuManager* menuManager;
+	GameUIManager* gameUIManager;
     DefrostManager* defrostManager;
 }
 @property (nonatomic, retain) PlayerData* activePlayerData;
@@ -46,12 +46,12 @@
                             [defrostManager defrostLoginResponse:loginResponse];
                         }
                         failureBlock:^{
-                            [menuManager showLoginMenu];
+                            [gameUIManager showLoginMenu];
                         }];
     }
     else
     {
-        [menuManager showLoginMenu];
+        [gameUIManager showLoginMenu];
     }
 }
 

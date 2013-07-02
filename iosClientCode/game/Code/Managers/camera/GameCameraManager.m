@@ -1,10 +1,11 @@
 #import "GameCameraManager.h"
+#import "GameUIManager.h"
 
 @interface GameCameraManager ()
 {
     TouchManager* touchManager;
-    ViewManager* viewManager;
     SceneManager* sceneManager;
+    GameUIManager* gameUIManager;
 }
 @property (nonatomic, retain) TouchChannel* touchChannel;
 @end
@@ -21,8 +22,7 @@
     touchChannelConfig.observePan = YES;
     touchChannelConfig.observePinch = YES;
     
-    self.touchChannel = [touchManager createTouchChannelForView:(UIView*)viewManager.getGLKView
-                                                     withConfig:touchChannelConfig];
+    self.touchChannel = [gameUIManager createTouchChannelOnGLViewWithConfig:touchChannelConfig];
     
     [self.director registerUpdateBlock:^{
         [self update];

@@ -3,7 +3,7 @@
 @class Camera;
 @class CameraConfig;
 
-@interface CameraComponent : Component
+@interface CameraComponent : EntityComponent
 
 @property (nonatomic, retain) Camera* camera;
 @property (nonatomic, retain) CameraConfig* cameraConfig;

@@ -3,7 +3,7 @@
 @class Light;
 @class LightConfig;
 
-@interface LightComponent : Component
+@interface LightComponent : EntityComponent
 
 @property (nonatomic, retain) Light* light;
 @property (nonatomic, retain) LightConfig* lightConfig;

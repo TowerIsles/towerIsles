@@ -7,7 +7,7 @@
 
 + (GameAppDelegate*)sharedApplicationDelegate;
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, assign) IBOutlet GameViewDirector* viewDirector;
 @property (nonatomic, readonly) AppDirector* director;
 

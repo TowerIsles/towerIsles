@@ -13,7 +13,6 @@
 
 @interface TouchChannel ()
 {
-	
 }
 @property (nonatomic, retain) TouchChannelConfig* config;
 @property (nonatomic, retain) UIView* viewToObserve;

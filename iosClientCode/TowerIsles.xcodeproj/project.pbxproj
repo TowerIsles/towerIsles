@@ -61,7 +61,6 @@
 		67CCED0F1743EB8F00AE8940 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED091743EB8F00AE8940 /* Default-568h@2x.png */; };
 		67CCED101743EB8F00AE8940 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED0A1743EB8F00AE8940 /* Default.png */; };
 		67CCED111743EB8F00AE8940 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED0B1743EB8F00AE8940 /* Default@2x.png */; };
-		67CCED121743EB8F00AE8940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED0C1743EB8F00AE8940 /* main.m */; };
 		67CCED131743EB8F00AE8940 /* TowerIsles-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED0D1743EB8F00AE8940 /* TowerIsles-Info.plist */; };
 		67CCED161743EB9900AE8940 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED141743EB9900AE8940 /* InfoPlist.strings */; };
 		67CCED3A1743EBA700AE8940 /* GameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED1A1743EBA700AE8940 /* GameAppDelegate.m */; };
@@ -69,7 +68,7 @@
 		67CCED3C1743EBA700AE8940 /* GameViewDirector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED1D1743EBA700AE8940 /* GameViewDirector.xib */; };
 		67CCED3D1743EBA700AE8940 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CCED1E1743EBA700AE8940 /* MainWindow.xib */; };
 		67CCED3E1743EBA700AE8940 /* LoadingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED231743EBA700AE8940 /* LoadingManager.m */; };
-		67CCED3F1743EBA700AE8940 /* MenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED261743EBA700AE8940 /* MenuManager.m */; };
+		67CCED3F1743EBA700AE8940 /* GameUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED261743EBA700AE8940 /* GameUIManager.m */; };
 		67CCED401743EBA700AE8940 /* OfflineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED291743EBA700AE8940 /* OfflineManager.m */; };
 		67CCED411743EBA700AE8940 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED2C1743EBA700AE8940 /* PlayerManager.m */; };
 		67CCED421743EBA700AE8940 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED301743EBA700AE8940 /* LoginResponse.m */; };
@@ -91,10 +90,110 @@
 		67D3DF1117684AE70060B70A /* LandData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1017684AE70060B70A /* LandData.m */; };
 		67D3DF1517684BC60060B70A /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1417684BC60060B70A /* SettingsManager.m */; };
 		67D3DF1917684BE50060B70A /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1817684BE50060B70A /* Setting.m */; };
+		67DF942117814E5400FB8AA5 /* NSString+CamelCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF942017814E5300FB8AA5 /* NSString+CamelCase.m */; };
+		67DF94F6178157B400FB8AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED0C1743EB8F00AE8940 /* main.m */; };
+		67DF95491781736100FB8AA5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DF95481781736100FB8AA5 /* Cocoa.framework */; };
+		67DF954F178173A000FB8AA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF954C178173A000FB8AA5 /* main.m */; };
+		67DF9550178173A000FB8AA5 /* TowerIslesEditor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67DF954D178173A000FB8AA5 /* TowerIslesEditor-Info.plist */; };
+		67DF9554178173C200FB8AA5 /* EditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF9553178173C200FB8AA5 /* EditorAppDelegate.m */; };
+		67DF956D178173DE00FB8AA5 /* CollapsibleModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9556178173DE00FB8AA5 /* CollapsibleModuleView.xib */; };
+		67DF956E178173DE00FB8AA5 /* CollapsibleModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF9558178173DE00FB8AA5 /* CollapsibleModuleViewController.m */; };
+		67DF956F178173DE00FB8AA5 /* DataEditorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF955B178173DE00FB8AA5 /* DataEditorWindow.xib */; };
+		67DF9570178173DE00FB8AA5 /* DataEditorWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF955D178173DE00FB8AA5 /* DataEditorWindowController.m */; };
+		67DF9571178173DE00FB8AA5 /* DataListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF955E178173DE00FB8AA5 /* DataListWindow.xib */; };
+		67DF9572178173DE00FB8AA5 /* DataListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF9560178173DE00FB8AA5 /* DataListWindowController.m */; };
+		67DF9573178173DE00FB8AA5 /* FlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF9561178173DE00FB8AA5 /* FlippedView.m */; };
+		67DF9574178173DE00FB8AA5 /* GenericCheckBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9562178173DE00FB8AA5 /* GenericCheckBox.xib */; };
+		67DF9575178173DE00FB8AA5 /* GenericComboBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9563178173DE00FB8AA5 /* GenericComboBox.xib */; };
+		67DF9576178173DE00FB8AA5 /* GenericImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9564178173DE00FB8AA5 /* GenericImageView.xib */; };
+		67DF9577178173DE00FB8AA5 /* GenericTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9565178173DE00FB8AA5 /* GenericTextField.xib */; };
+		67DF9578178173DE00FB8AA5 /* GenericTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9566178173DE00FB8AA5 /* GenericTextView.xib */; };
+		67DF9579178173DE00FB8AA5 /* ModuleListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF9567178173DE00FB8AA5 /* ModuleListView.xib */; };
+		67DF957A178173DE00FB8AA5 /* ModuleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF9569178173DE00FB8AA5 /* ModuleListViewController.m */; };
+		67DF957B178173DE00FB8AA5 /* ModuleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF956A178173DE00FB8AA5 /* ModuleView.xib */; };
+		67DF957C178173DE00FB8AA5 /* ModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF956C178173DE00FB8AA5 /* ModuleViewController.m */; };
+		67DF957E178175EC00FB8AA5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DF957D178175EC00FB8AA5 /* GLKit.framework */; };
+		67DF9580178175F300FB8AA5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DF957F178175F300FB8AA5 /* OpenGL.framework */; };
+		67DF95821781760B00FB8AA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DF95811781760B00FB8AA5 /* Foundation.framework */; };
+		67DF95841781761000FB8AA5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DF95831781761000FB8AA5 /* QuartzCore.framework */; };
+		67DF95861781766600FB8AA5 /* TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F81750715400F1BA07 /* TestCase.m */; };
+		67DF95871781766600FB8AA5 /* MathTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732011750755F00F1BA07 /* MathTesting.m */; };
+		67DF95881781766600FB8AA5 /* SerializationTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B158231770BA5E009B0BE0 /* SerializationTesting.m */; };
+		67DF95891781766600FB8AA5 /* TestingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731F51750714500F1BA07 /* TestingManager.m */; };
+		67DF958A1781766600FB8AA5 /* TestSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FE1750716800F1BA07 /* TestSpec.m */; };
+		67DF958B1781766600FB8AA5 /* TestComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C731FB1750715D00F1BA07 /* TestComponents.m */; };
+		67DF958C1781766600FB8AA5 /* LightComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B31752C30B0040362A /* LightComponent.m */; };
+		67DF958D1781766600FB8AA5 /* CameraComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B61752C31C0040362A /* CameraComponent.m */; };
+		67DF958E1781766600FB8AA5 /* RenderableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6B91752C3370040362A /* RenderableComponent.m */; };
+		67DF958F1781766600FB8AA5 /* MovableComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6BC1752C3450040362A /* MovableComponent.m */; };
+		67DF95901781766600FB8AA5 /* LightSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6AA1752C25A0040362A /* LightSpec.m */; };
+		67DF95911781766600FB8AA5 /* CameraSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6AD1752C26B0040362A /* CameraSpec.m */; };
+		67DF95921781766600FB8AA5 /* RenderableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A71752C1E70040362A /* RenderableSpec.m */; };
+		67DF95931781766600FB8AA5 /* MovableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6C71752C5E20040362A /* MovableSpec.m */; };
+		67DF95941781766600FB8AA5 /* IslandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1583D17720F80009B0BE0 /* IslandManager.m */; };
+		67DF95951781766600FB8AA5 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1417684BC60060B70A /* SettingsManager.m */; };
+		67DF95971781766600FB8AA5 /* DefrostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6CF175348A30040362A /* DefrostManager.m */; };
+		67DF95981781766600FB8AA5 /* GameSceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6C41752C5660040362A /* GameSceneManager.m */; };
+		67DF95991781766600FB8AA5 /* LoadingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED231743EBA700AE8940 /* LoadingManager.m */; };
+		67DF959A1781766600FB8AA5 /* GameUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED261743EBA700AE8940 /* GameUIManager.m */; };
+		67DF959B1781766600FB8AA5 /* OfflineManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED291743EBA700AE8940 /* OfflineManager.m */; };
+		67DF959C1781766600FB8AA5 /* OfflineDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F0DF60176C296D0079CEB0 /* OfflineDatabaseManager.m */; };
+		67DF959D1781766600FB8AA5 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED2C1743EBA700AE8940 /* PlayerManager.m */; };
+		67DF959E1781766600FB8AA5 /* IslandInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CA5DB9177D246B00186AEC /* IslandInstance.m */; };
+		67DF959F1781766600FB8AA5 /* IslandConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 674CE5B2177C973D0064AC9C /* IslandConfig.m */; };
+		67DF95A01781766600FB8AA5 /* IslandIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B1584117721274009B0BE0 /* IslandIndex.m */; };
+		67DF95A11781766600FB8AA5 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1817684BE50060B70A /* Setting.m */; };
+		67DF95A21781766600FB8AA5 /* LandData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D3DF1017684AE70060B70A /* LandData.m */; };
+		67DF95A31781766700FB8AA5 /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED301743EBA700AE8940 /* LoginResponse.m */; };
+		67DF95A41781766700FB8AA5 /* PlayerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED331743EBA700AE8940 /* PlayerData.m */; };
+		67DF95A51781766700FB8AA5 /* PlayerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED381743EBA700AE8940 /* PlayerService.m */; };
+		67DF95A61781766700FB8AA5 /* GraphicsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 675150C6175DB51300A1C439 /* GraphicsBase.m */; };
+		67DF95A71781766700FB8AA5 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51A17515D9C00B39912 /* Scene.m */; };
+		67DF95A81781766700FB8AA5 /* Movable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6CB1752CE0D0040362A /* Movable.m */; };
+		67DF95A91781766700FB8AA5 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51D17515DAC00B39912 /* Node.m */; };
+		67DF95AA1781766700FB8AA5 /* SceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D52017515DC300B39912 /* SceneNode.m */; };
+		67DF95AB1781766700FB8AA5 /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6921752A2600040362A /* Renderable.m */; };
+		67DF95AC1781766700FB8AA5 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6951752A2720040362A /* Model.m */; };
+		67DF95AD1781766700FB8AA5 /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69B1752A2890040362A /* Light.m */; };
+		67DF95AE1781766700FB8AA5 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A69E1752A2940040362A /* Camera.m */; };
+		67DF95AF1781766700FB8AA5 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A11752A2A90040362A /* Mesh.m */; };
+		67DF95B01781766700FB8AA5 /* RenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6A41752A2B40040362A /* RenderResource.m */; };
+		67DF95B11781766700FB8AA5 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B7A6D217534DA10040362A /* Color.m */; };
+		67DF95B21781766700FB8AA5 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977183175505C20013FB6E /* Shader.m */; };
+		67DF95B31781766700FB8AA5 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 678CC0331758EE310094CC98 /* PrimitiveData.m */; };
+		67DF95B41781766700FB8AA5 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6787808B175C6A2B0014B5E4 /* Material.m */; };
+		67DF95B51781766700FB8AA5 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6736AEE0174E723D006FA778 /* RenderManager.m */; };
+		67DF95B61781766700FB8AA5 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D51717515D5A00B39912 /* SceneManager.m */; };
+		67DF95B71781766700FB8AA5 /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67977180175505460013FB6E /* RenderResourceManager.m */; };
+		67DF95B81781766700FB8AA5 /* Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D711745429100B3FCFC /* Identifier.m */; };
+		67DF95B91781766700FB8AA5 /* DisplayInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6E1745427800B3FCFC /* DisplayInformation.m */; };
+		67DF95BA1781766700FB8AA5 /* UpdateBlockAtInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24F5174CBD92008EE9A2 /* UpdateBlockAtInterval.m */; };
+		67DF95BB1781766700FB8AA5 /* NSObject+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED4F1743EBB400AE8940 /* NSObject+Object.m */; };
+		67DF95BC1781766700FB8AA5 /* NSObject+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED511743EBB400AE8940 /* NSObject+Serialization.m */; };
+		67DF95BD1781766700FB8AA5 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED531743EBB400AE8940 /* Utilities.m */; };
+		67DF95BE1781766700FB8AA5 /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */; };
+		67DF95BF1781766700FB8AA5 /* NSString+CamelCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DF942017814E5300FB8AA5 /* NSString+CamelCase.m */; };
+		67DF95C01781766700FB8AA5 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED571743EBB400AE8940 /* ResourceManager.m */; };
+		67DF95C21781766700FB8AA5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED5C1743EBB400AE8940 /* JSONKit.m */; };
+		67DF95C31781766700FB8AA5 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED5F1743EBB400AE8940 /* Manager.m */; };
+		67DF95C41781766700FB8AA5 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED621743EBB400AE8940 /* Service.m */; };
+		67DF95C71781766700FB8AA5 /* Vec3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728650F174FC91F003B1A65 /* Vec3.m */; };
+		67DF95C81781766700FB8AA5 /* Quat.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286512174FC92B003B1A65 /* Quat.m */; };
+		67DF95C91781766700FB8AA5 /* MathValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C732031750939400F1BA07 /* MathValidation.m */; };
+		67DF95CA1781766700FB8AA5 /* Mat4.m in Sources */ = {isa = PBXBuildFile; fileRef = 6732D524175166AA00B39912 /* Mat4.m */; };
+		67DF95CB1781766700FB8AA5 /* EntityComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6217453C4D00B3FCFC /* EntityComponent.m */; };
+		67DF95CC1781766700FB8AA5 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5917453A5700B3FCFC /* Entity.m */; };
+		67DF95CD1781766700FB8AA5 /* EntityConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5F17453BA800B3FCFC /* EntityConfig.m */; };
+		67DF95CE1781766700FB8AA5 /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
+		67DF95CF1781766700FB8AA5 /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5C17453B0400B3FCFC /* EntityManager.m */; };
+		67DF95D01781766700FB8AA5 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24E1174C60CB008EE9A2 /* ServerTimeManager.m */; };
+		67DF95DE1782C57D00FB8AA5 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF24ED174CB373008EE9A2 /* FrameTimeManager.m */; };
+		67DF95DF1782CADF00FB8AA5 /* AppDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CCED4A1743EBB400AE8940 /* AppDirector.m */; };
+		67DF95E11782CC5800FB8AA5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67DF95E01782CC5700FB8AA5 /* MainMenu.xib */; };
 		67E04D5A17453A5700B3FCFC /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5917453A5700B3FCFC /* Entity.m */; };
 		67E04D5D17453B0400B3FCFC /* EntityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5C17453B0400B3FCFC /* EntityManager.m */; };
 		67E04D6017453BA800B3FCFC /* EntityConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D5F17453BA800B3FCFC /* EntityConfig.m */; };
-		67E04D6317453C4D00B3FCFC /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6217453C4D00B3FCFC /* Component.m */; };
+		67E04D6317453C4D00B3FCFC /* EntityComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6217453C4D00B3FCFC /* EntityComponent.m */; };
 		67E04D6F1745427800B3FCFC /* DisplayInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D6E1745427800B3FCFC /* DisplayInformation.m */; };
 		67E04D721745429100B3FCFC /* Identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D711745429100B3FCFC /* Identifier.m */; };
 		67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E04D7C17460C9E00B3FCFC /* EntitySpec.m */; };
@@ -206,7 +305,6 @@
 		67C732031750939400F1BA07 /* MathValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathValidation.m; path = math/MathValidation.m; sourceTree = "<group>"; };
 		67CA5DB8177D246B00186AEC /* IslandInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IslandInstance.h; path = game/code/objects/islandInstance/IslandInstance.h; sourceTree = SOURCE_ROOT; };
 		67CA5DB9177D246B00186AEC /* IslandInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IslandInstance.m; path = game/code/objects/islandInstance/IslandInstance.m; sourceTree = SOURCE_ROOT; };
-		67CCECE21743EAC400AE8940 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CCECE51743EAC400AE8940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		67CCECE71743EAC400AE8940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67CCECE91743EAC400AE8940 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -226,8 +324,8 @@
 		67CCED1F1743EBA700AE8940 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		67CCED221743EBA700AE8940 /* LoadingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingManager.h; sourceTree = "<group>"; };
 		67CCED231743EBA700AE8940 /* LoadingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingManager.m; sourceTree = "<group>"; };
-		67CCED251743EBA700AE8940 /* MenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuManager.h; sourceTree = "<group>"; };
-		67CCED261743EBA700AE8940 /* MenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuManager.m; sourceTree = "<group>"; };
+		67CCED251743EBA700AE8940 /* GameUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUIManager.h; sourceTree = "<group>"; };
+		67CCED261743EBA700AE8940 /* GameUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUIManager.m; sourceTree = "<group>"; };
 		67CCED281743EBA700AE8940 /* OfflineManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineManager.h; sourceTree = "<group>"; };
 		67CCED291743EBA700AE8940 /* OfflineManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineManager.m; sourceTree = "<group>"; };
 		67CCED2B1743EBA700AE8940 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
@@ -274,6 +372,48 @@
 		67D3DF1417684BC60060B70A /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsManager.m; path = game/code/managers/settings/SettingsManager.m; sourceTree = SOURCE_ROOT; };
 		67D3DF1717684BE50060B70A /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Setting.h; path = game/code/objects/setting/Setting.h; sourceTree = SOURCE_ROOT; };
 		67D3DF1817684BE50060B70A /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Setting.m; path = game/code/objects/setting/Setting.m; sourceTree = SOURCE_ROOT; };
+		67DF93CC1780884800FB8AA5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		67DF93CF1780884800FB8AA5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		67DF93D01780884800FB8AA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		67DF93D11780884800FB8AA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67DF941F17814E5300FB8AA5 /* NSString+CamelCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CamelCase.h"; sourceTree = "<group>"; };
+		67DF942017814E5300FB8AA5 /* NSString+CamelCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CamelCase.m"; sourceTree = "<group>"; };
+		67DF95481781736100FB8AA5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		67DF954C178173A000FB8AA5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = editor/main.m; sourceTree = SOURCE_ROOT; };
+		67DF954D178173A000FB8AA5 /* TowerIslesEditor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TowerIslesEditor-Info.plist"; path = "editor/TowerIslesEditor-Info.plist"; sourceTree = SOURCE_ROOT; };
+		67DF954E178173A000FB8AA5 /* TowerIslesEditor-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TowerIslesEditor-Prefix.pch"; path = "editor/TowerIslesEditor-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		67DF9552178173C200FB8AA5 /* EditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorAppDelegate.h; path = editor/code/appDelegate/EditorAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		67DF9553178173C200FB8AA5 /* EditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorAppDelegate.m; path = editor/code/appDelegate/EditorAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		67DF9556178173DE00FB8AA5 /* CollapsibleModuleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollapsibleModuleView.xib; path = editor/code/genericDataEditor/CollapsibleModuleView.xib; sourceTree = SOURCE_ROOT; };
+		67DF9557178173DE00FB8AA5 /* CollapsibleModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollapsibleModuleViewController.h; path = editor/code/genericDataEditor/CollapsibleModuleViewController.h; sourceTree = SOURCE_ROOT; };
+		67DF9558178173DE00FB8AA5 /* CollapsibleModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollapsibleModuleViewController.m; path = editor/code/genericDataEditor/CollapsibleModuleViewController.m; sourceTree = SOURCE_ROOT; };
+		67DF9559178173DE00FB8AA5 /* DataEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEditor.h; path = editor/code/genericDataEditor/DataEditor.h; sourceTree = SOURCE_ROOT; };
+		67DF955A178173DE00FB8AA5 /* DataEditorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEditorBase.h; path = editor/code/genericDataEditor/DataEditorBase.h; sourceTree = SOURCE_ROOT; };
+		67DF955B178173DE00FB8AA5 /* DataEditorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataEditorWindow.xib; path = editor/code/genericDataEditor/DataEditorWindow.xib; sourceTree = SOURCE_ROOT; };
+		67DF955C178173DE00FB8AA5 /* DataEditorWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataEditorWindowController.h; path = editor/code/genericDataEditor/DataEditorWindowController.h; sourceTree = SOURCE_ROOT; };
+		67DF955D178173DE00FB8AA5 /* DataEditorWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataEditorWindowController.m; path = editor/code/genericDataEditor/DataEditorWindowController.m; sourceTree = SOURCE_ROOT; };
+		67DF955E178173DE00FB8AA5 /* DataListWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataListWindow.xib; path = editor/code/genericDataEditor/DataListWindow.xib; sourceTree = SOURCE_ROOT; };
+		67DF955F178173DE00FB8AA5 /* DataListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataListWindowController.h; path = editor/code/genericDataEditor/DataListWindowController.h; sourceTree = SOURCE_ROOT; };
+		67DF9560178173DE00FB8AA5 /* DataListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataListWindowController.m; path = editor/code/genericDataEditor/DataListWindowController.m; sourceTree = SOURCE_ROOT; };
+		67DF9561178173DE00FB8AA5 /* FlippedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlippedView.m; path = editor/code/genericDataEditor/FlippedView.m; sourceTree = SOURCE_ROOT; };
+		67DF9562178173DE00FB8AA5 /* GenericCheckBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenericCheckBox.xib; path = editor/code/genericDataEditor/GenericCheckBox.xib; sourceTree = SOURCE_ROOT; };
+		67DF9563178173DE00FB8AA5 /* GenericComboBox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenericComboBox.xib; path = editor/code/genericDataEditor/GenericComboBox.xib; sourceTree = SOURCE_ROOT; };
+		67DF9564178173DE00FB8AA5 /* GenericImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenericImageView.xib; path = editor/code/genericDataEditor/GenericImageView.xib; sourceTree = SOURCE_ROOT; };
+		67DF9565178173DE00FB8AA5 /* GenericTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenericTextField.xib; path = editor/code/genericDataEditor/GenericTextField.xib; sourceTree = SOURCE_ROOT; };
+		67DF9566178173DE00FB8AA5 /* GenericTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenericTextView.xib; path = editor/code/genericDataEditor/GenericTextView.xib; sourceTree = SOURCE_ROOT; };
+		67DF9567178173DE00FB8AA5 /* ModuleListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModuleListView.xib; path = editor/code/genericDataEditor/ModuleListView.xib; sourceTree = SOURCE_ROOT; };
+		67DF9568178173DE00FB8AA5 /* ModuleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleListViewController.h; path = editor/code/genericDataEditor/ModuleListViewController.h; sourceTree = SOURCE_ROOT; };
+		67DF9569178173DE00FB8AA5 /* ModuleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleListViewController.m; path = editor/code/genericDataEditor/ModuleListViewController.m; sourceTree = SOURCE_ROOT; };
+		67DF956A178173DE00FB8AA5 /* ModuleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModuleView.xib; path = editor/code/genericDataEditor/ModuleView.xib; sourceTree = SOURCE_ROOT; };
+		67DF956B178173DE00FB8AA5 /* ModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleViewController.h; path = editor/code/genericDataEditor/ModuleViewController.h; sourceTree = SOURCE_ROOT; };
+		67DF956C178173DE00FB8AA5 /* ModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleViewController.m; path = editor/code/genericDataEditor/ModuleViewController.m; sourceTree = SOURCE_ROOT; };
+		67DF957D178175EC00FB8AA5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		67DF957F178175F300FB8AA5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		67DF95811781760B00FB8AA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		67DF95831781761000FB8AA5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		67DF95D71782977400FB8AA5 /* TowerIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TowerIsles.app; path = "/myapps/towerIsles/iosClientCode/build/Release-iphoneos/TowerIsles.app"; sourceTree = "<absolute>"; };
+		67DF95D81782977400FB8AA5 /* TowerIslesEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = TowerIslesEditor.app; path = /myapps/towerIsles/iosClientCode/build/Release/TowerIslesEditor.app; sourceTree = "<absolute>"; };
+		67DF95E01782CC5700FB8AA5 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = editor/code/appDelegate/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		67E04D56174539E100B3FCFC /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
 		67E04D5817453A5700B3FCFC /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
 		67E04D5917453A5700B3FCFC /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
@@ -281,8 +421,8 @@
 		67E04D5C17453B0400B3FCFC /* EntityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityManager.m; sourceTree = "<group>"; };
 		67E04D5E17453BA800B3FCFC /* EntityConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityConfig.h; sourceTree = "<group>"; };
 		67E04D5F17453BA800B3FCFC /* EntityConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityConfig.m; sourceTree = "<group>"; };
-		67E04D6117453C4D00B3FCFC /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		67E04D6217453C4D00B3FCFC /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		67E04D6117453C4D00B3FCFC /* EntityComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityComponent.h; sourceTree = "<group>"; };
+		67E04D6217453C4D00B3FCFC /* EntityComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityComponent.m; sourceTree = "<group>"; };
 		67E04D6D1745427800B3FCFC /* DisplayInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayInformation.h; path = objects/DisplayInformation.h; sourceTree = "<group>"; };
 		67E04D6E1745427800B3FCFC /* DisplayInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayInformation.m; path = objects/DisplayInformation.m; sourceTree = "<group>"; };
 		67E04D701745429100B3FCFC /* Identifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Identifier.h; path = objects/Identifier.h; sourceTree = "<group>"; };
@@ -324,6 +464,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67DF95281781733E00FB8AA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DF95841781761000FB8AA5 /* QuartzCore.framework in Frameworks */,
+				67DF95821781760B00FB8AA5 /* Foundation.framework in Frameworks */,
+				67DF9580178175F300FB8AA5 /* OpenGL.framework in Frameworks */,
+				67DF957E178175EC00FB8AA5 /* GLKit.framework in Frameworks */,
+				67DF95491781736100FB8AA5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -352,7 +504,7 @@
 			name = math;
 			sourceTree = "<group>";
 		};
-		6736AEDA174E71A0006FA778 /* graphics */ = {
+		6736AEDA174E71A0006FA778 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
 				6736AEDE174E71F6006FA778 /* base */,
@@ -360,7 +512,7 @@
 				6736AEDB174E71BE006FA778 /* managers */,
 				67B7A6C91752CD870040362A /* Graphics.h */,
 			);
-			name = graphics;
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 		6736AEDB174E71BE006FA778 /* managers */ = {
@@ -537,39 +689,34 @@
 		67CCECD91743EAC400AE8940 = {
 			isa = PBXGroup;
 			children = (
-				6797717D175488D40013FB6E /* GLKit.framework */,
 				67E04D89174746FE00B3FCFC /* bundle */,
 				67CCECEB1743EAC400AE8940 /* TowerIsles */,
-				67CCECE41743EAC400AE8940 /* Frameworks */,
-				67CCECE31743EAC400AE8940 /* Products */,
+				67DF95331781733E00FB8AA5 /* TowerIslesEditor */,
 			);
-			sourceTree = "<group>";
-		};
-		67CCECE31743EAC400AE8940 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				67CCECE21743EAC400AE8940 /* TowerIsles.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		67CCECE41743EAC400AE8940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6797717D175488D40013FB6E /* GLKit.framework */,
 				6736AEEA174E7536006FA778 /* OpenGLES.framework */,
 				67FF24E3174C7F2E008EE9A2 /* QuartzCore.framework */,
 				67CCECE51743EAC400AE8940 /* UIKit.framework */,
 				67CCECE71743EAC400AE8940 /* Foundation.framework */,
 				67CCECE91743EAC400AE8940 /* CoreGraphics.framework */,
+				67DF93CC1780884800FB8AA5 /* Cocoa.framework */,
+				67DF93CE1780884800FB8AA5 /* Other Frameworks */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		67CCECEB1743EAC400AE8940 /* TowerIsles */ = {
 			isa = PBXGroup;
 			children = (
+				67CCECE41743EAC400AE8940 /* Frameworks */,
 				67CCED171743EBA700AE8940 /* Code */,
-				67CCED451743EBB400AE8940 /* submodules */,
+				67CCED451743EBB400AE8940 /* Submodules */,
 				67CCECEC1743EAC400AE8940 /* Supporting Files */,
 			);
 			path = TowerIsles;
@@ -594,13 +741,13 @@
 				67C731EF1750710F00F1BA07 /* Testing */,
 				67E04D7417460C0400B3FCFC /* Components */,
 				67E04D7317460BF900B3FCFC /* EntitySpecs */,
-				67CCED1F1743EBA700AE8940 /* Game.h */,
-				67CCED0C1743EB8F00AE8940 /* main.m */,
 				67CCED181743EBA700AE8940 /* AppDelegate */,
 				67CCED201743EBA700AE8940 /* Managers */,
 				67CCED2D1743EBA700AE8940 /* Objects */,
 				67CCED341743EBA700AE8940 /* Services */,
 				67CCED391743EBA700AE8940 /* UI */,
+				67CCED1F1743EBA700AE8940 /* Game.h */,
+				67CCED0C1743EB8F00AE8940 /* main.m */,
 			);
 			name = Code;
 			path = game/Code;
@@ -623,13 +770,14 @@
 		67CCED201743EBA700AE8940 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				67DF95DC1782C47500FB8AA5 /* Touch */,
 				67B1583B17720F6B009B0BE0 /* Island */,
 				67D3DF1217684BB00060B70A /* Settings */,
 				6794996F1761BB2A007B60F0 /* Camera */,
 				67B7A6CD1753488C0040362A /* Defrost */,
 				67B7A6C21752C54E0040362A /* GameScene */,
 				67CCED211743EBA700AE8940 /* Loading */,
-				67CCED241743EBA700AE8940 /* Menu */,
+				67CCED241743EBA700AE8940 /* UI */,
 				67CCED271743EBA700AE8940 /* Offline */,
 				67CCED2A1743EBA700AE8940 /* Player */,
 			);
@@ -645,12 +793,13 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		67CCED241743EBA700AE8940 /* Menu */ = {
+		67CCED241743EBA700AE8940 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				67CCED251743EBA700AE8940 /* MenuManager.h */,
-				67CCED261743EBA700AE8940 /* MenuManager.m */,
+				67CCED251743EBA700AE8940 /* GameUIManager.h */,
+				67CCED261743EBA700AE8940 /* GameUIManager.m */,
 			);
+			name = UI;
 			path = Menu;
 			sourceTree = "<group>";
 		};
@@ -732,17 +881,18 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		67CCED451743EBB400AE8940 /* submodules */ = {
+		67CCED451743EBB400AE8940 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				6736AEDA174E71A0006FA778 /* graphics */,
-				67CCED461743EBB400AE8940 /* core */,
-				67E04D52174539C000B3FCFC /* gameEngine */,
+				67E04D52174539C000B3FCFC /* GameEngine */,
+				6736AEDA174E71A0006FA778 /* Graphics */,
+				67CCED461743EBB400AE8940 /* Core */,
 			);
+			name = Submodules;
 			path = submodules;
 			sourceTree = SOURCE_ROOT;
 		};
-		67CCED461743EBB400AE8940 /* core */ = {
+		67CCED461743EBB400AE8940 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				67E04D6C1745425C00B3FCFC /* objects */,
@@ -755,6 +905,7 @@
 				67CCED601743EBB400AE8940 /* services */,
 				67CCED631743EBB400AE8940 /* views */,
 			);
+			name = Core;
 			path = core;
 			sourceTree = "<group>";
 		};
@@ -780,6 +931,8 @@
 				67CCED531743EBB400AE8940 /* Utilities.m */,
 				67171C1D174B547500B20F2A /* PerformBlockAfterDelay.h */,
 				67171C1E174B566600B20F2A /* PerformBlockAfterDelay.m */,
+				67DF941F17814E5300FB8AA5 /* NSString+CamelCase.h */,
+				67DF942017814E5300FB8AA5 /* NSString+CamelCase.m */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -865,7 +1018,105 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
-		67E04D52174539C000B3FCFC /* gameEngine */ = {
+		67DF93CE1780884800FB8AA5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67DF93CF1780884800FB8AA5 /* AppKit.framework */,
+				67DF93D01780884800FB8AA5 /* CoreData.framework */,
+				67DF93D11780884800FB8AA5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		67DF95331781733E00FB8AA5 /* TowerIslesEditor */ = {
+			isa = PBXGroup;
+			children = (
+				67DF954A1781736800FB8AA5 /* Frameworks */,
+				67DF954B1781737000FB8AA5 /* Code */,
+				67DF95341781733E00FB8AA5 /* Supporting Files */,
+			);
+			path = TowerIslesEditor;
+			sourceTree = "<group>";
+		};
+		67DF95341781733E00FB8AA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67DF954D178173A000FB8AA5 /* TowerIslesEditor-Info.plist */,
+				67DF954E178173A000FB8AA5 /* TowerIslesEditor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67DF954A1781736800FB8AA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67DF95831781761000FB8AA5 /* QuartzCore.framework */,
+				67DF95811781760B00FB8AA5 /* Foundation.framework */,
+				67DF957F178175F300FB8AA5 /* OpenGL.framework */,
+				67DF957D178175EC00FB8AA5 /* GLKit.framework */,
+				67DF95481781736100FB8AA5 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67DF954B1781737000FB8AA5 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				67DF9555178173D100FB8AA5 /* GenericData */,
+				67DF9551178173B100FB8AA5 /* AppDelegate */,
+				67DF954C178173A000FB8AA5 /* main.m */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		67DF9551178173B100FB8AA5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				67DF95E01782CC5700FB8AA5 /* MainMenu.xib */,
+				67DF9552178173C200FB8AA5 /* EditorAppDelegate.h */,
+				67DF9553178173C200FB8AA5 /* EditorAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		67DF9555178173D100FB8AA5 /* GenericData */ = {
+			isa = PBXGroup;
+			children = (
+				67DF9556178173DE00FB8AA5 /* CollapsibleModuleView.xib */,
+				67DF9557178173DE00FB8AA5 /* CollapsibleModuleViewController.h */,
+				67DF9558178173DE00FB8AA5 /* CollapsibleModuleViewController.m */,
+				67DF9559178173DE00FB8AA5 /* DataEditor.h */,
+				67DF955A178173DE00FB8AA5 /* DataEditorBase.h */,
+				67DF955B178173DE00FB8AA5 /* DataEditorWindow.xib */,
+				67DF955C178173DE00FB8AA5 /* DataEditorWindowController.h */,
+				67DF955D178173DE00FB8AA5 /* DataEditorWindowController.m */,
+				67DF955E178173DE00FB8AA5 /* DataListWindow.xib */,
+				67DF955F178173DE00FB8AA5 /* DataListWindowController.h */,
+				67DF9560178173DE00FB8AA5 /* DataListWindowController.m */,
+				67DF9561178173DE00FB8AA5 /* FlippedView.m */,
+				67DF9562178173DE00FB8AA5 /* GenericCheckBox.xib */,
+				67DF9563178173DE00FB8AA5 /* GenericComboBox.xib */,
+				67DF9564178173DE00FB8AA5 /* GenericImageView.xib */,
+				67DF9565178173DE00FB8AA5 /* GenericTextField.xib */,
+				67DF9566178173DE00FB8AA5 /* GenericTextView.xib */,
+				67DF9567178173DE00FB8AA5 /* ModuleListView.xib */,
+				67DF9568178173DE00FB8AA5 /* ModuleListViewController.h */,
+				67DF9569178173DE00FB8AA5 /* ModuleListViewController.m */,
+				67DF956A178173DE00FB8AA5 /* ModuleView.xib */,
+				67DF956B178173DE00FB8AA5 /* ModuleViewController.h */,
+				67DF956C178173DE00FB8AA5 /* ModuleViewController.m */,
+			);
+			name = GenericData;
+			sourceTree = "<group>";
+		};
+		67DF95DC1782C47500FB8AA5 /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Touch;
+			sourceTree = "<group>";
+		};
+		67E04D52174539C000B3FCFC /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
 				67FC55161760E6DA00A72D9C /* objects */,
@@ -877,14 +1128,15 @@
 				67E04D55174539C000B3FCFC /* gameEngineManagers */,
 				67E04D56174539E100B3FCFC /* GameEngine.h */,
 			);
+			name = GameEngine;
 			path = gameEngine;
 			sourceTree = "<group>";
 		};
 		67E04D53174539C000B3FCFC /* component */ = {
 			isa = PBXGroup;
 			children = (
-				67E04D6117453C4D00B3FCFC /* Component.h */,
-				67E04D6217453C4D00B3FCFC /* Component.m */,
+				67E04D6117453C4D00B3FCFC /* EntityComponent.h */,
+				67E04D6217453C4D00B3FCFC /* EntityComponent.m */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -1013,7 +1265,24 @@
 			);
 			name = TowerIsles;
 			productName = TowerIsles;
-			productReference = 67CCECE21743EAC400AE8940 /* TowerIsles.app */;
+			productReference = 67DF95D71782977400FB8AA5 /* TowerIsles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67DF952A1781733E00FB8AA5 /* TowerIslesEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DF95451781733E00FB8AA5 /* Build configuration list for PBXNativeTarget "TowerIslesEditor" */;
+			buildPhases = (
+				67DF95271781733E00FB8AA5 /* Sources */,
+				67DF95281781733E00FB8AA5 /* Frameworks */,
+				67DF95291781733E00FB8AA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TowerIslesEditor;
+			productName = TowerIslesEditor;
+			productReference = 67DF95D81782977400FB8AA5 /* TowerIslesEditor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1033,11 +1302,12 @@
 				en,
 			);
 			mainGroup = 67CCECD91743EAC400AE8940;
-			productRefGroup = 67CCECE31743EAC400AE8940 /* Products */;
+			productRefGroup = 67CCECD91743EAC400AE8940;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				67CCECE11743EAC400AE8940 /* TowerIsles */,
+				67DF952A1781733E00FB8AA5 /* TowerIslesEditor */,
 			);
 		};
 /* End PBXProject section */
@@ -1060,6 +1330,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67DF95291781733E00FB8AA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DF9550178173A000FB8AA5 /* TowerIslesEditor-Info.plist in Resources */,
+				67DF956D178173DE00FB8AA5 /* CollapsibleModuleView.xib in Resources */,
+				67DF956F178173DE00FB8AA5 /* DataEditorWindow.xib in Resources */,
+				67DF9571178173DE00FB8AA5 /* DataListWindow.xib in Resources */,
+				67DF9574178173DE00FB8AA5 /* GenericCheckBox.xib in Resources */,
+				67DF9575178173DE00FB8AA5 /* GenericComboBox.xib in Resources */,
+				67DF9576178173DE00FB8AA5 /* GenericImageView.xib in Resources */,
+				67DF9577178173DE00FB8AA5 /* GenericTextField.xib in Resources */,
+				67DF9578178173DE00FB8AA5 /* GenericTextView.xib in Resources */,
+				67DF9579178173DE00FB8AA5 /* ModuleListView.xib in Resources */,
+				67DF957B178173DE00FB8AA5 /* ModuleView.xib in Resources */,
+				67DF95E11782CC5800FB8AA5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1067,11 +1356,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CCED121743EB8F00AE8940 /* main.m in Sources */,
 				67CCED3A1743EBA700AE8940 /* GameAppDelegate.m in Sources */,
 				67CCED3B1743EBA700AE8940 /* GameViewDirector.m in Sources */,
 				67CCED3E1743EBA700AE8940 /* LoadingManager.m in Sources */,
-				67CCED3F1743EBA700AE8940 /* MenuManager.m in Sources */,
+				67CCED3F1743EBA700AE8940 /* GameUIManager.m in Sources */,
 				67CCED401743EBA700AE8940 /* OfflineManager.m in Sources */,
 				67CCED411743EBA700AE8940 /* PlayerManager.m in Sources */,
 				67CCED421743EBA700AE8940 /* LoginResponse.m in Sources */,
@@ -1094,7 +1382,7 @@
 				67E04D5A17453A5700B3FCFC /* Entity.m in Sources */,
 				67E04D5D17453B0400B3FCFC /* EntityManager.m in Sources */,
 				67E04D6017453BA800B3FCFC /* EntityConfig.m in Sources */,
-				67E04D6317453C4D00B3FCFC /* Component.m in Sources */,
+				67E04D6317453C4D00B3FCFC /* EntityComponent.m in Sources */,
 				67E04D6F1745427800B3FCFC /* DisplayInformation.m in Sources */,
 				67E04D721745429100B3FCFC /* Identifier.m in Sources */,
 				67E04D7D17460C9E00B3FCFC /* EntitySpec.m in Sources */,
@@ -1153,6 +1441,96 @@
 				67B1584217721274009B0BE0 /* IslandIndex.m in Sources */,
 				674CE5B3177C973D0064AC9C /* IslandConfig.m in Sources */,
 				67CA5DBA177D246B00186AEC /* IslandInstance.m in Sources */,
+				67DF942117814E5400FB8AA5 /* NSString+CamelCase.m in Sources */,
+				67DF94F6178157B400FB8AA5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67DF95271781733E00FB8AA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DF95861781766600FB8AA5 /* TestCase.m in Sources */,
+				67DF95871781766600FB8AA5 /* MathTesting.m in Sources */,
+				67DF95881781766600FB8AA5 /* SerializationTesting.m in Sources */,
+				67DF95891781766600FB8AA5 /* TestingManager.m in Sources */,
+				67DF958A1781766600FB8AA5 /* TestSpec.m in Sources */,
+				67DF958B1781766600FB8AA5 /* TestComponents.m in Sources */,
+				67DF958C1781766600FB8AA5 /* LightComponent.m in Sources */,
+				67DF958D1781766600FB8AA5 /* CameraComponent.m in Sources */,
+				67DF958E1781766600FB8AA5 /* RenderableComponent.m in Sources */,
+				67DF958F1781766600FB8AA5 /* MovableComponent.m in Sources */,
+				67DF95901781766600FB8AA5 /* LightSpec.m in Sources */,
+				67DF95911781766600FB8AA5 /* CameraSpec.m in Sources */,
+				67DF95921781766600FB8AA5 /* RenderableSpec.m in Sources */,
+				67DF95931781766600FB8AA5 /* MovableSpec.m in Sources */,
+				67DF95941781766600FB8AA5 /* IslandManager.m in Sources */,
+				67DF95951781766600FB8AA5 /* SettingsManager.m in Sources */,
+				67DF95971781766600FB8AA5 /* DefrostManager.m in Sources */,
+				67DF95981781766600FB8AA5 /* GameSceneManager.m in Sources */,
+				67DF95991781766600FB8AA5 /* LoadingManager.m in Sources */,
+				67DF959A1781766600FB8AA5 /* GameUIManager.m in Sources */,
+				67DF959B1781766600FB8AA5 /* OfflineManager.m in Sources */,
+				67DF959C1781766600FB8AA5 /* OfflineDatabaseManager.m in Sources */,
+				67DF959D1781766600FB8AA5 /* PlayerManager.m in Sources */,
+				67DF959E1781766600FB8AA5 /* IslandInstance.m in Sources */,
+				67DF959F1781766600FB8AA5 /* IslandConfig.m in Sources */,
+				67DF95A01781766600FB8AA5 /* IslandIndex.m in Sources */,
+				67DF95A11781766600FB8AA5 /* Setting.m in Sources */,
+				67DF95A21781766600FB8AA5 /* LandData.m in Sources */,
+				67DF95A31781766700FB8AA5 /* LoginResponse.m in Sources */,
+				67DF95A41781766700FB8AA5 /* PlayerData.m in Sources */,
+				67DF95A51781766700FB8AA5 /* PlayerService.m in Sources */,
+				67DF95A61781766700FB8AA5 /* GraphicsBase.m in Sources */,
+				67DF95A71781766700FB8AA5 /* Scene.m in Sources */,
+				67DF95A81781766700FB8AA5 /* Movable.m in Sources */,
+				67DF95A91781766700FB8AA5 /* Node.m in Sources */,
+				67DF95AA1781766700FB8AA5 /* SceneNode.m in Sources */,
+				67DF95AB1781766700FB8AA5 /* Renderable.m in Sources */,
+				67DF95AC1781766700FB8AA5 /* Model.m in Sources */,
+				67DF95AD1781766700FB8AA5 /* Light.m in Sources */,
+				67DF95AE1781766700FB8AA5 /* Camera.m in Sources */,
+				67DF95AF1781766700FB8AA5 /* Mesh.m in Sources */,
+				67DF95B01781766700FB8AA5 /* RenderResource.m in Sources */,
+				67DF95B11781766700FB8AA5 /* Color.m in Sources */,
+				67DF95B21781766700FB8AA5 /* Shader.m in Sources */,
+				67DF95B31781766700FB8AA5 /* PrimitiveData.m in Sources */,
+				67DF95B41781766700FB8AA5 /* Material.m in Sources */,
+				67DF95B51781766700FB8AA5 /* RenderManager.m in Sources */,
+				67DF95B61781766700FB8AA5 /* SceneManager.m in Sources */,
+				67DF95B71781766700FB8AA5 /* RenderResourceManager.m in Sources */,
+				67DF95B81781766700FB8AA5 /* Identifier.m in Sources */,
+				67DF95B91781766700FB8AA5 /* DisplayInformation.m in Sources */,
+				67DF95BA1781766700FB8AA5 /* UpdateBlockAtInterval.m in Sources */,
+				67DF95BB1781766700FB8AA5 /* NSObject+Object.m in Sources */,
+				67DF95BC1781766700FB8AA5 /* NSObject+Serialization.m in Sources */,
+				67DF95BD1781766700FB8AA5 /* Utilities.m in Sources */,
+				67DF95BE1781766700FB8AA5 /* PerformBlockAfterDelay.m in Sources */,
+				67DF95BF1781766700FB8AA5 /* NSString+CamelCase.m in Sources */,
+				67DF95C01781766700FB8AA5 /* ResourceManager.m in Sources */,
+				67DF95C21781766700FB8AA5 /* JSONKit.m in Sources */,
+				67DF95C31781766700FB8AA5 /* Manager.m in Sources */,
+				67DF95C41781766700FB8AA5 /* Service.m in Sources */,
+				67DF95C71781766700FB8AA5 /* Vec3.m in Sources */,
+				67DF95C81781766700FB8AA5 /* Quat.m in Sources */,
+				67DF95C91781766700FB8AA5 /* MathValidation.m in Sources */,
+				67DF95CA1781766700FB8AA5 /* Mat4.m in Sources */,
+				67DF95CB1781766700FB8AA5 /* EntityComponent.m in Sources */,
+				67DF95CC1781766700FB8AA5 /* Entity.m in Sources */,
+				67DF95CD1781766700FB8AA5 /* EntityConfig.m in Sources */,
+				67DF95CE1781766700FB8AA5 /* EntitySpec.m in Sources */,
+				67DF95CF1781766700FB8AA5 /* EntityManager.m in Sources */,
+				67DF95D01781766700FB8AA5 /* ServerTimeManager.m in Sources */,
+				67DF954F178173A000FB8AA5 /* main.m in Sources */,
+				67DF9554178173C200FB8AA5 /* EditorAppDelegate.m in Sources */,
+				67DF956E178173DE00FB8AA5 /* CollapsibleModuleViewController.m in Sources */,
+				67DF9570178173DE00FB8AA5 /* DataEditorWindowController.m in Sources */,
+				67DF9572178173DE00FB8AA5 /* DataListWindowController.m in Sources */,
+				67DF9573178173DE00FB8AA5 /* FlippedView.m in Sources */,
+				67DF957A178173DE00FB8AA5 /* ModuleListViewController.m in Sources */,
+				67DF957C178173DE00FB8AA5 /* ModuleViewController.m in Sources */,
+				67DF95DE1782C57D00FB8AA5 /* FrameTimeManager.m in Sources */,
+				67DF95DF1782CADF00FB8AA5 /* AppDirector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1260,6 +1638,49 @@
 			};
 			name = Release;
 		};
+		67DF95461781733E00FB8AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "editor/TowerIslesEditor-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/editor/TowerIslesEditor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67DF95471781733E00FB8AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "editor/TowerIslesEditor-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/editor/TowerIslesEditor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1277,6 +1698,15 @@
 			buildConfigurations = (
 				67CCED001743EAC400AE8940 /* Debug */,
 				67CCED011743EAC400AE8940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DF95451781733E00FB8AA5 /* Build configuration list for PBXNativeTarget "TowerIslesEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DF95461781733E00FB8AA5 /* Debug */,
+				67DF95471781733E00FB8AA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

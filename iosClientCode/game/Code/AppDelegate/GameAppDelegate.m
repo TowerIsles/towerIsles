@@ -1,5 +1,5 @@
-#import "AppDirector.h"
 #import "GameAppDelegate.h"
+#import "AppDirector.h"
 #import "GameViewDirector.h"
 #import "ViewManager.h"
 
@@ -12,14 +12,14 @@
 
 @implementation GameAppDelegate
 
-- (void)dealloc
-{
-    [super dealloc];
-}
-
 + (GameAppDelegate*)sharedApplicationDelegate
 {
     return (GameAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+- (void)dealloc
+{
+    [super dealloc];
 }
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions

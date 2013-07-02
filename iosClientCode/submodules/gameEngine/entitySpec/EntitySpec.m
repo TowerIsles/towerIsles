@@ -1,5 +1,5 @@
 #import "EntitySpec.h"
-#import "Component.h"
+#import "EntityComponent.h"
 #import "Entity.h"
 #import "EntityManager.h"
 
@@ -40,7 +40,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
 
 			Class potentialClass = [NSObject classForIvar:ivar];
 			
-			if ([potentialClass isSubclassOfClass:kComponentClass])
+			if ([potentialClass isSubclassOfClass:kEntityComponentClass])
 			{
 				[injectableComponentClassesByIvar setObject:potentialClass
                                                      forKey:keyFromIvar(ivar)];
@@ -120,7 +120,7 @@ NSMutableDictionary* injectableSpecClassesByIvar = nil;
         
         if (componentClass != nil)
         {
-            Component* component = [_entity componentForClass:componentClass];
+            EntityComponent* component = [_entity componentForClass:componentClass];
             
             CheckTrue(component != nil);
             

@@ -5,7 +5,6 @@
 #import "Camera.h"
 #import "GraphicsBase.h"
 #import "Node.h"
-#import <GLKit/GLKit.h>
 #import "MathValidation.h"
 
 @interface Model ()

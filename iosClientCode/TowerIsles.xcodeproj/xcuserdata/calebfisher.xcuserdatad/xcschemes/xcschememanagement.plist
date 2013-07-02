@@ -9,10 +9,30 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TowerIslesEditor.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>67CCECE11743EAC400AE8940</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67DF93CA1780884800FB8AA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67DF95071781724100FB8AA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67DF952A1781733E00FB8AA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

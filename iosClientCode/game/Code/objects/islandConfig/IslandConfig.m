@@ -74,7 +74,7 @@
             for (int i = 0; i < group.choiceCount; ++i)
             {
                 int selectedIndex = [Util randomIntBetweenMin:0
-                                                          max:possibleEntries.count - 1];
+                                                          max:(int)possibleEntries.count - 1];
                 
                 IslandConfigEntry* chosenEntry = [possibleEntries objectAtIndex:selectedIndex];
                 
@@ -89,7 +89,7 @@
         else
         {
             int selectedIndex = [Util randomIntBetweenMin:0
-                                                      max:group.islandConfigEntries.count - 1];
+                                                      max:(int)group.islandConfigEntries.count - 1];
             
             IslandConfigEntry* chosenEntry = [group.islandConfigEntries objectAtIndex:selectedIndex];
             

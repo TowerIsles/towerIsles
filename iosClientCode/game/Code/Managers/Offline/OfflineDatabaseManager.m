@@ -58,6 +58,8 @@
 - (void)createPlayerWithLoginId:(NSString*)loginId
                        password:(NSString*)password
 {
+    CheckTrue(![ResourceManager doesResourceAtPathExist:[self internal_offlineDatabasePathForUserWithLoginId:loginId]]);
+    
     OfflineDatabasePlayerEntry* offlineDatabasePlayerEntry = [self internal_offlineDatabasePlayerEntryForLoginId:kDefaultPlayerName];
     
     offlineDatabasePlayerEntry.password = password;
@@ -94,7 +96,7 @@
     if (entry == nil ||
         [loginId isEqualToString:kDefaultPlayerName])
     {
-        NSString* path = Format(@"%@/%@.json", [self internal_offlineDatabaseRoot], loginId);
+        NSString* path = [self internal_offlineDatabasePathForUserWithLoginId:loginId];
         
         CheckTrue([ResourceManager doesResourceAtPathExist:path])
         
@@ -105,17 +107,20 @@
     return entry;
 }
 
+- (NSString*)internal_offlineDatabasePathForUserWithLoginId:(NSString*)loginId
+{
+    return Format(@"%@/%@.json", [self internal_offlineDatabaseRoot], loginId);
+}
+
 - (void)internal_saveOfflineDatabasePlayerEntry:(OfflineDatabasePlayerEntry*)offlineDatabasePlayerEntry
                                       withLogin:(NSString*)loginId
 {
-    NSString* path = Format(@"%@/%@.json", [self internal_offlineDatabaseRoot], loginId);
-    
     NSDictionary* databaseEntry = [offlineDatabasePlayerEntry serializedRepresentationForOfflineDatabase];
     
     NSString* outputString = [databaseEntry JSONStringWithOptions:JKSerializeOptionPretty
                                                                       error:nil];
     
-    [outputString writeToFile:path
+    [outputString writeToFile:[self internal_offlineDatabasePathForUserWithLoginId:loginId]
                    atomically:YES
                      encoding:NSUTF8StringEncoding
                         error:nil];

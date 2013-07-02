@@ -1,6 +1,6 @@
 #import "Base.h"
 
-@interface Component : ManagedPropertiesObject
+@interface EntityComponent : ManagedPropertiesObject
 
 - (void)teardown;
 

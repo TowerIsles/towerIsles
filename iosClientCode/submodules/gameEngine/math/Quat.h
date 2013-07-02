@@ -1,5 +1,5 @@
 #import "Vec3.h"
-#import <GLKit/GLKit.h>
+#import "GLKit/GLKMatrix3.h"
 
 typedef struct Quat {
     float x;

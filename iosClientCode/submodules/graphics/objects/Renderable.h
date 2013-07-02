@@ -1,5 +1,4 @@
 #import "Movable.h"
-#import <GLKit/GLKit.h>
 
 @class Camera;
 @class Node;

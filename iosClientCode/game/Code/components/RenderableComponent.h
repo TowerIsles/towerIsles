@@ -2,7 +2,7 @@
 
 @class Renderable;
 
-@interface RenderableComponent : Component
+@interface RenderableComponent : EntityComponent
 
 @property (nonatomic, retain) Renderable* renderable;
 

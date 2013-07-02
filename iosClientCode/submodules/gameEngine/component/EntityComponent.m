@@ -1,7 +1,7 @@
-#import "Component.h"
+#import "EntityComponent.h"
 
 
-@interface Component ()
+@interface EntityComponent ()
 {
 	
 }
@@ -9,7 +9,7 @@
 @end
 
 
-@implementation Component
+@implementation EntityComponent
 
 - (void)teardown {}
 

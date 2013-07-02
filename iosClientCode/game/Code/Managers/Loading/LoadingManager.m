@@ -1,5 +1,5 @@
 #import "LoadingManager.h"
-#import "MenuManager.h"
+#import "GameUIManager.h"
 #import "PlayerManager.h"
 #import "TestSpec.h"
 #import "SettingsManager.h"
@@ -7,7 +7,7 @@
 @interface LoadingManager ()
 {
 	PlayerManager* playerManager;
-    MenuManager* menuManager;
+    GameUIManager* gameUIManager;
     EntityManager* entityManager;
     SettingsManager* settingsManager;
 }
@@ -18,7 +18,7 @@
 - (void)load
 {
 #if DEBUG
-    [menuManager showDebugMenu];
+    [gameUIManager showDebugMenu];
 #endif
     
     if ([settingsManager.shouldLoginImplicitly getSettingValue])
@@ -27,14 +27,14 @@
     }
     else
     {
-        [menuManager showLoginMenu];
+        [gameUIManager showLoginMenu];
     }
 }
 
 - (void)reload
 {
     performBlockAfterDelay(.5f, ^{
-        [menuManager showLoginMenu];
+        [gameUIManager showLoginMenu];
     });
 }
 

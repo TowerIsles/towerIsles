@@ -1,7 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import "GameAppDelegate.h"
-
 int main(int argc, char *argv[])
 {
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];

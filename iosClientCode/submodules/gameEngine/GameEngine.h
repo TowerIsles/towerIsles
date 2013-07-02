@@ -1,6 +1,6 @@
 #import "Core.h"
 
-#import "Component.h"
+#import "EntityComponent.h"
 #import "Entity.h"
 #import "EntityConfig.h"
 #import "EntitySpec.h"
@@ -13,9 +13,10 @@
 #import "Quat.h"
 #import "Mat4.h"
 
+#ifndef EDITOR
 #import "TouchManager.h"
 #import "TouchChannel.h"
 #import "TouchGesture.h"
-
+#endif
 
 

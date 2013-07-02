@@ -3,7 +3,6 @@
 
 @interface TouchManager ()
 {
-    ViewManager* viewManager;
 }
 @property (nonatomic, retain) NSMutableArray* touchChannels;
 @end

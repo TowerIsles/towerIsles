@@ -52,7 +52,7 @@
         }
     }
     
-    NSLog(@"Summary -------------------- %d/%d passed", successfulTestCount, _testCases.count);
+    NSLog(@"Summary -------------------- %d/%d passed", successfulTestCount, (int)_testCases.count);
     NSLog(@"=============");
 }
 

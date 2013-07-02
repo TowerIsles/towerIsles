@@ -1,5 +1,5 @@
 #import "RenderResource.h"
-#import <GLKit/GLKit.h>
+#import "GraphicsBase.h"
 
 @interface Shader : RenderResource
 @property (nonatomic, assign) GLuint programHandle;

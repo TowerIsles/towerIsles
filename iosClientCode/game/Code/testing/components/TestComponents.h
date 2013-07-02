@@ -1,12 +1,12 @@
 #import "Game.h"
 
-@interface TestComponentOne : Component
+@interface TestComponentOne : EntityComponent
 @property (nonatomic, assign) int testParamOne;
 @property (nonatomic, assign) float testParamTwo;
 @end
 
 
-@interface TestComponentTwo : Component
+@interface TestComponentTwo : EntityComponent
 @property (nonatomic, assign) int testParamOne;
 @property (nonatomic, assign) float testParamTwo;
 @end

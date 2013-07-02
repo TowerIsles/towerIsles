@@ -1,6 +1,6 @@
 #import "Game.h"
 
-@interface MovableComponent : Component
+@interface MovableComponent : EntityComponent
 // Stateful, non-serializable
 @property (nonatomic, retain) SceneNode* sceneNode;
 // Config, overridable
