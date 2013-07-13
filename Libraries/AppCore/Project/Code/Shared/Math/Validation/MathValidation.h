@@ -57,6 +57,8 @@ ValidateFloat(mat4Arg.m33);
 
 #else
 
+#define ValidateVec2( X )
+
 #define ValidateVec3( X )
 
 #define ValidateFloat( X )

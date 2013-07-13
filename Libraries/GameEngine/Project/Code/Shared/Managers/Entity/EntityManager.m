@@ -49,9 +49,6 @@
     [self registerInterUpdateBlock:^{
         [self internal_removeQueuedEntities]; 
     }];
-    
-    [self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_renderables.json"];
-    //[self loadEntityConfigsFromFile:@"EntityConfig/EntityConfigLibrary_test.json"];
 }
 
 - (void)reload

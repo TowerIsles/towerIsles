@@ -18,7 +18,7 @@
 - (BOOL)              application:(UIApplication*)application
     didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    [Utilities initializeAppCoreClasses];
+    [self initializeClassCache];
     
     [_viewDirector loadView];
     
@@ -84,6 +84,8 @@
     
     [me configure]; // calls out to derived classes
 }
+
+- (void)initializeClassCache {}
 
 - (void)configure {}
 

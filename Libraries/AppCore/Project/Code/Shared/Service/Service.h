@@ -4,7 +4,7 @@
 // === Command Declaration ===
 #define DeclareServiceCommand(commandNameArg, inputType, outputType)                           \
 + (void)commandNameArg:(inputType*)commandInput                                                \
-    responseHandler:(void(^)(outputType*))responseBlock;
+       responseHandler:(void(^)(outputType*))responseBlock;
 
 // No input
 #define DeclareServiceCommandNoInput(commandNameArg, outputType)                               \
@@ -22,14 +22,13 @@
 // === Command Implementation ===
 #define ImplementServiceCommand(commandNameArg, inputType, outputType)                         \
 + (void)commandNameArg:(inputType*)commandInput                                                \
-    responseHandler:(void(^)(outputType*))responseBlock                                     \
+       responseHandler:(void(^)(outputType*))responseBlock                                     \
 {                                                                                           \
     PendingRequestAgent* pendingRequestAgent = [PendingRequestAgent new];                   \
     pendingRequestAgent.serviceName = [self serviceName];                                   \
     pendingRequestAgent.commandName = @#commandNameArg;                                        \
     pendingRequestAgent.commandInput = [(NSMutableDictionary*)commandInput serializedRepresentation];  \
-    pendingRequestAgent.responseBlock = (JujuRequestResponseBlock)responseBlock;            \
-    pendingRequestAgent.failureBlock = failureBlock;                                        \
+    pendingRequestAgent.responseBlock = responseBlock;            \
     pendingRequestAgent.serverResponseClass = [OutputType class];                           \
                                                                                             \
     [pendingRequestAgent performRequest];                                                   \
@@ -79,7 +78,7 @@
 /// === Stubbed Command Implementation ===
 #define ImplementStubbedServiceCommand(commandNameArg, inputType, outputType, stubbedOutputBlockArg) \
 + (void)commandNameArg:(inputType*)commandInput                                                \
-    responseHandler:(void(^)(outputType*))responseBlock                                     \
+      responseHandler:(void(^)(outputType*))responseBlock                                     \
 {                                                                                           \
     StubbedRequestAgent* stubbedRequestAgent = [StubbedRequestAgent new];                   \
     stubbedRequestAgent.commandName = @#commandNameArg;                                        \

@@ -29,3 +29,5 @@
 #else
 #define CheckGLError(contextArg)
 #endif
+
+#define BUFFER_OFFSET(i) ((char *)NULL + (i))

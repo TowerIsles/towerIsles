@@ -48,8 +48,6 @@
 		672BC00217905F2100423CCB /* OSXRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BC00117905F2100423CCB /* OSXRenderManager.m */; };
 		67C7AD6A1791353800B7DF1F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD691791353800B7DF1F /* GLKit.framework */; };
 		67C7AD6E179135C200B7DF1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD6D179135C200B7DF1F /* OpenGLES.framework */; };
-		67C7AD72179135F800B7DF1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD71179135F800B7DF1F /* CoreGraphics.framework */; };
-		67C7AD741791363F00B7DF1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD731791363F00B7DF1F /* QuartzCore.framework */; };
 		67E0A0F4178BE4F60030DA36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E0A0F3178BE4F60030DA36 /* Foundation.framework */; };
 		67F74D00178F0C8F009F1978 /* libAppCoreIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728603D178CED6C00DA6097 /* libAppCoreIOS.a */; };
 		67F74D01178F0C93009F1978 /* libAppCoreOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728603F178CED6C00DA6097 /* libAppCoreOSX.a */; };
@@ -139,8 +137,6 @@
 		672BC00117905F2100423CCB /* OSXRenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXRenderManager.m; sourceTree = "<group>"; };
 		67C7AD691791353800B7DF1F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		67C7AD6D179135C200B7DF1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		67C7AD71179135F800B7DF1F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		67C7AD731791363F00B7DF1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		67E0A0F3178BE4F60030DA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		67E0A101178BE6340030DA36 /* AppCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCore.xcodeproj; path = ../../AppCore/Project/AppCore.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,8 +155,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C7AD741791363F00B7DF1F /* QuartzCore.framework in Frameworks */,
-				67C7AD72179135F800B7DF1F /* CoreGraphics.framework in Frameworks */,
 				67C7AD6E179135C200B7DF1F /* OpenGLES.framework in Frameworks */,
 				67C7AD6A1791353800B7DF1F /* GLKit.framework in Frameworks */,
 				67F74D00178F0C8F009F1978 /* libAppCoreIOS.a in Frameworks */,
@@ -474,8 +468,6 @@
 		67E0A111178BE7220030DA36 /* IOS */ = {
 			isa = PBXGroup;
 			children = (
-				67C7AD731791363F00B7DF1F /* QuartzCore.framework */,
-				67C7AD71179135F800B7DF1F /* CoreGraphics.framework */,
 				67C7AD6D179135C200B7DF1F /* OpenGLES.framework */,
 				67C7AD691791353800B7DF1F /* GLKit.framework */,
 			);

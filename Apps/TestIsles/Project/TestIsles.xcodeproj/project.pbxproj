@@ -9,41 +9,46 @@
 /* Begin PBXBuildFile section */
 		67286050178CEE2100DA6097 /* libGameEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728604E178CEE2100DA6097 /* libGameEngineIOS.a */; };
 		67286105178DC92400DA6097 /* GameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860FB178DC92400DA6097 /* GameAppDelegate.m */; };
-		67286106178DC92400DA6097 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 672860FE178DC92400DA6097 /* Default-568h@2x.png */; };
-		67286107178DC92400DA6097 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 672860FF178DC92400DA6097 /* Default.png */; };
-		67286108178DC92400DA6097 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67286100178DC92400DA6097 /* Default@2x.png */; };
-		67286109178DC92400DA6097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286101178DC92400DA6097 /* main.m */; };
 		6728610C178DC93900DA6097 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6728610B178DC93900DA6097 /* MainWindow.xib */; };
 		672BBFF3178FF58F00423CCB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672BBFF2178FF58F00423CCB /* QuartzCore.framework */; };
 		672C5D59178B52F80032C67B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D58178B52F80032C67B /* UIKit.framework */; };
 		672C5D5B178B52F80032C67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D5A178B52F80032C67B /* Foundation.framework */; };
 		672C5D5D178B52F80032C67B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D5C178B52F80032C67B /* CoreGraphics.framework */; };
+		674C35221791481B009E9306 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD801791388D00B7DF1F /* OpenGLES.framework */; };
+		674C352D17914BB7009E9306 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C352717914BB7009E9306 /* Default-568h@2x.png */; };
+		674C352E17914BB7009E9306 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C352817914BB7009E9306 /* Default.png */; };
+		674C352F17914BB7009E9306 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 674C352917914BB7009E9306 /* Default@2x.png */; };
+		674C353017914BB7009E9306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 674C352A17914BB7009E9306 /* main.m */; };
+		674C353117914BB7009E9306 /* TestIsles-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674C352B17914BB7009E9306 /* TestIsles-Info.plist */; };
+		6774A6AB17914FD700DEE528 /* GameUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6774A6AA17914FD700DEE528 /* GameUtilities.m */; };
+		6774A6BC1791C33500DEE528 /* FPSCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6774A6BB1791C33500DEE528 /* FPSCounter.xib */; };
 		67C7AD781791369F00B7DF1F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD771791369F00B7DF1F /* GLKit.framework */; };
-		67C7AD811791388D00B7DF1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD801791388D00B7DF1F /* OpenGLES.framework */; };
 		67C7AD8417913D9D00B7DF1F /* ViewDirector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7AD8317913D9D00B7DF1F /* ViewDirector.xib */; };
-		67C7AD8617913DC300B7DF1F /* FpsCounter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67C7AD8517913DC300B7DF1F /* FpsCounter.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6728604E178CEE2100DA6097 /* libGameEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGameEngineIOS.a; path = "../../../Libraries/GameEngine/Project/build/Release-iphoneos/libGameEngineIOS.a"; sourceTree = "<group>"; };
 		672860FA178DC92400DA6097 /* GameAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameAppDelegate.h; sourceTree = "<group>"; };
 		672860FB178DC92400DA6097 /* GameAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameAppDelegate.m; sourceTree = "<group>"; };
-		672860FE178DC92400DA6097 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		672860FF178DC92400DA6097 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		67286100178DC92400DA6097 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		67286101178DC92400DA6097 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		67286102178DC92400DA6097 /* TestIsles-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestIsles-Info.plist"; sourceTree = "<group>"; };
-		67286103178DC92400DA6097 /* TestIsles-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestIsles-Prefix.pch"; sourceTree = "<group>"; };
 		6728610B178DC93900DA6097 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		672BBFF2178FF58F00423CCB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		672BC0191790698600423CCB /* libGameEngineOSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGameEngineOSX.a; path = "../../../Libraries/GameEngine/Project/build/Release-iphoneos/libGameEngineOSX.a"; sourceTree = "<group>"; };
 		672C5D58178B52F80032C67B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		672C5D5A178B52F80032C67B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		672C5D5C178B52F80032C67B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		674C352717914BB7009E9306 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		674C352817914BB7009E9306 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		674C352917914BB7009E9306 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		674C352A17914BB7009E9306 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		674C352B17914BB7009E9306 /* TestIsles-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestIsles-Info.plist"; sourceTree = "<group>"; };
+		674C352C17914BB7009E9306 /* TestIsles-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestIsles-Prefix.pch"; sourceTree = "<group>"; };
+		6774A6A917914FD700DEE528 /* GameUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameUtilities.h; path = Utilities/GameUtilities.h; sourceTree = "<group>"; };
+		6774A6AA17914FD700DEE528 /* GameUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameUtilities.m; path = Utilities/GameUtilities.m; sourceTree = "<group>"; };
+		6774A6AC1791507B00DEE528 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		6774A6BB1791C33500DEE528 /* FPSCounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FPSCounter.xib; path = ../../../Libraries/GameEngine/Project/Code/IOS/FPSCounter/FPSCounter.xib; sourceTree = "<group>"; };
 		67C7AD771791369F00B7DF1F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		67C7AD801791388D00B7DF1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		67C7AD8317913D9D00B7DF1F /* ViewDirector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewDirector.xib; path = ../../../Libraries/AppCore/Project/Code/IOS/Views/ViewDirector/ViewDirector.xib; sourceTree = "<group>"; };
-		67C7AD8517913DC300B7DF1F /* FpsCounter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FpsCounter.xib; path = ../../../Libraries/GameEngine/Project/Code/IOS/FPSCounter/FpsCounter.xib; sourceTree = "<group>"; };
 		67F74CF5178E7816009F1978 /* TestIsles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIsles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,13 +57,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C7AD811791388D00B7DF1F /* OpenGLES.framework in Frameworks */,
 				67C7AD781791369F00B7DF1F /* GLKit.framework in Frameworks */,
 				672BBFF3178FF58F00423CCB /* QuartzCore.framework in Frameworks */,
 				67286050178CEE2100DA6097 /* libGameEngineIOS.a in Frameworks */,
 				672C5D59178B52F80032C67B /* UIKit.framework in Frameworks */,
 				672C5D5B178B52F80032C67B /* Foundation.framework in Frameworks */,
 				672C5D5D178B52F80032C67B /* CoreGraphics.framework in Frameworks */,
+				674C35221791481B009E9306 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,9 @@
 		67285FE5178CEC0E00DA6097 /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				6774A6BB1791C33500DEE528 /* FPSCounter.xib */,
+				67C7AD8317913D9D00B7DF1F /* ViewDirector.xib */,
+				67C7AD801791388D00B7DF1F /* OpenGLES.framework */,
 				6728604E178CEE2100DA6097 /* libGameEngineIOS.a */,
 				672C5D5C178B52F80032C67B /* CoreGraphics.framework */,
 				672C5D58178B52F80032C67B /* UIKit.framework */,
@@ -96,6 +104,7 @@
 		67285FE7178CEC1900DA6097 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				67F74CF5178E7816009F1978 /* TestIsles.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				672860F9178DC92400DA6097 /* AppDelegate */,
+				674C352717914BB7009E9306 /* Default-568h@2x.png */,
+				674C352817914BB7009E9306 /* Default.png */,
+				674C352917914BB7009E9306 /* Default@2x.png */,
+				674C352A17914BB7009E9306 /* main.m */,
+				674C352B17914BB7009E9306 /* TestIsles-Info.plist */,
+				674C352C17914BB7009E9306 /* TestIsles-Prefix.pch */,
 			);
 			name = IOS;
 			path = Code/IOS;
@@ -130,12 +145,8 @@
 		672860FD178DC92400DA6097 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				672860FE178DC92400DA6097 /* Default-568h@2x.png */,
-				672860FF178DC92400DA6097 /* Default.png */,
-				67286100178DC92400DA6097 /* Default@2x.png */,
-				67286101178DC92400DA6097 /* main.m */,
-				67286102178DC92400DA6097 /* TestIsles-Info.plist */,
-				67286103178DC92400DA6097 /* TestIsles-Prefix.pch */,
+				6774A6A817914FBF00DEE528 /* Utilities */,
+				6774A6AC1791507B00DEE528 /* Game.h */,
 			);
 			name = Shared;
 			path = Code/Shared;
@@ -152,12 +163,8 @@
 		672C5D4C178B52F80032C67B = {
 			isa = PBXGroup;
 			children = (
-				67C7AD8517913DC300B7DF1F /* FpsCounter.xib */,
-				67C7AD8317913D9D00B7DF1F /* ViewDirector.xib */,
-				67C7AD801791388D00B7DF1F /* OpenGLES.framework */,
 				672C5D5E178B52F80032C67B /* TestIsles Code */,
 				672C5D57178B52F80032C67B /* TestIsles Frameworks */,
-				67F74CF5178E7816009F1978 /* TestIsles.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +189,15 @@
 			);
 			name = "TestIsles Code";
 			path = TestIsles;
+			sourceTree = "<group>";
+		};
+		6774A6A817914FBF00DEE528 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6774A6A917914FD700DEE528 /* GameUtilities.h */,
+				6774A6AA17914FD700DEE528 /* GameUtilities.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,12 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6774A6BC1791C33500DEE528 /* FPSCounter.xib in Resources */,
 				67C7AD8417913D9D00B7DF1F /* ViewDirector.xib in Resources */,
-				67C7AD8617913DC300B7DF1F /* FpsCounter.xib in Resources */,
-				67286106178DC92400DA6097 /* Default-568h@2x.png in Resources */,
-				67286107178DC92400DA6097 /* Default.png in Resources */,
-				67286108178DC92400DA6097 /* Default@2x.png in Resources */,
 				6728610C178DC93900DA6097 /* MainWindow.xib in Resources */,
+				674C352D17914BB7009E9306 /* Default-568h@2x.png in Resources */,
+				674C352E17914BB7009E9306 /* Default.png in Resources */,
+				674C352F17914BB7009E9306 /* Default@2x.png in Resources */,
+				674C353117914BB7009E9306 /* TestIsles-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67286105178DC92400DA6097 /* GameAppDelegate.m in Sources */,
-				67286109178DC92400DA6097 /* main.m in Sources */,
+				674C353017914BB7009E9306 /* main.m in Sources */,
+				6774A6AB17914FD700DEE528 /* GameUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +338,9 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Shared/TestIsles-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/IOS/TestIsles-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Code/Shared/TestIsles-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Code/IOS/TestIsles-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,9 +355,9 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Code/Shared/TestIsles-Prefix.pch";
+				GCC_PREFIX_HEADER = "Code/IOS/TestIsles-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Code/Shared/TestIsles-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Code/IOS/TestIsles-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

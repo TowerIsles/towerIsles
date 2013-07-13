@@ -11,6 +11,8 @@
 
 - (void)addViewLayerWithName:(NSString*)viewLayerName;
 
+- (void)initializeClassCache;
+
 - (void)configure;
 
 @end

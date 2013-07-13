@@ -91,9 +91,9 @@ GLint uniforms[NUM_UNIFORMS];
 {
     [viewManager initOpenGLContext];
     
-    [renderResourceManager loadShaders];
-    [renderResourceManager loadMaterials];
-    [renderResourceManager loadModels];
+//    [renderResourceManager loadShaders];
+//    [renderResourceManager loadMaterials];
+//    [renderResourceManager loadModels];
     
     glEnable(GL_DEPTH_TEST);
     

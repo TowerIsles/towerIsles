@@ -1,5 +1,8 @@
 #import "AppCore.h"
 
+#import "GLKit/GLKMath.h"
+#import "GraphicsEngineUtilities.h"
+
 #if APP_CORE_OSX
 
 #import <OpenGL/OpenGL.h>
@@ -21,10 +24,3 @@
 
 #endif
 
-#import "GLKit/GLKMath.h"
-
-#import "AppCoreAsserts.h"
-
-#import "GraphicsEngineUtilities.h"
-
-#define BUFFER_OFFSET(i) ((char *)NULL + (i))

@@ -22,9 +22,6 @@
 		672BC007179062A200423CCB /* GameEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BC005179062A200423CCB /* GameEngineUtilities.m */; };
 		672BC0131790690F00423CCB /* libGraphicsEngineOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67286015178CECA700DA6097 /* libGraphicsEngineOSX.a */; };
 		672C5D9C178B57E70032C67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D9B178B57E70032C67B /* Foundation.framework */; };
-		67C7AD7A179136BD00B7DF1F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD79179136BD00B7DF1F /* GLKit.framework */; };
-		67C7AD7D179136C700B7DF1F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD79179136BD00B7DF1F /* GLKit.framework */; };
-		67C7AD7F1791387D00B7DF1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD7E1791387D00B7DF1F /* OpenGLES.framework */; };
 		67E0A172178BEE190030DA36 /* FPSCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A170178BEE190030DA36 /* FPSCounter.m */; };
 		67E0A19F178BEE260030DA36 /* EntityComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A175178BEE260030DA36 /* EntityComponent.m */; };
 		67E0A1A0178BEE260030DA36 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A178178BEE260030DA36 /* Entity.m */; };
@@ -83,12 +80,10 @@
 		672BC004179062A200423CCB /* GameEngineUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEngineUtilities.h; path = Code/Shared/Utilities/GameEngineUtilities.h; sourceTree = SOURCE_ROOT; };
 		672BC005179062A200423CCB /* GameEngineUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameEngineUtilities.m; path = Code/Shared/Utilities/GameEngineUtilities.m; sourceTree = SOURCE_ROOT; };
 		672C5D9B178B57E70032C67B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		67C7AD79179136BD00B7DF1F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		67C7AD7E1791387D00B7DF1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6774A6BD1791C48C00DEE528 /* FPSCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPSCounter.xib; sourceTree = "<group>"; };
 		67E0A107178BE6C50030DA36 /* GraphicsEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GraphicsEngine.xcodeproj; path = ../../GraphicsEngine/Project/GraphicsEngine.xcodeproj; sourceTree = "<group>"; };
 		67E0A16F178BEE190030DA36 /* FPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSCounter.h; sourceTree = "<group>"; };
 		67E0A170178BEE190030DA36 /* FPSCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSCounter.m; sourceTree = "<group>"; };
-		67E0A171178BEE190030DA36 /* FpsCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FpsCounter.xib; sourceTree = "<group>"; };
 		67E0A174178BEE260030DA36 /* EntityComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityComponent.h; sourceTree = "<group>"; };
 		67E0A175178BEE260030DA36 /* EntityComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityComponent.m; sourceTree = "<group>"; };
 		67E0A177178BEE260030DA36 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
@@ -120,7 +115,6 @@
 			files = (
 				672BC0131790690F00423CCB /* libGraphicsEngineOSX.a in Frameworks */,
 				67286029178CECA900DA6097 /* Foundation.framework in Frameworks */,
-				67C7AD7D179136C700B7DF1F /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +122,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C7AD7F1791387D00B7DF1F /* OpenGLES.framework in Frameworks */,
-				67C7AD7A179136BD00B7DF1F /* GLKit.framework in Frameworks */,
 				67F74CFA178F0C52009F1978 /* libGraphicsEngineIOS.a in Frameworks */,
 				672C5D9C178B57E70032C67B /* Foundation.framework in Frameworks */,
 			);
@@ -159,7 +151,6 @@
 		672C5D8F178B57E70032C67B = {
 			isa = PBXGroup;
 			children = (
-				67C7AD7E1791387D00B7DF1F /* OpenGLES.framework */,
 				67E0A107178BE6C50030DA36 /* GraphicsEngine.xcodeproj */,
 				672C5D9D178B57E70032C67B /* Engine Code */,
 				672C5D9A178B57E70032C67B /* Engine Frameworks */,
@@ -203,7 +194,6 @@
 		67E0A114178BE7710030DA36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				67C7AD79179136BD00B7DF1F /* GLKit.framework */,
 				672C5D9B178B57E70032C67B /* Foundation.framework */,
 			);
 			name = Shared;
@@ -263,7 +253,7 @@
 			children = (
 				67E0A16F178BEE190030DA36 /* FPSCounter.h */,
 				67E0A170178BEE190030DA36 /* FPSCounter.m */,
-				67E0A171178BEE190030DA36 /* FpsCounter.xib */,
+				6774A6BD1791C48C00DEE528 /* FPSCounter.xib */,
 			);
 			name = FPSCounter;
 			path = Code/IOS/FPSCounter;

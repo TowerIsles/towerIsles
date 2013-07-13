@@ -14,6 +14,19 @@
 #import "AppCoreAsserts.h"
 #import "AppCoreUtilities.h"
 #import "PerformBlockAfterDelay.h"
+#import "Vec2.h"
+#import "Vec3.h"
+#import "Quat.h"
+#import "Mat4.h"
+#import "MathValidation.h"
+
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
+#define APP_CORE_IOS 0
+#define APP_CORE_OSX 1
+#else
+#define APP_CORE_IOS 1
+#define APP_CORE_OSX 0
+#endif
 
 #if APP_CORE_OSX
 

@@ -8,6 +8,8 @@
 
 @interface EntityManager : Manager
 
+- (void)loadEntityConfigsFromFile:(NSString*)filename;
+
 - (EntitySpec*)createEntitySpecFromEntityConfigId:(NSString*)entityConfigId;
 
 - (EntitySpec*)createEntitySpecFromEntityInstanceConfig:(EntityInstanceConfig*)entityInstanceConfig;

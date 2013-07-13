@@ -1,12 +1,16 @@
 #import "GameAppDelegate.h"
-#import "ViewDirector.h"
-#import "GameEngineUtilities.h"
+#import "Game.h"
 
 @implementation GameAppDelegate
 
 + (GameAppDelegate*)sharedApplicationDelegate
 {
     return (GameAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+- (void)initializeClassCache
+{
+    [Utilities initializeGameClasses];
 }
 
 - (void)configure
