@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6728600B178CEC9B00DA6097 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E0A0F3178BE4F60030DA36 /* Foundation.framework */; };
+		672860B4178DB45000DA6097 /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728607B178DB45000DA6097 /* RenderResourceManager.m */; };
+		672860B5178DB45000DA6097 /* RenderResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728607B178DB45000DA6097 /* RenderResourceManager.m */; };
+		672860B6178DB45000DA6097 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728607E178DB45000DA6097 /* SceneManager.m */; };
+		672860B7178DB45000DA6097 /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728607E178DB45000DA6097 /* SceneManager.m */; };
+		672860B8178DB45000DA6097 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286082178DB45000DA6097 /* Camera.m */; };
+		672860B9178DB45000DA6097 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286082178DB45000DA6097 /* Camera.m */; };
+		672860BA178DB45000DA6097 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286085178DB45000DA6097 /* Color.m */; };
+		672860BB178DB45000DA6097 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286085178DB45000DA6097 /* Color.m */; };
+		672860BC178DB45000DA6097 /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286088178DB45000DA6097 /* Light.m */; };
+		672860BD178DB45000DA6097 /* Light.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286088178DB45000DA6097 /* Light.m */; };
+		672860BE178DB45000DA6097 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728608B178DB45000DA6097 /* Material.m */; };
+		672860BF178DB45000DA6097 /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728608B178DB45000DA6097 /* Material.m */; };
+		672860C0178DB45000DA6097 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728608E178DB45000DA6097 /* Mesh.m */; };
+		672860C1178DB45000DA6097 /* Mesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728608E178DB45000DA6097 /* Mesh.m */; };
+		672860C2178DB45000DA6097 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286091178DB45000DA6097 /* Model.m */; };
+		672860C3178DB45000DA6097 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286091178DB45000DA6097 /* Model.m */; };
+		672860C4178DB45000DA6097 /* Movable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286094178DB45000DA6097 /* Movable.m */; };
+		672860C5178DB45000DA6097 /* Movable.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286094178DB45000DA6097 /* Movable.m */; };
+		672860C6178DB45000DA6097 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286097178DB45000DA6097 /* Node.m */; };
+		672860C7178DB45000DA6097 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 67286097178DB45000DA6097 /* Node.m */; };
+		672860C8178DB45000DA6097 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728609A178DB45000DA6097 /* PrimitiveData.m */; };
+		672860C9178DB45000DA6097 /* PrimitiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728609A178DB45000DA6097 /* PrimitiveData.m */; };
+		672860CA178DB45000DA6097 /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728609D178DB45000DA6097 /* Renderable.m */; };
+		672860CB178DB45000DA6097 /* Renderable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6728609D178DB45000DA6097 /* Renderable.m */; };
+		672860CC178DB45000DA6097 /* RenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A0178DB45000DA6097 /* RenderResource.m */; };
+		672860CD178DB45000DA6097 /* RenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A0178DB45000DA6097 /* RenderResource.m */; };
+		672860CE178DB45000DA6097 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A3178DB45000DA6097 /* Scene.m */; };
+		672860CF178DB45000DA6097 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A3178DB45000DA6097 /* Scene.m */; };
+		672860D0178DB45000DA6097 /* SceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A6178DB45000DA6097 /* SceneNode.m */; };
+		672860D1178DB45000DA6097 /* SceneNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A6178DB45000DA6097 /* SceneNode.m */; };
+		672860D2178DB45000DA6097 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A9178DB45000DA6097 /* Shader.m */; };
+		672860D3178DB45000DA6097 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 672860A9178DB45000DA6097 /* Shader.m */; };
+		672BBFF7179059CF00423CCB /* GraphicsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFF6179059CF00423CCB /* GraphicsBase.m */; };
+		672BBFF8179059CF00423CCB /* GraphicsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFF6179059CF00423CCB /* GraphicsBase.m */; };
+		672BBFFB17905AF500423CCB /* GraphicsEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFFA17905AF500423CCB /* GraphicsEngineUtilities.m */; };
+		672BBFFC17905AF500423CCB /* GraphicsEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFFA17905AF500423CCB /* GraphicsEngineUtilities.m */; };
+		672BBFFF17905F1B00423CCB /* IOSRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFFE17905F1B00423CCB /* IOSRenderManager.m */; };
+		672BC00217905F2100423CCB /* OSXRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BC00117905F2100423CCB /* OSXRenderManager.m */; };
+		67C7AD6A1791353800B7DF1F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD691791353800B7DF1F /* GLKit.framework */; };
+		67C7AD6E179135C200B7DF1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD6D179135C200B7DF1F /* OpenGLES.framework */; };
+		67C7AD72179135F800B7DF1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD71179135F800B7DF1F /* CoreGraphics.framework */; };
+		67C7AD741791363F00B7DF1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C7AD731791363F00B7DF1F /* QuartzCore.framework */; };
+		67E0A0F4178BE4F60030DA36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E0A0F3178BE4F60030DA36 /* Foundation.framework */; };
+		67F74D00178F0C8F009F1978 /* libAppCoreIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728603D178CED6C00DA6097 /* libAppCoreIOS.a */; };
+		67F74D01178F0C93009F1978 /* libAppCoreOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6728603F178CED6C00DA6097 /* libAppCoreOSX.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6728603C178CED6C00DA6097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67E0A101178BE6340030DA36 /* AppCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67286031178CECFA00DA6097;
+			remoteInfo = AppCoreIOS;
+		};
+		6728603E178CED6C00DA6097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67E0A101178BE6340030DA36 /* AppCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 67286032178CECFA00DA6097;
+			remoteInfo = AppCoreOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6728600C178CEC9B00DA6097 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E0A0EE178BE4F50030DA36 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		67286010178CEC9B00DA6097 /* libGraphicsEngineOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGraphicsEngineOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67286033178CECFA00DA6097 /* libGraphicsEngineIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGraphicsEngineIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67286078178DB45000DA6097 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderManager.h; sourceTree = "<group>"; };
+		6728607A178DB45000DA6097 /* RenderResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderResourceManager.h; sourceTree = "<group>"; };
+		6728607B178DB45000DA6097 /* RenderResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderResourceManager.m; sourceTree = "<group>"; };
+		6728607D178DB45000DA6097 /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		6728607E178DB45000DA6097 /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
+		67286081178DB45000DA6097 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		67286082178DB45000DA6097 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		67286084178DB45000DA6097 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		67286085178DB45000DA6097 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		67286087178DB45000DA6097 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		67286088178DB45000DA6097 /* Light.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Light.m; sourceTree = "<group>"; };
+		6728608A178DB45000DA6097 /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		6728608B178DB45000DA6097 /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Material.m; sourceTree = "<group>"; };
+		6728608D178DB45000DA6097 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		6728608E178DB45000DA6097 /* Mesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mesh.m; sourceTree = "<group>"; };
+		67286090178DB45000DA6097 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		67286091178DB45000DA6097 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		67286093178DB45000DA6097 /* Movable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movable.h; sourceTree = "<group>"; };
+		67286094178DB45000DA6097 /* Movable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movable.m; sourceTree = "<group>"; };
+		67286096178DB45000DA6097 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		67286097178DB45000DA6097 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		67286099178DB45000DA6097 /* PrimitiveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimitiveData.h; sourceTree = "<group>"; };
+		6728609A178DB45000DA6097 /* PrimitiveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimitiveData.m; sourceTree = "<group>"; };
+		6728609C178DB45000DA6097 /* Renderable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderable.h; sourceTree = "<group>"; };
+		6728609D178DB45000DA6097 /* Renderable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Renderable.m; sourceTree = "<group>"; };
+		6728609F178DB45000DA6097 /* RenderResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderResource.h; sourceTree = "<group>"; };
+		672860A0178DB45000DA6097 /* RenderResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderResource.m; sourceTree = "<group>"; };
+		672860A2178DB45000DA6097 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		672860A3178DB45000DA6097 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		672860A5178DB45000DA6097 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
+		672860A6178DB45000DA6097 /* SceneNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneNode.m; sourceTree = "<group>"; };
+		672860A8178DB45000DA6097 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		672860A9178DB45000DA6097 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
+		672860AD178DB45000DA6097 /* GraphicsEngine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GraphicsEngine-Prefix.pch"; path = "Code/Shared/GraphicsEngine-Prefix.pch"; sourceTree = "<group>"; };
+		672860AE178DB45000DA6097 /* GraphicsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicsEngine.h; path = Code/Shared/GraphicsEngine.h; sourceTree = "<group>"; };
+		672BBFF5179059CF00423CCB /* GraphicsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsBase.h; sourceTree = "<group>"; };
+		672BBFF6179059CF00423CCB /* GraphicsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsBase.m; sourceTree = "<group>"; };
+		672BBFF917905AF400423CCB /* GraphicsEngineUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsEngineUtilities.h; sourceTree = "<group>"; };
+		672BBFFA17905AF500423CCB /* GraphicsEngineUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsEngineUtilities.m; sourceTree = "<group>"; };
+		672BBFFE17905F1B00423CCB /* IOSRenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSRenderManager.m; sourceTree = "<group>"; };
+		672BC00117905F2100423CCB /* OSXRenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXRenderManager.m; sourceTree = "<group>"; };
+		67C7AD691791353800B7DF1F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		67C7AD6D179135C200B7DF1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		67C7AD71179135F800B7DF1F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		67C7AD731791363F00B7DF1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		67E0A0F3178BE4F60030DA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67E0A101178BE6340030DA36 /* AppCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCore.xcodeproj; path = ../../AppCore/Project/AppCore.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6728600A178CEC9B00DA6097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67F74D01178F0C93009F1978 /* libAppCoreOSX.a in Frameworks */,
+				6728600B178CEC9B00DA6097 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E0A0ED178BE4F50030DA36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C7AD741791363F00B7DF1F /* QuartzCore.framework in Frameworks */,
+				67C7AD72179135F800B7DF1F /* CoreGraphics.framework in Frameworks */,
+				67C7AD6E179135C200B7DF1F /* OpenGLES.framework in Frameworks */,
+				67C7AD6A1791353800B7DF1F /* GLKit.framework in Frameworks */,
+				67F74D00178F0C8F009F1978 /* libAppCoreIOS.a in Frameworks */,
+				67E0A0F4178BE4F60030DA36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		67285FDF178CEBC800DA6097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67286010178CEC9B00DA6097 /* libGraphicsEngineOSX.a */,
+				67286033178CECFA00DA6097 /* libGraphicsEngineIOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67286074178DB45000DA6097 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				67286075178DB45000DA6097 /* Render */,
+				67286079178DB45000DA6097 /* RenderResource */,
+				6728607C178DB45000DA6097 /* Scene */,
+			);
+			name = Managers;
+			path = Code/Shared/Managers;
+			sourceTree = "<group>";
+		};
+		67286075178DB45000DA6097 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				67286078178DB45000DA6097 /* RenderManager.h */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		67286079178DB45000DA6097 /* RenderResource */ = {
+			isa = PBXGroup;
+			children = (
+				6728607A178DB45000DA6097 /* RenderResourceManager.h */,
+				6728607B178DB45000DA6097 /* RenderResourceManager.m */,
+			);
+			path = RenderResource;
+			sourceTree = "<group>";
+		};
+		6728607C178DB45000DA6097 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6728607D178DB45000DA6097 /* SceneManager.h */,
+				6728607E178DB45000DA6097 /* SceneManager.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		6728607F178DB45000DA6097 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				67286080178DB45000DA6097 /* Camera */,
+				67286083178DB45000DA6097 /* Color */,
+				67286086178DB45000DA6097 /* Light */,
+				67286089178DB45000DA6097 /* Material */,
+				6728608C178DB45000DA6097 /* Mesh */,
+				6728608F178DB45000DA6097 /* Model */,
+				67286092178DB45000DA6097 /* Movable */,
+				67286095178DB45000DA6097 /* Node */,
+				67286098178DB45000DA6097 /* PrimitiveData */,
+				6728609B178DB45000DA6097 /* Renderable */,
+				6728609E178DB45000DA6097 /* RenderResource */,
+				672860A1178DB45000DA6097 /* Scene */,
+				672860A4178DB45000DA6097 /* SceneNode */,
+				672860A7178DB45000DA6097 /* Shader */,
+			);
+			name = Objects;
+			path = Code/Shared/Objects;
+			sourceTree = "<group>";
+		};
+		67286080178DB45000DA6097 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				67286081178DB45000DA6097 /* Camera.h */,
+				67286082178DB45000DA6097 /* Camera.m */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		67286083178DB45000DA6097 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				67286084178DB45000DA6097 /* Color.h */,
+				67286085178DB45000DA6097 /* Color.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		67286086178DB45000DA6097 /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				67286087178DB45000DA6097 /* Light.h */,
+				67286088178DB45000DA6097 /* Light.m */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
+		67286089178DB45000DA6097 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				6728608A178DB45000DA6097 /* Material.h */,
+				6728608B178DB45000DA6097 /* Material.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		6728608C178DB45000DA6097 /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				6728608D178DB45000DA6097 /* Mesh.h */,
+				6728608E178DB45000DA6097 /* Mesh.m */,
+			);
+			path = Mesh;
+			sourceTree = "<group>";
+		};
+		6728608F178DB45000DA6097 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67286090178DB45000DA6097 /* Model.h */,
+				67286091178DB45000DA6097 /* Model.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67286092178DB45000DA6097 /* Movable */ = {
+			isa = PBXGroup;
+			children = (
+				67286093178DB45000DA6097 /* Movable.h */,
+				67286094178DB45000DA6097 /* Movable.m */,
+			);
+			path = Movable;
+			sourceTree = "<group>";
+		};
+		67286095178DB45000DA6097 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				67286096178DB45000DA6097 /* Node.h */,
+				67286097178DB45000DA6097 /* Node.m */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		67286098178DB45000DA6097 /* PrimitiveData */ = {
+			isa = PBXGroup;
+			children = (
+				67286099178DB45000DA6097 /* PrimitiveData.h */,
+				6728609A178DB45000DA6097 /* PrimitiveData.m */,
+			);
+			path = PrimitiveData;
+			sourceTree = "<group>";
+		};
+		6728609B178DB45000DA6097 /* Renderable */ = {
+			isa = PBXGroup;
+			children = (
+				6728609C178DB45000DA6097 /* Renderable.h */,
+				6728609D178DB45000DA6097 /* Renderable.m */,
+			);
+			path = Renderable;
+			sourceTree = "<group>";
+		};
+		6728609E178DB45000DA6097 /* RenderResource */ = {
+			isa = PBXGroup;
+			children = (
+				6728609F178DB45000DA6097 /* RenderResource.h */,
+				672860A0178DB45000DA6097 /* RenderResource.m */,
+			);
+			path = RenderResource;
+			sourceTree = "<group>";
+		};
+		672860A1178DB45000DA6097 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				672860A2178DB45000DA6097 /* Scene.h */,
+				672860A3178DB45000DA6097 /* Scene.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		672860A4178DB45000DA6097 /* SceneNode */ = {
+			isa = PBXGroup;
+			children = (
+				672860A5178DB45000DA6097 /* SceneNode.h */,
+				672860A6178DB45000DA6097 /* SceneNode.m */,
+			);
+			path = SceneNode;
+			sourceTree = "<group>";
+		};
+		672860A7178DB45000DA6097 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				672860A8178DB45000DA6097 /* Shader.h */,
+				672860A9178DB45000DA6097 /* Shader.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		672860AA178DB45000DA6097 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				672BBFF5179059CF00423CCB /* GraphicsBase.h */,
+				672BBFF6179059CF00423CCB /* GraphicsBase.m */,
+				672BBFF917905AF400423CCB /* GraphicsEngineUtilities.h */,
+				672BBFFA17905AF500423CCB /* GraphicsEngineUtilities.m */,
+			);
+			name = Utilities;
+			path = Code/Shared/Utilities;
+			sourceTree = "<group>";
+		};
+		672BBFFD17905F1B00423CCB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				672BBFFE17905F1B00423CCB /* IOSRenderManager.m */,
+			);
+			name = Managers;
+			path = Code/IOS/Managers;
+			sourceTree = SOURCE_ROOT;
+		};
+		672BC00017905F2100423CCB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				672BC00117905F2100423CCB /* OSXRenderManager.m */,
+			);
+			name = Managers;
+			path = Code/OSX/Managers;
+			sourceTree = "<group>";
+		};
+		67C6D431178C864700E25A55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6728603D178CED6C00DA6097 /* libAppCoreIOS.a */,
+				6728603F178CED6C00DA6097 /* libAppCoreOSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67E0A0E7178BE4F50030DA36 = {
+			isa = PBXGroup;
+			children = (
+				67E0A101178BE6340030DA36 /* AppCore.xcodeproj */,
+				67E0A10F178BE6F80030DA36 /* Graphics Code */,
+				67E0A0F2178BE4F60030DA36 /* Graphics Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67E0A0F2178BE4F60030DA36 /* Graphics Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67285FDF178CEBC800DA6097 /* Products */,
+				67E0A113178BE72A0030DA36 /* Shared */,
+				67E0A112178BE7280030DA36 /* OSX */,
+				67E0A111178BE7220030DA36 /* IOS */,
+			);
+			name = "Graphics Frameworks";
+			sourceTree = "<group>";
+		};
+		67E0A103178BE6870030DA36 /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+				672BBFFD17905F1B00423CCB /* Managers */,
+			);
+			name = IOS;
+			path = GraphicsEngine;
+			sourceTree = "<group>";
+		};
+		67E0A104178BE6990030DA36 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				67286074178DB45000DA6097 /* Managers */,
+				6728607F178DB45000DA6097 /* Objects */,
+				672860AA178DB45000DA6097 /* Utilities */,
+				672860AD178DB45000DA6097 /* GraphicsEngine-Prefix.pch */,
+				672860AE178DB45000DA6097 /* GraphicsEngine.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		67E0A105178BE69B0030DA36 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				672BC00017905F2100423CCB /* Managers */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		67E0A10D178BE6CE0030DA36 /* SharedHeaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SharedHeaders;
+			sourceTree = "<group>";
+		};
+		67E0A10F178BE6F80030DA36 /* Graphics Code */ = {
+			isa = PBXGroup;
+			children = (
+				67E0A10D178BE6CE0030DA36 /* SharedHeaders */,
+				67E0A104178BE6990030DA36 /* Shared */,
+				67E0A105178BE69B0030DA36 /* OSX */,
+				67E0A103178BE6870030DA36 /* IOS */,
+			);
+			name = "Graphics Code";
+			sourceTree = "<group>";
+		};
+		67E0A111178BE7220030DA36 /* IOS */ = {
+			isa = PBXGroup;
+			children = (
+				67C7AD731791363F00B7DF1F /* QuartzCore.framework */,
+				67C7AD71179135F800B7DF1F /* CoreGraphics.framework */,
+				67C7AD6D179135C200B7DF1F /* OpenGLES.framework */,
+				67C7AD691791353800B7DF1F /* GLKit.framework */,
+			);
+			name = IOS;
+			sourceTree = "<group>";
+		};
+		67E0A112178BE7280030DA36 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		67E0A113178BE72A0030DA36 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				67E0A0F3178BE4F60030DA36 /* Foundation.framework */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67286008178CEC9B00DA6097 /* GraphicsEngineOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6728600D178CEC9B00DA6097 /* Build configuration list for PBXNativeTarget "GraphicsEngineOSX" */;
+			buildPhases = (
+				67286009178CEC9B00DA6097 /* Sources */,
+				6728600A178CEC9B00DA6097 /* Frameworks */,
+				6728600C178CEC9B00DA6097 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphicsEngineOSX;
+			productName = GraphicsEngine;
+			productReference = 67286010178CEC9B00DA6097 /* libGraphicsEngineOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		67E0A0EF178BE4F50030DA36 /* GraphicsEngineIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E0A0FE178BE4F60030DA36 /* Build configuration list for PBXNativeTarget "GraphicsEngineIOS" */;
+			buildPhases = (
+				67E0A0EC178BE4F50030DA36 /* Sources */,
+				67E0A0ED178BE4F50030DA36 /* Frameworks */,
+				67E0A0EE178BE4F50030DA36 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphicsEngineIOS;
+			productName = GraphicsEngine;
+			productReference = 67286033178CECFA00DA6097 /* libGraphicsEngineIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67E0A0E8178BE4F50030DA36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Caleb Fisher";
+			};
+			buildConfigurationList = 67E0A0EB178BE4F50030DA36 /* Build configuration list for PBXProject "GraphicsEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67E0A0E7178BE4F50030DA36;
+			productRefGroup = 67E0A0E7178BE4F50030DA36;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 67C6D431178C864700E25A55 /* Products */;
+					ProjectRef = 67E0A101178BE6340030DA36 /* AppCore.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				67E0A0EF178BE4F50030DA36 /* GraphicsEngineIOS */,
+				67286008178CEC9B00DA6097 /* GraphicsEngineOSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6728603D178CED6C00DA6097 /* libAppCoreIOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCoreIOS.a;
+			remoteRef = 6728603C178CED6C00DA6097 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6728603F178CED6C00DA6097 /* libAppCoreOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCoreOSX.a;
+			remoteRef = 6728603E178CED6C00DA6097 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67286009178CEC9B00DA6097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672860B5178DB45000DA6097 /* RenderResourceManager.m in Sources */,
+				672860B7178DB45000DA6097 /* SceneManager.m in Sources */,
+				672860B9178DB45000DA6097 /* Camera.m in Sources */,
+				672860BB178DB45000DA6097 /* Color.m in Sources */,
+				672860BD178DB45000DA6097 /* Light.m in Sources */,
+				672860BF178DB45000DA6097 /* Material.m in Sources */,
+				672860C1178DB45000DA6097 /* Mesh.m in Sources */,
+				672860C3178DB45000DA6097 /* Model.m in Sources */,
+				672860C5178DB45000DA6097 /* Movable.m in Sources */,
+				672860C7178DB45000DA6097 /* Node.m in Sources */,
+				672860C9178DB45000DA6097 /* PrimitiveData.m in Sources */,
+				672860CB178DB45000DA6097 /* Renderable.m in Sources */,
+				672860CD178DB45000DA6097 /* RenderResource.m in Sources */,
+				672860CF178DB45000DA6097 /* Scene.m in Sources */,
+				672860D1178DB45000DA6097 /* SceneNode.m in Sources */,
+				672860D3178DB45000DA6097 /* Shader.m in Sources */,
+				672BBFF8179059CF00423CCB /* GraphicsBase.m in Sources */,
+				672BBFFC17905AF500423CCB /* GraphicsEngineUtilities.m in Sources */,
+				672BC00217905F2100423CCB /* OSXRenderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E0A0EC178BE4F50030DA36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672860B4178DB45000DA6097 /* RenderResourceManager.m in Sources */,
+				672860B6178DB45000DA6097 /* SceneManager.m in Sources */,
+				672860B8178DB45000DA6097 /* Camera.m in Sources */,
+				672860BA178DB45000DA6097 /* Color.m in Sources */,
+				672860BC178DB45000DA6097 /* Light.m in Sources */,
+				672860BE178DB45000DA6097 /* Material.m in Sources */,
+				672860C0178DB45000DA6097 /* Mesh.m in Sources */,
+				672860C2178DB45000DA6097 /* Model.m in Sources */,
+				672860C4178DB45000DA6097 /* Movable.m in Sources */,
+				672860C6178DB45000DA6097 /* Node.m in Sources */,
+				672860C8178DB45000DA6097 /* PrimitiveData.m in Sources */,
+				672860CA178DB45000DA6097 /* Renderable.m in Sources */,
+				672860CC178DB45000DA6097 /* RenderResource.m in Sources */,
+				672860CE178DB45000DA6097 /* Scene.m in Sources */,
+				672860D0178DB45000DA6097 /* SceneNode.m in Sources */,
+				672860D2178DB45000DA6097 /* Shader.m in Sources */,
+				672BBFF7179059CF00423CCB /* GraphicsBase.m in Sources */,
+				672BBFFB17905AF500423CCB /* GraphicsEngineUtilities.m in Sources */,
+				672BBFFF17905F1B00423CCB /* IOSRenderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6728600E178CEC9B00DA6097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GraphicsEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
+				WORKSPACE_DIR = /myapps/ThroneRoom;
+			};
+			name = Debug;
+		};
+		6728600F178CEC9B00DA6097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GraphicsEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
+				WORKSPACE_DIR = /myapps/ThroneRoom;
+			};
+			name = Release;
+		};
+		67E0A0FC178BE4F60030DA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		67E0A0FD178BE4F60030DA36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67E0A0FF178BE4F60030DA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/GraphicsEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
+				WORKSPACE_DIR = /myapps/ThroneRoom;
+			};
+			name = Debug;
+		};
+		67E0A100178BE4F60030DA36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/GraphicsEngine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
+				WORKSPACE_DIR = /myapps/ThroneRoom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6728600D178CEC9B00DA6097 /* Build configuration list for PBXNativeTarget "GraphicsEngineOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6728600E178CEC9B00DA6097 /* Debug */,
+				6728600F178CEC9B00DA6097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E0A0EB178BE4F50030DA36 /* Build configuration list for PBXProject "GraphicsEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E0A0FC178BE4F60030DA36 /* Debug */,
+				67E0A0FD178BE4F60030DA36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E0A0FE178BE4F60030DA36 /* Build configuration list for PBXNativeTarget "GraphicsEngineIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E0A0FF178BE4F60030DA36 /* Debug */,
+				67E0A100178BE4F60030DA36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67E0A0E8178BE4F50030DA36 /* Project object */;
+}
