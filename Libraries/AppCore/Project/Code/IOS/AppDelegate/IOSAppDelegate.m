@@ -5,6 +5,7 @@
 #import "PassthroughView.h"
 #import "AppCoreUtilities.h"
 #import "ViewManager.h"
+#import "AppCoreAsserts.h"
 
 @interface IOSAppDelegate ()
 {
@@ -101,6 +102,13 @@
     viewLayer.view = passthroughView;
     
     [_viewDirector addUIView:passthroughView];
+}
+
+- (void)registerDrawCallback:(void(^)(GLKView*, CGRect))drawCallback
+{
+    CheckNotNull(_viewDirector);
+    
+    [_viewDirector setDrawCallback:drawCallback];
 }
 
 @end

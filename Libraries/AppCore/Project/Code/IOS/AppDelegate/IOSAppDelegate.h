@@ -3,6 +3,7 @@
 @class ViewDirector;
 @class AppDirector;
 @class ViewLayer;
+@class GLKView;
 
 @interface IOSAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -14,5 +15,7 @@
 - (void)initializeClassCache;
 
 - (void)configure;
+
+- (void)registerDrawCallback:(void(^)(GLKView*, CGRect))drawCallback;
 
 @end

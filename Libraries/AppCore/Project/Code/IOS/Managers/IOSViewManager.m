@@ -35,6 +35,11 @@
     }
 }
 
+- (id)getOpenGLView
+{
+    return _activeViewDirector.getOpenGLView;
+}
+
 - (void)setViewDirector:(ViewDirector*)viewDirector
 {
     CheckTrue(_activeViewDirector == nil);

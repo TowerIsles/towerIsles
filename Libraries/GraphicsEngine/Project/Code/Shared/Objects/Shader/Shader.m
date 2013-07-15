@@ -182,7 +182,7 @@
 {
     if (modelViewProjectionMatrixHandle == -1)
     {
-        modelViewProjectionMatrixHandle = glGetUniformLocation(_programHandle, "modelViewProjectionMatrix");
+        modelViewProjectionMatrixHandle = [self getModelViewProjectionMatrixUniform];
         
         CheckGLError
     }
@@ -195,7 +195,7 @@
 {
     if (normalMatrixHandle == -1)
     {
-        normalMatrixHandle = glGetUniformLocation(_programHandle, "normalMatrix");
+        normalMatrixHandle = [self getNormalMatrixUniform];;
         
         CheckGLError
     }

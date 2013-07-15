@@ -2,14 +2,12 @@
 #import "ManagedView.h"
 #import "AppDirector.h"
 #import "ViewLayer.h"
+#import "AppCoreAsserts.h"
 
 @interface ViewManager ()
 {
-    
 }
-
 @property (nonatomic, retain) NSMutableDictionary* layers;
-@property (nonatomic, retain) GLKView* glkView;
 @end
 
 @implementation ViewManager
@@ -35,20 +33,21 @@
     }
 }
 
+- (id)getOpenGLView
+{
+    return nil;
+}
+
+- (void)setViewDirector:(ViewDirector*)viewDirector
+{
+    CheckTrue(_activeViewDirector == nil);
+    self.activeViewDirector = viewDirector;
+}
+
 - (void)setDefaultViewLayer:(ViewLayer*)viewLayer
 {
     [self setViewLayer:viewLayer
              layerName:@"default"];
-}
-
-- (void)setGLKView:(GLKView*)glkView
-{
-    self.glkView = glkView;
-}
-
-- (GLKView*)getGLKView
-{
-    return _glkView;
 }
 
 - (void)setViewLayer:(ViewLayer*)viewLayer
@@ -56,7 +55,7 @@
 {
     CheckTrue(_layers != nil);
     CheckTrue(_layers[layerName] == nil);
-
+    
     [_layers setObject:viewLayer
                 forKey:layerName];
 }
@@ -100,12 +99,17 @@
     
     return managedView;
 }
-                     
+
 - (void)dismissAllViewsOnDefaultLayer
 {
     ViewLayer* defaultViewLayer = _layers[@"default"];
     
     [defaultViewLayer dismissAllViews];
+}
+
+- (void)initOpenGLContext
+{
+    [_activeViewDirector initOpenGLContext];
 }
 
 @end

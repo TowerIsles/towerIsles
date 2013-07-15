@@ -18,6 +18,11 @@
     [super dealloc];
 }
 
+- (GLKView*)getOpenGLView
+{
+    return _glkView;
+}
+
 - (void)glkView:(GLKView*)view
      drawInRect:(CGRect)rect
 {

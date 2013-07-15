@@ -6,6 +6,8 @@
 
 @interface ViewManager : Manager
 
+- (id)getOpenGLView;
+
 - (void)setViewDirector:(ViewDirector*)viewDirector;
 
 - (void)setDefaultViewLayer:(ViewLayer*)viewLayer;

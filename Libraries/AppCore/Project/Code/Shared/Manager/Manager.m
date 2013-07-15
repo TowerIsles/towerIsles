@@ -4,6 +4,8 @@
 
 @implementation Manager
 
+- (int)loadPriority  { return 0; }
+
 - (void)load {}
 
 - (void)reload {}

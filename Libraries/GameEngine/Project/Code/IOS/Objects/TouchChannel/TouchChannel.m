@@ -9,8 +9,6 @@
 @implementation TouchChannelConfig
 @end
 
-
-
 @interface TouchChannel ()
 {
 }
@@ -28,13 +26,13 @@
     {
         _tapGesture.active = NO;
     }
-
+    
     _longPressGesture.firstFrame = NO;
     if (!_config.manuallyRefreshLongPress)
     {
         _longPressGesture.active = NO;
     }
-
+    
     _panGesture.firstFrame = NO;
     if (!_config.manuallyRefreshPan)
     {
@@ -53,28 +51,29 @@
     }
 }
 
-- (void)observeTouchesOnView:(UIView*)viewToObserve
+- (void)observeTouchesOnView:(id)viewToObserve
                   withConfig:(TouchChannelConfig*)config;
 {
     self.config = config;
+    
     self.viewToObserve = viewToObserve;
     
     if (config.observeTap)
     {
         self.tapGesture = [TapGesture object];
         
-        [viewToObserve addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self
+        [_viewToObserve addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                      action:@selector(handleTapFrom:)] autorelease]];
     }
-
+    
     if (config.observeLongPress)
     {
         self.longPressGesture = [LongPressGesture object];
         
         UILongPressGestureRecognizer* gesture = [[[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                       action:@selector(handleLongPressFrom:)] autorelease];
+                                                                                               action:@selector(handleLongPressFrom:)] autorelease];
         
-        [viewToObserve addGestureRecognizer:gesture];
+        [_viewToObserve addGestureRecognizer:gesture];
         
         // gesture.allowableMovement = 100;
     }
@@ -83,7 +82,7 @@
     {
         self.panGesture = [PanGesture object];
         
-        [viewToObserve addGestureRecognizer:[[[UIPanGestureRecognizer alloc] initWithTarget:self
+        [_viewToObserve addGestureRecognizer:[[[UIPanGestureRecognizer alloc] initWithTarget:self
                                                                                      action:@selector(handlePanFrom:)] autorelease]];
     }
     
@@ -91,7 +90,7 @@
     {
         self.pinchGesture = [PinchGesture object];
         
-        [viewToObserve addGestureRecognizer:[[[UIPinchGestureRecognizer alloc] initWithTarget:self
+        [_viewToObserve addGestureRecognizer:[[[UIPinchGestureRecognizer alloc] initWithTarget:self
                                                                                        action:@selector(handlePinchFrom:)] autorelease]];
     }
 }
@@ -134,7 +133,7 @@
 - (void)handlePanFrom:(UIPanGestureRecognizer*)gestureRecognizer
 {
     CheckNotNull(_panGesture);
-  
+    
     _panGesture.locationInView = [gestureRecognizer locationInView:_viewToObserve];
     
     _panGesture.translationInView = [gestureRecognizer translationInView:_viewToObserve];

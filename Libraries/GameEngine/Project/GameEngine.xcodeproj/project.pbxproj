@@ -15,13 +15,14 @@
 		6728601E178CECA900DA6097 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A184178BEE260030DA36 /* FrameTimeManager.m */; };
 		6728601F178CECA900DA6097 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A187178BEE260030DA36 /* ServerTimeManager.m */; };
 		67286020178CECA900DA6097 /* TouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A18A178BEE260030DA36 /* TouchManager.m */; };
-		67286025178CECA900DA6097 /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A19B178BEE260030DA36 /* TouchChannel.m */; };
 		67286026178CECA900DA6097 /* TouchGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A19E178BEE260030DA36 /* TouchGesture.m */; };
 		67286029178CECA900DA6097 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D9B178B57E70032C67B /* Foundation.framework */; };
 		672BC006179062A200423CCB /* GameEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BC005179062A200423CCB /* GameEngineUtilities.m */; };
 		672BC007179062A200423CCB /* GameEngineUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 672BC005179062A200423CCB /* GameEngineUtilities.m */; };
 		672BC0131790690F00423CCB /* libGraphicsEngineOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67286015178CECA700DA6097 /* libGraphicsEngineOSX.a */; };
 		672C5D9C178B57E70032C67B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672C5D9B178B57E70032C67B /* Foundation.framework */; };
+		678648431792890F0015FE03 /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678648421792890F0015FE03 /* TouchChannel.m */; };
+		678648461792892F0015FE03 /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 678648451792892F0015FE03 /* TouchChannel.m */; };
 		67E0A172178BEE190030DA36 /* FPSCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A170178BEE190030DA36 /* FPSCounter.m */; };
 		67E0A19F178BEE260030DA36 /* EntityComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A175178BEE260030DA36 /* EntityComponent.m */; };
 		67E0A1A0178BEE260030DA36 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A178178BEE260030DA36 /* Entity.m */; };
@@ -31,7 +32,6 @@
 		67E0A1A4178BEE260030DA36 /* FrameTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A184178BEE260030DA36 /* FrameTimeManager.m */; };
 		67E0A1A5178BEE260030DA36 /* ServerTimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A187178BEE260030DA36 /* ServerTimeManager.m */; };
 		67E0A1A6178BEE260030DA36 /* TouchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A18A178BEE260030DA36 /* TouchManager.m */; };
-		67E0A1AB178BEE260030DA36 /* TouchChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A19B178BEE260030DA36 /* TouchChannel.m */; };
 		67E0A1AC178BEE260030DA36 /* TouchGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A19E178BEE260030DA36 /* TouchGesture.m */; };
 		67F74CFA178F0C52009F1978 /* libGraphicsEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67286037178CECFA00DA6097 /* libGraphicsEngineIOS.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -81,6 +81,8 @@
 		672BC005179062A200423CCB /* GameEngineUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameEngineUtilities.m; path = Code/Shared/Utilities/GameEngineUtilities.m; sourceTree = SOURCE_ROOT; };
 		672C5D9B178B57E70032C67B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6774A6BD1791C48C00DEE528 /* FPSCounter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPSCounter.xib; sourceTree = "<group>"; };
+		678648421792890F0015FE03 /* TouchChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchChannel.m; path = Code/IOS/Objects/TouchChannel/TouchChannel.m; sourceTree = SOURCE_ROOT; };
+		678648451792892F0015FE03 /* TouchChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchChannel.m; path = Code/OSX/Objects/TouchChannel/TouchChannel.m; sourceTree = SOURCE_ROOT; };
 		67E0A107178BE6C50030DA36 /* GraphicsEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GraphicsEngine.xcodeproj; path = ../../GraphicsEngine/Project/GraphicsEngine.xcodeproj; sourceTree = "<group>"; };
 		67E0A16F178BEE190030DA36 /* FPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSCounter.h; sourceTree = "<group>"; };
 		67E0A170178BEE190030DA36 /* FPSCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSCounter.m; sourceTree = "<group>"; };
@@ -101,7 +103,6 @@
 		67E0A189178BEE260030DA36 /* TouchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchManager.h; sourceTree = "<group>"; };
 		67E0A18A178BEE260030DA36 /* TouchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchManager.m; sourceTree = "<group>"; };
 		67E0A19A178BEE260030DA36 /* TouchChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchChannel.h; sourceTree = "<group>"; };
-		67E0A19B178BEE260030DA36 /* TouchChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchChannel.m; sourceTree = "<group>"; };
 		67E0A19D178BEE260030DA36 /* TouchGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchGesture.h; sourceTree = "<group>"; };
 		67E0A19E178BEE260030DA36 /* TouchGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchGesture.m; sourceTree = "<group>"; };
 		67E0A1AD178BEE360030DA36 /* GameEngine-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GameEngine-Prefix.pch"; path = "Code/Shared/GameEngine-Prefix.pch"; sourceTree = SOURCE_ROOT; };
@@ -182,6 +183,38 @@
 			path = GameEngine;
 			sourceTree = "<group>";
 		};
+		6786483B179288D30015FE03 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				6786483E179288D90015FE03 /* TouchChannel */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		6786483E179288D90015FE03 /* TouchChannel */ = {
+			isa = PBXGroup;
+			children = (
+				678648421792890F0015FE03 /* TouchChannel.m */,
+			);
+			name = TouchChannel;
+			sourceTree = "<group>";
+		};
+		6786483F179288E60015FE03 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				67864840179288EC0015FE03 /* TouchChannel */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		67864840179288EC0015FE03 /* TouchChannel */ = {
+			isa = PBXGroup;
+			children = (
+				678648451792892F0015FE03 /* TouchChannel.m */,
+			);
+			name = TouchChannel;
+			sourceTree = "<group>";
+		};
 		67E0A108178BE6C50030DA36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +249,7 @@
 		67E0A11C178BE7C30030DA36 /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				6786483B179288D30015FE03 /* Objects */,
 				67E0A16E178BEE190030DA36 /* FPSCounter */,
 			);
 			name = IOS;
@@ -224,6 +258,7 @@
 		67E0A11D178BE7CB0030DA36 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				6786483F179288E60015FE03 /* Objects */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
@@ -353,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				67E0A19A178BEE260030DA36 /* TouchChannel.h */,
-				67E0A19B178BEE260030DA36 /* TouchChannel.m */,
 			);
 			path = TouchChannel;
 			sourceTree = "<group>";
@@ -467,9 +501,9 @@
 				6728601E178CECA900DA6097 /* FrameTimeManager.m in Sources */,
 				6728601F178CECA900DA6097 /* ServerTimeManager.m in Sources */,
 				67286020178CECA900DA6097 /* TouchManager.m in Sources */,
-				67286025178CECA900DA6097 /* TouchChannel.m in Sources */,
 				67286026178CECA900DA6097 /* TouchGesture.m in Sources */,
 				672BC007179062A200423CCB /* GameEngineUtilities.m in Sources */,
+				678648461792892F0015FE03 /* TouchChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,9 +520,9 @@
 				67E0A1A4178BEE260030DA36 /* FrameTimeManager.m in Sources */,
 				67E0A1A5178BEE260030DA36 /* ServerTimeManager.m in Sources */,
 				67E0A1A6178BEE260030DA36 /* TouchManager.m in Sources */,
-				67E0A1AB178BEE260030DA36 /* TouchChannel.m in Sources */,
 				67E0A1AC178BEE260030DA36 /* TouchGesture.m in Sources */,
 				672BC006179062A200423CCB /* GameEngineUtilities.m in Sources */,
+				678648431792890F0015FE03 /* TouchChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

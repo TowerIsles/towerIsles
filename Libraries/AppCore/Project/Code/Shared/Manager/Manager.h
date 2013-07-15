@@ -7,6 +7,8 @@
 
 @property (nonatomic, assign) AppDirector* director;
 
+- (int)loadPriority;
+
 - (void)load;
 
 - (void)reload;

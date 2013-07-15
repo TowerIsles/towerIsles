@@ -91,6 +91,7 @@ GLint uniforms[NUM_UNIFORMS];
 {
     [viewManager initOpenGLContext];
     
+    // TODO
 //    [renderResourceManager loadShaders];
 //    [renderResourceManager loadMaterials];
 //    [renderResourceManager loadModels];
@@ -138,6 +139,11 @@ GLint uniforms[NUM_UNIFORMS];
         drawInRect:(CGRect)rect
 {
     
+}
+
+- (int)loadPriority
+{
+    return 10;
 }
 
 - (void)load

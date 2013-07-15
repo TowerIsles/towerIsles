@@ -1,6 +1,5 @@
 #import "AppCore.h"
 #import "TouchGesture.h"
-#import <UIKit/UIKit.h> // TODO - remove
 
 @interface TouchChannelConfig : ManagedPropertiesObject
 @property (nonatomic, assign) BOOL observeTap;
@@ -23,7 +22,7 @@
 
 - (void)refresh;
 
-- (void)observeTouchesOnView:(UIView*)viewToObserve
+- (void)observeTouchesOnView:(id)viewToObserve
                   withConfig:(TouchChannelConfig*)config;
 
 @end

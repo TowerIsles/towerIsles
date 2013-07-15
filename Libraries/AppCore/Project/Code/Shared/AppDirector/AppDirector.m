@@ -56,7 +56,11 @@
 
 - (void)beginRunning
 {
-    for (Manager* manager in _managersByClass.allValues)
+    NSArray* managersSortedForLoad = [_managersByClass.allValues sortedArrayUsingComparator:^NSComparisonResult(Manager* managerA, Manager* managerB) {
+        return [managerA loadPriority] < [managerB loadPriority];
+    }];
+    
+    for (Manager* manager in managersSortedForLoad)
     {
         [manager load];
     }

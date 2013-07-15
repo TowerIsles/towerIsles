@@ -26,8 +26,8 @@
     }];
 }
 
-- (TouchChannel*)createTouchChannelForView:(UIView*)targetView
-                                withConfig:(TouchChannelConfig*)touchChannelConfig;
+- (TouchChannel*)createTouchChannelForView:(id)targetView
+                                withConfig:(TouchChannelConfig*)touchChannelConfig
 {
     TouchChannel* touchChannel = [TouchChannel object];
     

@@ -41,8 +41,8 @@
     
     GLKMatrix4 modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
     
-    [Utilities displayGLKMatrix4:&modelViewProjectionMatrix
-                         context:@"modelViewProjectionMatrix"];
+    //[Utilities displayGLKMatrix4:&modelViewProjectionMatrix
+    //                     context:@"modelViewProjectionMatrix"];
     
     ValidateMat4(modelMatrix);
     

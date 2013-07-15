@@ -13,6 +13,11 @@
 
 @implementation RenderManager
 
+- (int)loadPriority
+{
+    return 10;
+}
+
 - (void)load
 {
     [self internal_setupOpenGL];

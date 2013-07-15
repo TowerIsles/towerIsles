@@ -2,6 +2,8 @@
 
 @interface ViewDirector : GLKViewController
 
+- (GLKView*)getOpenGLView;
+
 - (void)setDrawCallback:(void(^)(GLKView*, CGRect))drawCallback;
 
 - (void)addUIView:(UIView*)uiView;
