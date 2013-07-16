@@ -81,9 +81,7 @@
                                             [[UIScreen mainScreen] bounds].size.width,
                                             [[UIScreen mainScreen] bounds].size.height)];
     
-    IOSAppDelegate* me = self;
-    
-    [me configure]; // calls out to derived classes
+    [self configure]; // calls out to derived classes
 }
 
 - (void)initializeClassCache {}

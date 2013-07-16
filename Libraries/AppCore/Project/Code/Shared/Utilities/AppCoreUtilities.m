@@ -1,3 +1,4 @@
+#import "AppCore.h"
 #import "AppCoreUtilities.h"
 #import <objc/runtime.h>
 #import "Manager.h"
@@ -35,7 +36,9 @@ Class kManagedViewClass = nil;
     kManagerClass = Manager.class;
     kManagedPropertiesObjectClass = ManagedPropertiesObject.class;
     kBasicSerializedClassesPlaceholderClass = BasicSerializedClassesPlaceholder.class;
+#if APP_CORE_IOS
     kManagedViewClass = ManagedView.class;
+#endif
 }
 
 + (NSArray*)allClassesWithSuperClass:(Class)superClass

@@ -635,13 +635,16 @@
 		6728600E178CEC9B00DA6097 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/GraphicsEngine.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};
@@ -650,13 +653,16 @@
 		6728600F178CEC9B00DA6097 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/GraphicsEngine.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/GraphicsEngine-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/**";
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};

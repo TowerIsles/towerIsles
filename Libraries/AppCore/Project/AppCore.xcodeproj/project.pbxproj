@@ -57,6 +57,9 @@
 		67E0A15E178BE9260030DA36 /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A14A178BE9260030DA36 /* Service.m */; };
 		67E0A15F178BE9260030DA36 /* AppCoreUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A14E178BE9260030DA36 /* AppCoreUtilities.m */; };
 		67E0A160178BE9270030DA36 /* PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0A150178BE9260030DA36 /* PerformBlockAfterDelay.m */; };
+		67E7D5E01795253B002A89AB /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E7D5DF1795253B002A89AB /* OpenGLView.m */; };
+		67EC254D17945800009F8AC2 /* OSXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EC254C17945800009F8AC2 /* OSXAppDelegate.m */; };
+		67EC254F17945A0C009F8AC2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EC254E17945A0C009F8AC2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,6 +146,11 @@
 		67E0A14E178BE9260030DA36 /* AppCoreUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCoreUtilities.m; sourceTree = "<group>"; };
 		67E0A14F178BE9260030DA36 /* PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformBlockAfterDelay.h; sourceTree = "<group>"; };
 		67E0A150178BE9260030DA36 /* PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformBlockAfterDelay.m; sourceTree = "<group>"; };
+		67E7D5DE1795253B002A89AB /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = Code/OSX/Views/OpenGLView.h; sourceTree = "<group>"; };
+		67E7D5DF1795253B002A89AB /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = Code/OSX/Views/OpenGLView.m; sourceTree = "<group>"; };
+		67EC254B17945800009F8AC2 /* OSXAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSXAppDelegate.h; path = Code/OSX/AppDelegate/OSXAppDelegate.h; sourceTree = "<group>"; };
+		67EC254C17945800009F8AC2 /* OSXAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OSXAppDelegate.m; path = Code/OSX/AppDelegate/OSXAppDelegate.m; sourceTree = "<group>"; };
+		67EC254E17945A0C009F8AC2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 			files = (
 				67285FFD178CEC6800DA6097 /* Foundation.framework in Frameworks */,
 				672BBFF1178FF46F00423CCB /* QuartzCore.framework in Frameworks */,
+				67EC254F17945A0C009F8AC2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +237,8 @@
 		672860DD178DB51800DA6097 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				67EC254B17945800009F8AC2 /* OSXAppDelegate.h */,
+				67EC254C17945800009F8AC2 /* OSXAppDelegate.m */,
 			);
 			name = AppDelegate;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 		67E0A122178BE8000030DA36 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				67EC254E17945A0C009F8AC2 /* Cocoa.framework */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
@@ -427,6 +439,7 @@
 				672860DD178DB51800DA6097 /* AppDelegate */,
 				672860DF178DB52A00DA6097 /* Objects */,
 				672860DE178DB52500DA6097 /* Managers */,
+				67E7D5DD1795215C002A89AB /* Views */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
@@ -588,6 +601,15 @@
 			path = Code/Shared/Utilities;
 			sourceTree = "<group>";
 		};
+		67E7D5DD1795215C002A89AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67E7D5DE1795253B002A89AB /* OpenGLView.h */,
+				67E7D5DF1795253B002A89AB /* OpenGLView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -677,6 +699,8 @@
 				672BBFE7178FE8DA00423CCB /* MathValidation.m in Sources */,
 				672BBFE9178FE8DA00423CCB /* Vec3.m in Sources */,
 				672BBFEE178FEE1A00423CCB /* Vec2.m in Sources */,
+				67EC254D17945800009F8AC2 /* OSXAppDelegate.m in Sources */,
+				67E7D5E01795253B002A89AB /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,7 +743,12 @@
 		67286000178CEC6800DA6097 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/AppCore.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/AppCore-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -729,7 +758,9 @@
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};
 			name = Debug;
@@ -737,14 +768,21 @@
 		67286001178CEC6800DA6097 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/AppCore.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/AppCore-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};
 			name = Release;

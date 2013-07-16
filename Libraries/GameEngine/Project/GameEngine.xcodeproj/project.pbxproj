@@ -532,14 +532,19 @@
 		6728602C178CECA900DA6097 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/GameEngine.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/GameEngine-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/** $(WORKSPACE_DIR)/Libraries/GraphicsEngine/**";
+				VALID_ARCHS = "i386 x86_64";
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};
 			name = Debug;
@@ -547,14 +552,19 @@
 		6728602D178CECA900DA6097 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				DSTROOT = /tmp/GameEngine.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Code/Shared/GameEngine-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(WORKSPACE_DIR)/Libraries/AppCore/** $(WORKSPACE_DIR)/Libraries/GraphicsEngine/**";
+				VALID_ARCHS = "i386 x86_64";
 				WORKSPACE_DIR = /myapps/ThroneRoom;
 			};
 			name = Release;

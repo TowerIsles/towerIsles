@@ -1,3 +1,11 @@
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
+#define APP_CORE_IOS 0
+#define APP_CORE_OSX 1
+#else
+#define APP_CORE_IOS 1
+#define APP_CORE_OSX 0
+#endif
+
 #import "AppDirector.h"
 #import "ResourceManager.h"
 #import "JSONKit.h"
@@ -20,16 +28,8 @@
 #import "Mat4.h"
 #import "MathValidation.h"
 
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-#define APP_CORE_IOS 0
-#define APP_CORE_OSX 1
-#else
-#define APP_CORE_IOS 1
-#define APP_CORE_OSX 0
-#endif
-
 #if APP_CORE_OSX
-
+#import <Cocoa/Cocoa.h>
 #elif APP_CORE_IOS
 #import "IOSAppDelegate.h"
 #import "ViewDirector.h"
